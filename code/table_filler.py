@@ -9,7 +9,7 @@ Entrez.email = "kallefruitema@gmail.com"
 
 
 def fill_table_brokstuk(cursor):
-    with open('seq2.fa') as file:
+    with open('blast_db/seq2.fa') as file:
         inhoud = file.read().strip().split('\n')
     fasta_dict = {}
     for i, line in enumerate(inhoud):
