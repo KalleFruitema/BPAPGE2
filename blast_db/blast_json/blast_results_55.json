@@ -1,0 +1,425 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_55",
+          "query_title": "seq_055",
+          "query_len": 739,
+          "query_masking": [
+            {
+              "from": 3,
+              "to": 93
+            },
+            {
+              "from": 597,
+              "to": 636
+            },
+            {
+              "from": 661,
+              "to": 703
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22610",
+                  "accession": "22610",
+                  "title": "ENSPPRP00000007149.1 pep scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004913.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 361,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 323.939,
+                  "score": 829,
+                  "evalue": 3.87706e-111,
+                  "identity": 156,
+                  "positive": 156,
+                  "query_from": 2,
+                  "query_to": 469,
+                  "query_frame": 2,
+                  "hit_from": 206,
+                  "hit_to": 361,
+                  "align_len": 156,
+                  "gaps": 0,
+                  "qseq": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "hseq": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "midline": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22609",
+                  "accession": "22609",
+                  "title": "ENSPPRP00000007165.1 pep scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004927.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 344,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 323.168,
+                  "score": 827,
+                  "evalue": 4.37278e-111,
+                  "identity": 156,
+                  "positive": 156,
+                  "query_from": 2,
+                  "query_to": 469,
+                  "query_frame": 2,
+                  "hit_from": 189,
+                  "hit_to": 344,
+                  "align_len": 156,
+                  "gaps": 0,
+                  "qseq": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "hseq": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "midline": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22611",
+                  "accession": "22611",
+                  "title": "ENSPPRP00000007136.1 pep scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004894.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 330,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 302.368,
+                  "score": 773,
+                  "evalue": 5.94132e-103,
+                  "identity": 147,
+                  "positive": 148,
+                  "query_from": 23,
+                  "query_to": 469,
+                  "query_frame": 2,
+                  "hit_from": 182,
+                  "hit_to": 330,
+                  "align_len": 149,
+                  "gaps": 0,
+                  "qseq": "YAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "hseq": "HRVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "midline": "+ VGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22612",
+                  "accession": "22612",
+                  "title": "ENSPPRP00000007137.1 pep scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004887.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 321,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 224.557,
+                  "score": 571,
+                  "evalue": 1.23492e-72,
+                  "identity": 116,
+                  "positive": 116,
+                  "query_from": 2,
+                  "query_to": 469,
+                  "query_frame": 2,
+                  "hit_from": 206,
+                  "hit_to": 321,
+                  "align_len": 156,
+                  "gaps": 40,
+                  "qseq": "LHPEECMYAVGQGALGVEVRAKDQDILDLVGVLHDPETLLRCIAERAFLRHLEGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "hseq": "LHPEECMYAVGQ----------------------------------------EGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH",
+                  "midline": "LHPEECMYAVGQ                                        EGGCSVPVAVHTAMKDGQLYLTGGVWSLDGSDSMQETMQATICVTAQHEDGPEDDPQLVGITARNIPRQAQLAAENLGISLASLLLNKGAKNILDVARQLNDAH"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27707",
+                  "accession": "27707",
+                  "title": "ENSPPRP00000002134.1 pep scaffold:PanPar1.0:KV860304.1:10796946:10884811:-1 gene:ENSPPRG00000023623.1 transcript:ENSPPRT00000032996.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:STK4 description:serine/threonine kinase 4 [Source:HGNC Symbol;Acc:HGNC:11408]"
+                }
+              ],
+              "len": 484,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 31.5722,
+                  "score": 70,
+                  "evalue": 0.542993,
+                  "identity": 14,
+                  "positive": 24,
+                  "query_from": 210,
+                  "query_to": 374,
+                  "query_frame": 3,
+                  "hit_from": 368,
+                  "hit_to": 422,
+                  "align_len": 55,
+                  "gaps": 0,
+                  "qseq": "NCT*QEESGVWTAQIACKRPCRPPFVSLPSMKMAQRMIHSWWGSLPGTFHDKPSW",
+                  "hseq": "NAEDEEEEGTMKRRDETMQPAKPSFLEYFEQKEKENQINSFGKSVPGPLRNSSDW",
+                  "midline": "N   +EE G    +    +P +P F+     K  +  I+S+  S+PG   +   W"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27708",
+                  "accession": "27708",
+                  "title": "ENSPPRP00000002137.1 pep scaffold:PanPar1.0:KV860304.1:10796946:10884811:-1 gene:ENSPPRG00000023623.1 transcript:ENSPPRT00000032999.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:STK4 description:serine/threonine kinase 4 [Source:HGNC Symbol;Acc:HGNC:11408]"
+                }
+              ],
+              "len": 429,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 31.5722,
+                  "score": 70,
+                  "evalue": 0.545835,
+                  "identity": 14,
+                  "positive": 24,
+                  "query_from": 210,
+                  "query_to": 374,
+                  "query_frame": 3,
+                  "hit_from": 313,
+                  "hit_to": 367,
+                  "align_len": 55,
+                  "gaps": 0,
+                  "qseq": "NCT*QEESGVWTAQIACKRPCRPPFVSLPSMKMAQRMIHSWWGSLPGTFHDKPSW",
+                  "hseq": "NAEDEEEEGTMKRRDETMQPAKPSFLEYFEQKEKENQINSFGKSVPGPLRNSSDW",
+                  "midline": "N   +EE G    +    +P +P F+     K  +  I+S+  S+PG   +   W"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27709",
+                  "accession": "27709",
+                  "title": "ENSPPRP00000002125.1 pep scaffold:PanPar1.0:KV860304.1:10813532:10884811:-1 gene:ENSPPRG00000023623.1 transcript:ENSPPRT00000033006.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:STK4 description:serine/threonine kinase 4 [Source:HGNC Symbol;Acc:HGNC:11408]"
+                }
+              ],
+              "len": 456,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 31.187,
+                  "score": 69,
+                  "evalue": 0.705012,
+                  "identity": 14,
+                  "positive": 24,
+                  "query_from": 210,
+                  "query_to": 374,
+                  "query_frame": 3,
+                  "hit_from": 368,
+                  "hit_to": 422,
+                  "align_len": 55,
+                  "gaps": 0,
+                  "qseq": "NCT*QEESGVWTAQIACKRPCRPPFVSLPSMKMAQRMIHSWWGSLPGTFHDKPSW",
+                  "hseq": "NAEDEEEEGTMKRRDETMQPAKPSFLEYFEQKEKENQINSFGKSVPGPLRNSSDW",
+                  "midline": "N   +EE G    +    +P +P F+     K  +  I+S+  S+PG   +   W"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|5294",
+                  "accession": "5294",
+                  "title": "ENSPPRP00000024585.1 pep scaffold:PanPar1.0:KV860394.1:1164683:1189869:1 gene:ENSPPRG00000014834.1 transcript:ENSPPRT00000023496.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CTPS1 description:CTP synthase 1 [Source:HGNC Symbol;Acc:HGNC:2519]"
+                }
+              ],
+              "len": 591,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 1.393,
+                  "identity": 16,
+                  "positive": 22,
+                  "query_from": 124,
+                  "query_to": 249,
+                  "query_frame": -2,
+                  "hit_from": 343,
+                  "hit_to": 383,
+                  "align_len": 42,
+                  "gaps": 1,
+                  "qseq": "EPSRLQTPPVRYSCPSFIAVCTATGTLQPPSRCLRKARSAMQ",
+                  "hseq": "EPSTLQEEPVRYH-EAWQKLCSAHGVLVPGGFGVRGTEGKIQ",
+                  "midline": "EPS LQ  PVRY   ++  +C+A G L P    +R     +Q"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|11385",
+                  "accession": "11385",
+                  "title": "ENSPPRP00000018546.1 pep scaffold:PanPar1.0:KV860349.1:5765137:5781469:-1 gene:ENSPPRG00000010178.1 transcript:ENSPPRT00000016892.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:FAM186B description:family with sequence similarity 186 member B [Source:HGNC Symbol;Acc:HGNC:25296]"
+                }
+              ],
+              "len": 900,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 3.79272,
+                  "identity": 14,
+                  "positive": 15,
+                  "query_from": 585,
+                  "query_to": 656,
+                  "query_frame": -3,
+                  "hit_from": 815,
+                  "hit_to": 839,
+                  "align_len": 26,
+                  "gaps": 3,
+                  "qseq": "PPTEEARHSHS--PKVRQVPGSL*PC",
+                  "hseq": "PPTSSLRHTHSCGPSCRQPPGHF-PC",
+                  "midline": "PPT   RH+HS  P  RQ PG   PC"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|17781",
+                  "accession": "17781",
+                  "title": "ENSPPRP00000012043.1 pep scaffold:PanPar1.0:KV860272.1:45631519:45657788:-1 gene:ENSPPRG00000005760.1 transcript:ENSPPRT00000010076.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:POLR1B description:RNA polymerase I subunit B [Source:HGNC Symbol;Acc:HGNC:20454]"
+                }
+              ],
+              "len": 952,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 9.67563,
+                  "identity": 11,
+                  "positive": 16,
+                  "query_from": 432,
+                  "query_to": 503,
+                  "query_frame": 3,
+                  "hit_from": 867,
+                  "hit_to": 890,
+                  "align_len": 24,
+                  "gaps": 0,
+                  "qseq": "TSWMLHDSLTTPTNWSVGHKCLGC",
+                  "hseq": "TSFLLHDRLFNCSDRSVAHVCVEC",
+                  "midline": "TS++LHD L   ++ SV H C+ C"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|17780",
+                  "accession": "17780",
+                  "title": "ENSPPRP00000012049.1 pep scaffold:PanPar1.0:KV860272.1:45631519:45657788:-1 gene:ENSPPRG00000005760.1 transcript:ENSPPRT00000010083.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:POLR1B description:RNA polymerase I subunit B [Source:HGNC Symbol;Acc:HGNC:20454]"
+                }
+              ],
+              "len": 1079,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 9.77651,
+                  "identity": 11,
+                  "positive": 16,
+                  "query_from": 432,
+                  "query_to": 503,
+                  "query_frame": 3,
+                  "hit_from": 994,
+                  "hit_to": 1017,
+                  "align_len": 24,
+                  "gaps": 0,
+                  "qseq": "TSWMLHDSLTTPTNWSVGHKCLGC",
+                  "hseq": "TSFLLHDRLFNCSDRSVAHVCVEC",
+                  "midline": "TS++LHD L   ++ SV H C+ C"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|17779",
+                  "accession": "17779",
+                  "title": "ENSPPRP00000012065.1 pep scaffold:PanPar1.0:KV860272.1:45630991:45657921:-1 gene:ENSPPRG00000005760.1 transcript:ENSPPRT00000010095.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:POLR1B description:RNA polymerase I subunit B [Source:HGNC Symbol;Acc:HGNC:20454]"
+                }
+              ],
+              "len": 1164,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 9.83173,
+                  "identity": 11,
+                  "positive": 16,
+                  "query_from": 432,
+                  "query_to": 503,
+                  "query_frame": 3,
+                  "hit_from": 1079,
+                  "hit_to": 1102,
+                  "align_len": 24,
+                  "gaps": 0,
+                  "qseq": "TSWMLHDSLTTPTNWSVGHKCLGC",
+                  "hseq": "TSFLLHDRLFNCSDRSVAHVCVEC",
+                  "midline": "TS++LHD L   ++ SV H C+ C"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 99,
+            "eff_space": 1833467790,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

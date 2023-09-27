@@ -1,0 +1,146 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_23",
+          "query_title": "seq_023",
+          "query_len": 496,
+          "query_masking": [
+            {
+              "from": 414,
+              "to": 450
+            },
+            {
+              "from": 22,
+              "to": 58
+            },
+            {
+              "from": 415,
+              "to": 460
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|2132",
+                  "accession": "2132",
+                  "title": "ENSPPRP00000027790.1 pep scaffold:PanPar1.0:KV860371.1:4373732:4414047:1 gene:ENSPPRG00000019516.1 transcript:ENSPPRT00000029066.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROS description:uroporphyrinogen III synthase [Source:HGNC Symbol;Acc:HGNC:12592]"
+                }
+              ],
+              "len": 264,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 93.5893,
+                  "score": 231,
+                  "evalue": 1.37173e-23,
+                  "identity": 62,
+                  "positive": 62,
+                  "query_from": 311,
+                  "query_to": 496,
+                  "query_frame": 2,
+                  "hit_from": 1,
+                  "hit_to": 62,
+                  "align_len": 62,
+                  "gaps": 0,
+                  "qseq": "MKVLLLKDPKEDDCGQDPYIRELGLYGLEATLIPVlsfeflslssfseklsHPEGYGGLIFT",
+                  "hseq": "MKVLLLKDPKEDDCGQDPYIRELGLYGLEATLIPVLSFEFLSLSSFSEKLSHPEGYGGLIFT",
+                  "midline": "MKVLLLKDPKEDDCGQDPYIRELGLYGLEATLIPVLSFEFLSLSSFSEKLSHPEGYGGLIFT"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|11803",
+                  "accession": "11803",
+                  "title": "ENSPPRP00000018115.1 pep scaffold:PanPar1.0:KV860326.1:3933626:3963027:-1 gene:ENSPPRG00000009871.1 transcript:ENSPPRT00000016448.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UPK2 description:uroplakin 2 [Source:HGNC Symbol;Acc:HGNC:12579]"
+                }
+              ],
+              "len": 184,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 2.78809,
+                  "identity": 15,
+                  "positive": 18,
+                  "query_from": 94,
+                  "query_to": 177,
+                  "query_frame": 1,
+                  "hit_from": 81,
+                  "hit_to": 108,
+                  "align_len": 28,
+                  "gaps": 0,
+                  "qseq": "RPRCDLVSPLLSGANLCVTKLSGCQVTQ",
+                  "hseq": "RGRRELVSVVDSGAGFTVTRLSAYQVTN",
+                  "midline": "R R +LVS + SGA   VT+LS  QVT "
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|8437",
+                  "accession": "8437",
+                  "title": "ENSPPRP00000021522.1 pep scaffold:PanPar1.0:KV860299.1:1996964:1999735:-1 gene:ENSPPRG00000012314.1 transcript:ENSPPRT00000020001.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 130,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 26.5646,
+                  "score": 57,
+                  "evalue": 6.79532,
+                  "identity": 13,
+                  "positive": 22,
+                  "query_from": 372,
+                  "query_to": 485,
+                  "query_frame": -3,
+                  "hit_from": 65,
+                  "hit_to": 105,
+                  "align_len": 41,
+                  "gaps": 3,
+                  "qseq": "GPHSLQDETASQKN---WKETKTQMIKQGSEWLQVHIILVP",
+                  "hseq": "GAEQLRDQTSDRLETVILDVTKTESISAATEWVKEHLICTP",
+                  "midline": "G   L+D+T+ +        TKT+ I   +EW++ H+I  P"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 93,
+            "eff_space": 910908576,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

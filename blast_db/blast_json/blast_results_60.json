@@ -1,0 +1,394 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_60",
+          "query_title": "seq_060",
+          "query_len": 746,
+          "query_masking": [
+            {
+              "from": 225,
+              "to": 273
+            },
+            {
+              "from": 175,
+              "to": 217
+            },
+            {
+              "from": 244,
+              "to": 295
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|2571",
+                  "accession": "2571",
+                  "title": "ENSPPRP00000027313.1 pep scaffold:PanPar1.0:KV860305.1:3164066:3177793:-1 gene:ENSPPRG00000018767.1 transcript:ENSPPRT00000028117.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COX15 description:cytochrome c oxidase assembly homolog COX15 [Source:HGNC Symbol;Acc:HGNC:2263]"
+                }
+              ],
+              "len": 413,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 497.664,
+                  "score": 1280,
+                  "evalue": 7.9394e-179,
+                  "identity": 247,
+                  "positive": 247,
+                  "query_from": 3,
+                  "query_to": 743,
+                  "query_frame": 3,
+                  "hit_from": 167,
+                  "hit_to": 413,
+                  "align_len": 247,
+                  "gaps": 0,
+                  "qseq": "ILPAAYFWRKGWLSRGMKGRVLALCGLVCFQGLLGWYMVKSGLEEKPDSHDIPRVSQYRLAAHLGSALVLYCASLWTSLSLLLPQHKLPETRQLLWLRRCAHGTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGESWIPEDLFTFSPILRNVFENPTMVQFDHRILGITSVTAVTVLYFLSRRIPLPRRTKMAAVTLLALAYTQVGLGISTLLMYVPTPLAATHQSGSLALLSVALWLMNELRRVPK",
+                  "hseq": "ILPAAYFWRKGWLSRGMKGRVLALCGLVCFQGLLGWYMVKSGLEEKPDSHDIPRVSQYRLAAHLGSALVLYCASLWTSLSLLLPQHKLPETRQLLWLRRCAHGTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGESWIPEDLFTFSPILRNVFENPTMVQFDHRILGITSVTAVTVLYFLSRRIPLPRRTKMAAVTLLALAYTQVGLGISTLLMYVPTPLAATHQSGSLALLSVALWLMNELRRVPK",
+                  "midline": "ILPAAYFWRKGWLSRGMKGRVLALCGLVCFQGLLGWYMVKSGLEEKPDSHDIPRVSQYRLAAHLGSALVLYCASLWTSLSLLLPQHKLPETRQLLWLRRCAHGTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGESWIPEDLFTFSPILRNVFENPTMVQFDHRILGITSVTAVTVLYFLSRRIPLPRRTKMAAVTLLALAYTQVGLGISTLLMYVPTPLAATHQSGSLALLSVALWLMNELRRVPK"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|2570",
+                  "accession": "2570",
+                  "title": "ENSPPRP00000027332.1 pep scaffold:PanPar1.0:KV860305.1:3162949:3177610:-1 gene:ENSPPRG00000018767.1 transcript:ENSPPRT00000028147.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COX15 description:cytochrome c oxidase assembly homolog COX15 [Source:HGNC Symbol;Acc:HGNC:2263]"
+                }
+              ],
+              "len": 369,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 417.542,
+                  "score": 1072,
+                  "evalue": 6.69293e-148,
+                  "identity": 204,
+                  "positive": 205,
+                  "query_from": 3,
+                  "query_to": 617,
+                  "query_frame": 3,
+                  "hit_from": 165,
+                  "hit_to": 369,
+                  "align_len": 205,
+                  "gaps": 0,
+                  "qseq": "ILPAAYFWRKGWLSRGMKGRVLALCGLVCFQGLLGWYMVKSGLEEKPDSHDIPRVSQYRLAAHLGSALVLYCASLWTSLSLLLPQHKLPETRQLLWLRRCAHGTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGESWIPEDLFTFSPILRNVFENPTMVQFDHRILGITSVTAVTVLYFLSRRIPLPRRTKMAAVTLLALAYTQV",
+                  "hseq": "ILPAAYFWRKGWLSRGMKGRVLALCGLVCFQGLLGWYMVKSGLEEKPDSHDIPRVSQYRLAAHLGSALVLYCASLWTSLSLLLPQHKLPETRQLLWLRRCAHGTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGESWIPEDLFTFSPILRNVFENPTMVQFDHRILGITSVTAVTVLYFLSRRIPLPRRTKMAAVTLLALAYTQI",
+                  "midline": "ILPAAYFWRKGWLSRGMKGRVLALCGLVCFQGLLGWYMVKSGLEEKPDSHDIPRVSQYRLAAHLGSALVLYCASLWTSLSLLLPQHKLPETRQLLWLRRCAHGTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGESWIPEDLFTFSPILRNVFENPTMVQFDHRILGITSVTAVTVLYFLSRRIPLPRRTKMAAVTLLALAYTQ+"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|25179",
+                  "accession": "25179",
+                  "title": "ENSPPRP00000004697.1 pep scaffold:PanPar1.0:KV860285.1:22259805:22285503:1 gene:ENSPPRG00000000711.1 transcript:ENSPPRT00000002326.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CYTH4 description:cytohesin 4 [Source:HGNC Symbol;Acc:HGNC:9505]"
+                }
+              ],
+              "len": 380,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.6462,
+                  "score": 65,
+                  "evalue": 2.13685,
+                  "identity": 18,
+                  "positive": 22,
+                  "query_from": 73,
+                  "query_to": 189,
+                  "query_frame": -3,
+                  "hit_from": 205,
+                  "hit_to": 242,
+                  "align_len": 39,
+                  "gaps": 1,
+                  "qseq": "GQQGGTD*PEGCHGSLVFLLIHFSPYTIPTDPGSRLTHT",
+                  "hseq": "GINGGGDLPEEQLRNL-FDSIKSEPFSIPEDDGNDLTHT",
+                  "midline": "G  GG D PE    +L F  I   P++IP D G+ LTHT"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4971",
+                  "accession": "4971",
+                  "title": "ENSPPRP00000024279.1 pep scaffold:PanPar1.0:KV860375.1:3725958:3737912:-1 gene:ENSPPRG00000015176.1 transcript:ENSPPRT00000023136.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CYTH2 description:cytohesin 2 [Source:HGNC Symbol;Acc:HGNC:9502]"
+                }
+              ],
+              "len": 374,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 3.06268,
+                  "identity": 24,
+                  "positive": 30,
+                  "query_from": 73,
+                  "query_to": 246,
+                  "query_frame": -3,
+                  "hit_from": 191,
+                  "hit_to": 256,
+                  "align_len": 67,
+                  "gaps": 10,
+                  "qseq": "AVRVKSTSWHNKEQGLIPG---------GQQGGTD*PEGCHGSLVFLLIHFSPYTIPTDPGSRLTHT",
+                  "hseq": "AVIMLNTSLHNPNVRDKPGLERFVAMNRGINEGGDLPEELLRNL-YDSIRNEPFKIPEDDGNDLTHT",
+                  "midline": "AV + +TS HN      PG         G   G D PE    +L +  I   P+ IP D G+ LTHT"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4972",
+                  "accession": "4972",
+                  "title": "ENSPPRP00000024246.1 pep scaffold:PanPar1.0:KV860375.1:3725958:3734680:-1 gene:ENSPPRG00000015176.1 transcript:ENSPPRT00000023083.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CYTH2 description:cytohesin 2 [Source:HGNC Symbol;Acc:HGNC:9502]"
+                }
+              ],
+              "len": 393,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 3.33349,
+                  "identity": 24,
+                  "positive": 30,
+                  "query_from": 73,
+                  "query_to": 246,
+                  "query_frame": -3,
+                  "hit_from": 191,
+                  "hit_to": 256,
+                  "align_len": 67,
+                  "gaps": 10,
+                  "qseq": "AVRVKSTSWHNKEQGLIPG---------GQQGGTD*PEGCHGSLVFLLIHFSPYTIPTDPGSRLTHT",
+                  "hseq": "AVIMLNTSLHNPNVRDKPGLERFVAMNRGINEGGDLPEELLRNL-YDSIRNEPFKIPEDDGNDLTHT",
+                  "midline": "AV + +TS HN      PG         G   G D PE    +L +  I   P+ IP D G+ LTHT"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4970",
+                  "accession": "4970",
+                  "title": "ENSPPRP00000024461.1 pep scaffold:PanPar1.0:KV860375.1:3725585:3734680:-1 gene:ENSPPRG00000015176.1 transcript:ENSPPRT00000023355.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CYTH2 description:cytohesin 2 [Source:HGNC Symbol;Acc:HGNC:9502]"
+                }
+              ],
+              "len": 310,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.8758,
+                  "score": 63,
+                  "evalue": 3.94006,
+                  "identity": 24,
+                  "positive": 30,
+                  "query_from": 73,
+                  "query_to": 246,
+                  "query_frame": -3,
+                  "hit_from": 191,
+                  "hit_to": 256,
+                  "align_len": 67,
+                  "gaps": 10,
+                  "qseq": "AVRVKSTSWHNKEQGLIPG---------GQQGGTD*PEGCHGSLVFLLIHFSPYTIPTDPGSRLTHT",
+                  "hseq": "AVIMLNTSLHNPNVRDKPGLERFVAMNRGINEGGDLPEELLRNL-YDSIRNEPFKIPEDDGNDLTHT",
+                  "midline": "AV + +TS HN      PG         G   G D PE    +L +  I   P+ IP D G+ LTHT"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|16293",
+                  "accession": "16293",
+                  "title": "ENSPPRP00000013571.1 pep scaffold:PanPar1.0:KV860272.1:43159649:43210110:-1 gene:ENSPPRG00000006759.1 transcript:ENSPPRT00000011667.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ST3GAL5 description:ST3 beta-galactoside alpha-2,3-sialyltransferase 5 [Source:HGNC Symbol;Acc:HGNC:10872]"
+                }
+              ],
+              "len": 367,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.8758,
+                  "score": 63,
+                  "evalue": 4.38568,
+                  "identity": 22,
+                  "positive": 32,
+                  "query_from": 219,
+                  "query_to": 410,
+                  "query_frame": 3,
+                  "hit_from": 170,
+                  "hit_to": 233,
+                  "align_len": 65,
+                  "gaps": 2,
+                  "qseq": "ASLWTSLSLLLPQHKLPETRQLLWLRRCAH-GTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGES",
+                  "hseq": "SSQVQSLLEILPEHDMPEHLKAKSCRRCVVIGSGGILHGLAL-GHALNQFDVVIRLNSAPVEGYS",
+                  "midline": "+S   SL  +LP+H +PE  +    RRC   G+ G++   AL G  +   D  +  NS P  G S"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|16294",
+                  "accession": "16294",
+                  "title": "ENSPPRP00000013559.1 pep scaffold:PanPar1.0:KV860272.1:43159649:43188067:-1 gene:ENSPPRG00000006759.1 transcript:ENSPPRT00000011661.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ST3GAL5 description:ST3 beta-galactoside alpha-2,3-sialyltransferase 5 [Source:HGNC Symbol;Acc:HGNC:10872]"
+                }
+              ],
+              "len": 428,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.4906,
+                  "score": 62,
+                  "evalue": 5.25782,
+                  "identity": 22,
+                  "positive": 32,
+                  "query_from": 219,
+                  "query_to": 410,
+                  "query_frame": 3,
+                  "hit_from": 178,
+                  "hit_to": 241,
+                  "align_len": 65,
+                  "gaps": 2,
+                  "qseq": "ASLWTSLSLLLPQHKLPETRQLLWLRRCAH-GTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGES",
+                  "hseq": "SSQVQSLLEILPEHDMPEHLKAKSCRRCVVIGSGGILHGLAL-GHALNQFDVVIRLNSAPVEGYS",
+                  "midline": "+S   SL  +LP+H +PE  +    RRC   G+ G++   AL G  +   D  +  NS P  G S"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|16292",
+                  "accession": "16292",
+                  "title": "ENSPPRP00000013576.1 pep scaffold:PanPar1.0:KV860272.1:43159487:43210135:-1 gene:ENSPPRG00000006759.1 transcript:ENSPPRT00000011676.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ST3GAL5 description:ST3 beta-galactoside alpha-2,3-sialyltransferase 5 [Source:HGNC Symbol;Acc:HGNC:10872]"
+                }
+              ],
+              "len": 420,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.4906,
+                  "score": 62,
+                  "evalue": 5.56958,
+                  "identity": 22,
+                  "positive": 32,
+                  "query_from": 219,
+                  "query_to": 410,
+                  "query_frame": 3,
+                  "hit_from": 170,
+                  "hit_to": 233,
+                  "align_len": 65,
+                  "gaps": 2,
+                  "qseq": "ASLWTSLSLLLPQHKLPETRQLLWLRRCAH-GTAGLVFLTALSGAFVAGLDAGLVYNSFPKMGES",
+                  "hseq": "SSQVQSLLEILPEHDMPEHLKAKSCRRCVVIGSGGILHGLAL-GHALNQFDVVIRLNSAPVEGYS",
+                  "midline": "+S   SL  +LP+H +PE  +    RRC   G+ G++   AL G  +   D  +  NS P  G S"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|14190",
+                  "accession": "14190",
+                  "title": "ENSPPRP00000015516.1 pep scaffold:PanPar1.0:KV860437.1:1342273:1361377:-1 gene:ENSPPRG00000008238.1 transcript:ENSPPRT00000013719.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ATP1A3 description:ATPase Na+/K+ transporting subunit alpha 3 [Source:HGNC Symbol;Acc:HGNC:801]"
+                }
+              ],
+              "len": 1024,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 8.85178,
+                  "identity": 27,
+                  "positive": 54,
+                  "query_from": 315,
+                  "query_to": 623,
+                  "query_frame": 3,
+                  "hit_from": 749,
+                  "hit_to": 862,
+                  "align_len": 117,
+                  "gaps": 17,
+                  "qseq": "AGLVFLTALSGAFVAGLDAG-LVYNSFPKMGESWIPEDLFTFSPILRNVFEN---P----TMVQFDHRILGITSVTAVTVLY------FLSRRIPLPRRTKMAAVTLLALAYTQVGL",
+                  "hseq": "ADMILLDDNFASIVTGVEEGRLIFDNLKKSIAYTLTSNIPEITPFLLFIMANIPLPLGTITILCID---LGTDMVPAISLAYEAAESDIMKRQPRNPRTDKLVNERLISMAYGQIGM",
+                  "midline": "A ++ L     + V G++ G L++++  K     +  ++   +P L  +  N   P    T++  D   LG   V A+++ Y       + R+   PR  K+    L+++AY Q+G+"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|14189",
+                  "accession": "14189",
+                  "title": "ENSPPRP00000015532.1 pep scaffold:PanPar1.0:KV860437.1:1333059:1361182:-1 gene:ENSPPRG00000008238.1 transcript:ENSPPRT00000013724.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ATP1A3 description:ATPase Na+/K+ transporting subunit alpha 3 [Source:HGNC Symbol;Acc:HGNC:801]"
+                }
+              ],
+              "len": 1025,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 8.85249,
+                  "identity": 27,
+                  "positive": 54,
+                  "query_from": 315,
+                  "query_to": 623,
+                  "query_frame": 3,
+                  "hit_from": 748,
+                  "hit_to": 861,
+                  "align_len": 117,
+                  "gaps": 17,
+                  "qseq": "AGLVFLTALSGAFVAGLDAG-LVYNSFPKMGESWIPEDLFTFSPILRNVFEN---P----TMVQFDHRILGITSVTAVTVLY------FLSRRIPLPRRTKMAAVTLLALAYTQVGL",
+                  "hseq": "ADMILLDDNFASIVTGVEEGRLIFDNLKKSIAYTLTSNIPEITPFLLFIMANIPLPLGTITILCID---LGTDMVPAISLAYEAAESDIMKRQPRNPRTDKLVNERLISMAYGQIGM",
+                  "midline": "A ++ L     + V G++ G L++++  K     +  ++   +P L  +  N   P    T++  D   LG   V A+++ Y       + R+   PR  K+    L+++AY Q+G+"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 99,
+            "eff_space": 1858412930,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

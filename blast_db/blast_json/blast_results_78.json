@@ -1,0 +1,301 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_78",
+          "query_title": "seq_078",
+          "query_len": 372,
+          "query_masking": [
+            {
+              "from": 33,
+              "to": 54
+            },
+            {
+              "from": 16,
+              "to": 64
+            },
+            {
+              "from": 256,
+              "to": 289
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4988",
+                  "accession": "4988",
+                  "title": "ENSPPRP00000024961.1 pep scaffold:PanPar1.0:KV860292.1:10140702:10193733:-1 gene:ENSPPRG00000015157.1 transcript:ENSPPRT00000023971.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:BLVRA description:biliverdin reductase A [Source:HGNC Symbol;Acc:HGNC:1062]"
+                }
+              ],
+              "len": 309,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 225.713,
+                  "score": 574,
+                  "evalue": 3.5963e-75,
+                  "identity": 118,
+                  "positive": 119,
+                  "query_from": 16,
+                  "query_to": 372,
+                  "query_frame": 1,
+                  "hit_from": 4,
+                  "hit_to": 122,
+                  "align_len": 119,
+                  "gaps": 0,
+                  "qseq": "KPERKFgvvvvgvgRAGSVRIRDLRNPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVLH",
+                  "hseq": "EPERKFGVVVVGVGRAGSVRIRDLRNPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVLH",
+                  "midline": "+PERKFGVVVVGVGRAGSVRIRDLRNPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVLH"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27190",
+                  "accession": "27190",
+                  "title": "ENSPPRP00000002674.1 pep scaffold:PanPar1.0:KV860375.1:3280541:3295878:-1 gene:ENSPPRG00000023269.1 transcript:ENSPPRT00000000221.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DHDH description:dihydrodiol dehydrogenase [Source:HGNC Symbol;Acc:HGNC:17887]"
+                }
+              ],
+              "len": 242,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 38.1206,
+                  "score": 87,
+                  "evalue": 0.000571525,
+                  "identity": 22,
+                  "positive": 32,
+                  "query_from": 178,
+                  "query_to": 369,
+                  "query_frame": 1,
+                  "hit_from": 57,
+                  "hit_to": 120,
+                  "align_len": 64,
+                  "gaps": 0,
+                  "qseq": "SLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVL",
+                  "hseq": "SYEELAKDPNVEVAYIGTQHPQHKAAVLLCLAAGKAVLCEKPMGVNAAEVREMVAEARSRGLFL",
+                  "midline": "S E     P VEVAYI ++   H+  +   L AGK VL E PM ++    +++   A  +G  L"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27189",
+                  "accession": "27189",
+                  "title": "ENSPPRP00000002684.1 pep scaffold:PanPar1.0:KV860375.1:3280175:3295924:-1 gene:ENSPPRG00000023269.1 transcript:ENSPPRT00000000228.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DHDH description:dihydrodiol dehydrogenase [Source:HGNC Symbol;Acc:HGNC:17887]"
+                }
+              ],
+              "len": 335,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 38.1206,
+                  "score": 87,
+                  "evalue": 0.000675302,
+                  "identity": 22,
+                  "positive": 32,
+                  "query_from": 178,
+                  "query_to": 369,
+                  "query_frame": 1,
+                  "hit_from": 57,
+                  "hit_to": 120,
+                  "align_len": 64,
+                  "gaps": 0,
+                  "qseq": "SLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVL",
+                  "hseq": "SYEELAKDPNVEVAYIGTQHPQHKAAVLLCLAAGKAVLCEKPMGVNAAEVREMVAEARSRGLFL",
+                  "midline": "S E     P VEVAYI ++   H+  +   L AGK VL E PM ++    +++   A  +G  L"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6203",
+                  "accession": "6203",
+                  "title": "ENSPPRP00000023711.1 pep scaffold:PanPar1.0:KV860326.1:12034096:12163401:1 gene:ENSPPRG00000013980.1 transcript:ENSPPRT00000022399.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ARHGAP20 description:Rho GTPase activating protein 20 [Source:HGNC Symbol;Acc:HGNC:18357]"
+                }
+              ],
+              "len": 1191,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.6462,
+                  "score": 65,
+                  "evalue": 0.735251,
+                  "identity": 20,
+                  "positive": 27,
+                  "query_from": 172,
+                  "query_to": 360,
+                  "query_frame": -1,
+                  "hit_from": 293,
+                  "hit_to": 350,
+                  "align_len": 63,
+                  "gaps": 5,
+                  "qseq": "SFLLSQLPQVLSCFPRQCHWIFHKDMLTSIKELPDIVLMAGALTADISNLYLWAGKSIFQRNL",
+                  "hseq": "SFLMEQLPREL-----QCQFILKPSRLAAAQQLSDSGQKTFKRRRSLINWAFWRGSSIHLDNL",
+                  "midline": "SFL+ QLP+ L     QC +I     L + ++L D           + N   W G SI   NL"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6204",
+                  "accession": "6204",
+                  "title": "ENSPPRP00000023696.1 pep scaffold:PanPar1.0:KV860326.1:12034397:12163401:1 gene:ENSPPRG00000013980.1 transcript:ENSPPRT00000022390.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ARHGAP20 description:Rho GTPase activating protein 20 [Source:HGNC Symbol;Acc:HGNC:18357]"
+                }
+              ],
+              "len": 1161,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.6462,
+                  "score": 65,
+                  "evalue": 0.741318,
+                  "identity": 20,
+                  "positive": 27,
+                  "query_from": 172,
+                  "query_to": 360,
+                  "query_frame": -1,
+                  "hit_from": 263,
+                  "hit_to": 320,
+                  "align_len": 63,
+                  "gaps": 5,
+                  "qseq": "SFLLSQLPQVLSCFPRQCHWIFHKDMLTSIKELPDIVLMAGALTADISNLYLWAGKSIFQRNL",
+                  "hseq": "SFLMEQLPREL-----QCQFILKPSRLAAAQQLSDSGQKTFKRRRSLINWAFWRGSSIHLDNL",
+                  "midline": "SFL+ QLP+ L     QC +I     L + ++L D           + N   W G SI   NL"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4125",
+                  "accession": "4125",
+                  "title": "ENSPPRP00000025675.1 pep scaffold:PanPar1.0:KV860383.1:1585973:1663159:1 gene:ENSPPRG00000016156.1 transcript:ENSPPRT00000024984.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MYOM2 description:myomesin 2 [Source:HGNC Symbol;Acc:HGNC:7614]"
+                }
+              ],
+              "len": 1461,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 27.7202,
+                  "score": 60,
+                  "evalue": 2.87064,
+                  "identity": 23,
+                  "positive": 44,
+                  "query_from": 91,
+                  "query_to": 369,
+                  "query_frame": 1,
+                  "hit_from": 528,
+                  "hit_to": 615,
+                  "align_len": 93,
+                  "gaps": 5,
+                  "qseq": "NPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVL",
+                  "hseq": "DPPAPRGKEPLMYFIEKSVVGS-GSWQRVNAQTAVRSPR----YAVFDLAEGKPYVFRVLSANKHGLSEPSEITAPIQAQDMIAVPSAPGRVL",
+                  "midline": "+P A      L+ F+ +  +G+    Q+++ + A+ SP     Y   + +  + Y+ + L+A KH L E     +   AQD+  +    G+VL"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|12253",
+                  "accession": "12253",
+                  "title": "ENSPPRP00000017686.1 pep scaffold:PanPar1.0:KV860311.1:11088775:11167004:-1 gene:ENSPPRG00000009567.1 transcript:ENSPPRT00000015981.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ISM1 description:isthmin 1 [Source:HGNC Symbol;Acc:HGNC:16213]"
+                }
+              ],
+              "len": 464,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 27.7202,
+                  "score": 60,
+                  "evalue": 2.98089,
+                  "identity": 11,
+                  "positive": 15,
+                  "query_from": 226,
+                  "query_to": 285,
+                  "query_frame": 1,
+                  "hit_from": 445,
+                  "hit_to": 464,
+                  "align_len": 20,
+                  "gaps": 0,
+                  "qseq": "CSESSSHEDYIRQFLNAGKH",
+                  "hseq": "CTESPSDEDYIKQFQEAREY",
+                  "midline": "C+ES S EDYI+QF  A ++"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|28293",
+                  "accession": "28293",
+                  "title": "ENSPPRP00000001547.1 pep scaffold:PanPar1.0:KV860339.1:11810403:11814636:1 gene:ENSPPRG00000024031.1 transcript:ENSPPRT00000033610.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:GRB7 description:growth factor receptor bound protein 7 [Source:HGNC Symbol;Acc:HGNC:4567]"
+                }
+              ],
+              "len": 532,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 26.5646,
+                  "score": 57,
+                  "evalue": 7.22475,
+                  "identity": 14,
+                  "positive": 20,
+                  "query_from": 241,
+                  "query_to": 342,
+                  "query_frame": 1,
+                  "hit_from": 217,
+                  "hit_to": 249,
+                  "align_len": 34,
+                  "gaps": 1,
+                  "qseq": "SHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWK",
+                  "hseq": "SHEDLIQNFLNAGSFPEIQGFLQLRG-SGRKLWK",
+                  "midline": "SHED I+ FLNAG    ++  + L   + + LWK"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 89,
+            "eff_space": 446978000,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

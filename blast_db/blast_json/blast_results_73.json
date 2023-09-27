@@ -1,0 +1,399 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_73",
+          "query_title": "seq_073",
+          "query_len": 1410,
+          "query_masking": [
+            {
+              "from": 300,
+              "to": 324
+            },
+            {
+              "from": 1296,
+              "to": 1344
+            },
+            {
+              "from": 742,
+              "to": 772
+            },
+            {
+              "from": 898,
+              "to": 931
+            },
+            {
+              "from": 1012,
+              "to": 1063
+            },
+            {
+              "from": 1153,
+              "to": 1228
+            },
+            {
+              "from": 1243,
+              "to": 1294
+            },
+            {
+              "from": 1321,
+              "to": 1360
+            },
+            {
+              "from": 1034,
+              "to": 1091
+            },
+            {
+              "from": 1109,
+              "to": 1154
+            },
+            {
+              "from": 1160,
+              "to": 1199
+            },
+            {
+              "from": 1244,
+              "to": 1292
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|26742",
+                  "accession": "26742",
+                  "title": "ENSPPRP00000003131.1 pep scaffold:PanPar1.0:KV860333.1:5402218:5450989:-1 gene:ENSPPRG00000022978.1 transcript:ENSPPRT00000000700.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 250,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 381.719,
+                  "score": 979,
+                  "evalue": 5.84354e-132,
+                  "identity": 213,
+                  "positive": 214,
+                  "query_from": 622,
+                  "query_to": 1392,
+                  "query_frame": 1,
+                  "hit_from": 14,
+                  "hit_to": 248,
+                  "align_len": 257,
+                  "gaps": 22,
+                  "qseq": "QFFEVPFDSNMNRTKNRPLVRGQISPLLAVSFATCCAVPGVALLTWGVNPLTGALGVFNIFLYTCCYTPLKKISIANTWVGAVVGAIPGPPRGQKGFAGERQRCLCKPLMTACLASPFPLNPHTGAFLLGGILYSWQFPHFNALSWGLREDYSRGGYCMMSVTHPALCRRVALRHCLALIGLSAAAPVLDVTTWTFPAISLPINLYISYLGFRFYVDADRKSSRKlffcslwplplflllmlTCKRSPEGHVGGSAP",
+                  "hseq": "SFFEVPFDSNMNRTKNRPLVRGQISPLLAVSFATCCAIPGVALLTWGVNPLTGALGVFNIFLYTCCYTPLKKISIANTWVGAVVGAIP-PVMGWTAATGSLD---------------------AGAFLLGGILYSWQFPHFNALSWGLREDYSRGGYCMMSVTHPALCRRVALRHCLALIGLSAAAPVLDVTTWTFPAISLPINLYISYLGFRFYVDADRKSSRKLFFCSLWHLPLFLLLMLTCKRPPGATCAGGEP",
+                  "midline": " FFEVPFDSNMNRTKNRPLVRGQISPLLAVSFATCCA+PGVALLTWGVNPLTGALGVFNIFLYTCCYTPLKKISIANTWVGAVVGAIP P  G     G                         GAFLLGGILYSWQFPHFNALSWGLREDYSRGGYCMMSVTHPALCRRVALRHCLALIGLSAAAPVLDVTTWTFPAISLPINLYISYLGFRFYVDADRKSSRKLFFCSLW LPLFLLLMLTCKR P     G  P"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27213",
+                  "accession": "27213",
+                  "title": "ENSPPRP00000002679.1 pep scaffold:PanPar1.0:KV860333.1:5545902:5555438:-1 gene:ENSPPRG00000023281.1 transcript:ENSPPRT00000000227.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 178,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 320.472,
+                  "score": 820,
+                  "evalue": 6.592e-109,
+                  "identity": 165,
+                  "positive": 167,
+                  "query_from": 1,
+                  "query_to": 510,
+                  "query_frame": 1,
+                  "hit_from": 1,
+                  "hit_to": 170,
+                  "align_len": 170,
+                  "gaps": 0,
+                  "qseq": "MAASPHTLSSRLLTGWVGGCVWYLEGRAMQESPREFMHLFRSVRKQWMTFQHFTFLRRMYVTQLNRSLNQQVKRKPEPTVSPFLERSSLAQAKAETCAMRplppphlplSRKPNDKELLELESASVIEGSLDVGRETKDEKQWKEMKLHLDDLPGVLARLSKIKLTALVV",
+                  "hseq": "MAASPHTLSSRLLTGWVGGCVWYLEGRAMQESPREFMHLFRSVRKQWMTFQHFTFLRRMYVTQLNRSLNQQVKRKPEPTASPFLERSSLAQAKAETCAMRPLPPPHLPLSRKPNDKELLELESASVIEGSLDVGRETKDEKQWKEMKLHLDDLPGVLARLSKIKLTGALL",
+                  "midline": "MAASPHTLSSRLLTGWVGGCVWYLEGRAMQESPREFMHLFRSVRKQWMTFQHFTFLRRMYVTQLNRSLNQQVKRKPEPT SPFLERSSLAQAKAETCAMRPLPPPHLPLSRKPNDKELLELESASVIEGSLDVGRETKDEKQWKEMKLHLDDLPGVLARLSKIKLT  ++"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|9585",
+                  "accession": "9585",
+                  "title": "ENSPPRP00000020356.1 pep scaffold:PanPar1.0:KV860591.1:119476:120423:1 gene:ENSPPRG00000011444.1 transcript:ENSPPRT00000018771.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 315,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 32.7278,
+                  "score": 73,
+                  "evalue": 0.598427,
+                  "identity": 42,
+                  "positive": 66,
+                  "query_from": 553,
+                  "query_to": 1074,
+                  "query_frame": 1,
+                  "hit_from": 153,
+                  "hit_to": 295,
+                  "align_len": 177,
+                  "gaps": 37,
+                  "qseq": "DLPCFLLTFVGTGLASCAANSINQFFEVPFDSNMNRTKNRPLVRGQISPLLAVSFATCCAVPGVALLTWGVNPLTGALGVFNIFLYTCCYTPLKKISIANTWVGAVVGAIPGPPRGQKGFA--GERQRCLCKPLMTACLASPFPLNPHTGA-FLLGGILYSWQFPHFNALSWGLRED",
+                  "hseq": "NLAALLHTLLMARLSFCAGNSIHHFF------------------CDVVPLLQLS-CSDTSTNQVALFTVGSMILTG---------------PLSLIILSYAYIISTILGVSSAPGRQKAFSTCGSHLTIVFLFYGTAIGVYLFPPSSHSGVKDRIAAVFYTVVTPMLNPFIYSLRNN",
+                  "midline": "+L   L T +   L+ CA NSI+ FF                    + PLL +S  +  +   VAL T G   LTG               PL  I ++  ++ + +  +   P  QK F+  G     +     TA     FP + H+G    +  + Y+   P  N   + LR +"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|29025",
+                  "accession": "29025",
+                  "title": "ENSPPRP00000000818.1 pep scaffold:PanPar1.0:KV860365.1:7006710:7026915:-1 gene:ENSPPRG00000024569.1 transcript:ENSPPRT00000034392.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:NPHS1 description:NPHS1 adhesion molecule, nephrin [Source:HGNC Symbol;Acc:HGNC:7908]"
+                }
+              ],
+              "len": 1201,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 32.7278,
+                  "score": 73,
+                  "evalue": 0.861659,
+                  "identity": 20,
+                  "positive": 28,
+                  "query_from": 591,
+                  "query_to": 767,
+                  "query_frame": -2,
+                  "hit_from": 836,
+                  "hit_to": 888,
+                  "align_len": 59,
+                  "gaps": 6,
+                  "qseq": "FTPQVRRATPGTAQHVAKDTASNGLICPRTRGLFFVLFMFESNGTSKN*LMELAAQDAR",
+                  "hseq": "FAPQVEHPTPLTKVAAAGDSTSSATLHCRARGVPNIVFTWTKNGVA------LDLQDPR",
+                  "midline": "F PQV   TP T    A D+ S+  +  R RG+  ++F +  NG +      L  QD R"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|29024",
+                  "accession": "29024",
+                  "title": "ENSPPRP00000000825.1 pep scaffold:PanPar1.0:KV860365.1:7005874:7027838:-1 gene:ENSPPRG00000024569.1 transcript:ENSPPRT00000034387.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:NPHS1 description:NPHS1 adhesion molecule, nephrin [Source:HGNC Symbol;Acc:HGNC:7908]"
+                }
+              ],
+              "len": 1241,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 32.7278,
+                  "score": 73,
+                  "evalue": 0.90211,
+                  "identity": 20,
+                  "positive": 28,
+                  "query_from": 591,
+                  "query_to": 767,
+                  "query_frame": -2,
+                  "hit_from": 836,
+                  "hit_to": 888,
+                  "align_len": 59,
+                  "gaps": 6,
+                  "qseq": "FTPQVRRATPGTAQHVAKDTASNGLICPRTRGLFFVLFMFESNGTSKN*LMELAAQDAR",
+                  "hseq": "FAPQVEHPTPLTKVAAAGDSTSSATLHCRARGVPNIVFTWTKNGVA------LDLQDPR",
+                  "midline": "F PQV   TP T    A D+ S+  +  R RG+  ++F +  NG +      L  QD R"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|28023",
+                  "accession": "28023",
+                  "title": "ENSPPRP00000001857.1 pep scaffold:PanPar1.0:KV860283.1:19245970:19311712:-1 gene:ENSPPRG00000023833.1 transcript:ENSPPRT00000033278.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ZCCHC24 description:zinc finger CCHC-type containing 24 [Source:HGNC Symbol;Acc:HGNC:26911]"
+                }
+              ],
+              "len": 241,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 6.7608,
+                  "identity": 17,
+                  "positive": 21,
+                  "query_from": 332,
+                  "query_to": 463,
+                  "query_frame": -3,
+                  "hit_from": 98,
+                  "hit_to": 138,
+                  "align_len": 44,
+                  "gaps": 3,
+                  "qseq": "LANHPDGVSSLSTAFHPWSLSPHRVSPQLRRPIPVPAVLCHWAF",
+                  "hseq": "LNNIADGLSSLTEHFSDLTLTSETRKPSKR---PPPNYLCHLCF",
+                  "midline": "L N  DG+SSL+  F   +L+     P  R   P P  LCH  F"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|15241",
+                  "accession": "15241",
+                  "title": "ENSPPRP00000014521.1 pep scaffold:PanPar1.0:KV860329.1:3958707:4089281:1 gene:ENSPPRG00000007510.1 transcript:ENSPPRT00000012676.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MAGI1 description:membrane associated guanylate kinase, WW and PDZ domain containing 1 [Source:HGNC Symbol;Acc:HGNC:946]"
+                }
+              ],
+              "len": 1139,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.6462,
+                  "score": 65,
+                  "evalue": 7.68771,
+                  "identity": 14,
+                  "positive": 17,
+                  "query_from": 721,
+                  "query_to": 798,
+                  "query_frame": -1,
+                  "hit_from": 949,
+                  "hit_to": 973,
+                  "align_len": 26,
+                  "gaps": 1,
+                  "qseq": "VEDPQGSREGVHPPGQEGDAWNGTAR",
+                  "hseq": "VRDPKGSREYIRHP-TEHHTWNGTSR",
+                  "midline": "V DP+GSRE +  P  E   WNGT+R"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|15238",
+                  "accession": "15238",
+                  "title": "ENSPPRP00000014589.1 pep scaffold:PanPar1.0:KV860329.1:3433845:4086422:1 gene:ENSPPRG00000007510.1 transcript:ENSPPRT00000012734.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MAGI1 description:membrane associated guanylate kinase, WW and PDZ domain containing 1 [Source:HGNC Symbol;Acc:HGNC:946]"
+                }
+              ],
+              "len": 1446,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.6462,
+                  "score": 65,
+                  "evalue": 8.10192,
+                  "identity": 14,
+                  "positive": 17,
+                  "query_from": 721,
+                  "query_to": 798,
+                  "query_frame": -1,
+                  "hit_from": 1256,
+                  "hit_to": 1280,
+                  "align_len": 26,
+                  "gaps": 1,
+                  "qseq": "VEDPQGSREGVHPPGQEGDAWNGTAR",
+                  "hseq": "VRDPKGSREYIRHP-TEHHTWNGTSR",
+                  "midline": "V DP+GSRE +  P  E   WNGT+R"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|2810",
+                  "accession": "2810",
+                  "title": "ENSPPRP00000027127.1 pep scaffold:PanPar1.0:KV860394.1:3246742:3247818:1 gene:ENSPPRG00000018339.1 transcript:ENSPPRT00000027738.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 358,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.8758,
+                  "score": 63,
+                  "evalue": 9.37768,
+                  "identity": 23,
+                  "positive": 38,
+                  "query_from": 1000,
+                  "query_to": 1227,
+                  "query_frame": 1,
+                  "hit_from": 104,
+                  "hit_to": 167,
+                  "align_len": 78,
+                  "gaps": 16,
+                  "qseq": "FLLGGILYSWQFPHFNALSWGLREDYSRGGYCMMSVTHPALCRRVALRH--CLALIGLSAAAPVLDVTTWTFPAISLP",
+                  "hseq": "FLLFGVTESWLFSIMSVDRY-------------VAICHP-LRYKIIMSHWMCLLMVGICAAYGVVGGLCYTFFAMSLP",
+                  "midline": "FLL G+  SW F   +   +             +++ HP L  ++ + H  CL ++G+ AA  V+    +TF A+SLP"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13084",
+                  "accession": "13084",
+                  "title": "ENSPPRP00000016807.1 pep scaffold:PanPar1.0:KV860340.1:6403502:6536528:-1 gene:ENSPPRG00000008991.1 transcript:ENSPPRT00000015071.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:SETD2 description:SET domain containing 2, histone lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:18420]"
+                }
+              ],
+              "len": 2564,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 9.86287,
+                  "identity": 16,
+                  "positive": 20,
+                  "query_from": 876,
+                  "query_to": 980,
+                  "query_frame": 3,
+                  "hit_from": 672,
+                  "hit_to": 706,
+                  "align_len": 35,
+                  "gaps": 0,
+                  "qseq": "GHPGATSGPEGFCGRETEMPL*ASDDSVSCFPFSP",
+                  "hseq": "GSPGAESDLATFCTSKTDTVLMSSDDSVTGSEVSP",
+                  "midline": "G PGA S    FC  +T+  L +SDDSV+    SP"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 105,
+            "eff_space": 4487175680,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

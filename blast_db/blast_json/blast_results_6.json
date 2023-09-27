@@ -1,0 +1,213 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_6",
+          "query_title": "seq_006",
+          "query_len": 2796,
+          "query_masking": [
+            {
+              "from": 111,
+              "to": 159
+            },
+            {
+              "from": 252,
+              "to": 279
+            },
+            {
+              "from": 390,
+              "to": 423
+            },
+            {
+              "from": 2337,
+              "to": 2376
+            },
+            {
+              "from": 2577,
+              "to": 2616
+            },
+            {
+              "from": 2715,
+              "to": 2745
+            },
+            {
+              "from": 385,
+              "to": 415
+            },
+            {
+              "from": 2434,
+              "to": 2482
+            },
+            {
+              "from": 2635,
+              "to": 2659
+            },
+            {
+              "from": 938,
+              "to": 974
+            },
+            {
+              "from": 1850,
+              "to": 1883
+            },
+            {
+              "from": 2027,
+              "to": 2063
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|5185",
+                  "accession": "5185",
+                  "title": "ENSPPRP00000024726.1 pep scaffold:PanPar1.0:KV860315.1:7297813:7336425:1 gene:ENSPPRG00000014934.1 transcript:ENSPPRT00000023672.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:FECH description:ferrochelatase [Source:HGNC Symbol;Acc:HGNC:3647]"
+                }
+              ],
+              "len": 423,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 777.319,
+                  "score": 2006,
+                  "evalue": 0,
+                  "identity": 399,
+                  "positive": 400,
+                  "query_from": 199,
+                  "query_to": 1401,
+                  "query_frame": 1,
+                  "hit_from": 23,
+                  "hit_to": 423,
+                  "align_len": 401,
+                  "gaps": 0,
+                  "qseq": "VVPGSSRARQPWRGQSIGataaaatetaQRTRSPEPQVQPGKRKPKTGILMLNMGGPETLGDVHdfllrlfldrdlMTLPIQNKLAPIIAKRRTPKIQEQYRRIGGGSPIKMWTSKQGEGMVKLLDDLSPNTAPHKYYIGFRYVHPLTEEAIEEMERDGIERAIAFTQYPQYSCSTTGSSLNAIYRYYSEMGRRPAMKWSTIDRWPTHPLLIQCFADHIVKELDHFPPEKRSEVVILFSAHSLPMSVVNRGDPYPQEVGATVQRVMDNLGYSNPYRLVWQSKVGPMPWLGPQTDETIKGLCERGRKNILLVPIAFTSDHIETLYELDIEYSQVLANECGVENIRRAESLNGNPLFSKALADLVLSHIQSNELCSKQLTLSCPLCVNPVCRETKSFFTSQQL",
+                  "hseq": "LVPGSSRARQPWRGQSIGATAAAATETAQRTRSPEPQVQPGKRKPKTGILMLNMGGPETLGDVHDFLLRLFLDRDLMTLPIQNKLAPIIAKRRTPKIQEQYRRIGGGSPIKMWTSKQGEGMVKLLDDLSPNTAPHKYYIGFRYVHPLTEEAIEEMERDGIERAIAFTQYPQYSCSTTGSSLNAIYRYYSEMGRRPAMKWSTIDRWPTHPLLIQCFADHIVKELDHFPPEKRSEVVILFSAHSLPMSVVNRGDPYPQEVGATVQRVMDKLGYSNPYRLVWQSKVGPMPWLGPQTDETIKGLCERGRKNILLVPIAFTSDHIETLYELDIEYSQVLANECGVENIRRAESLNGNPLFSKALADLVLSHIQSNELCSKQLTLSCPLCVNPVCRETKSFFTSQQL",
+                  "midline": "+VPGSSRARQPWRGQSIGATAAAATETAQRTRSPEPQVQPGKRKPKTGILMLNMGGPETLGDVHDFLLRLFLDRDLMTLPIQNKLAPIIAKRRTPKIQEQYRRIGGGSPIKMWTSKQGEGMVKLLDDLSPNTAPHKYYIGFRYVHPLTEEAIEEMERDGIERAIAFTQYPQYSCSTTGSSLNAIYRYYSEMGRRPAMKWSTIDRWPTHPLLIQCFADHIVKELDHFPPEKRSEVVILFSAHSLPMSVVNRGDPYPQEVGATVQRVMD LGYSNPYRLVWQSKVGPMPWLGPQTDETIKGLCERGRKNILLVPIAFTSDHIETLYELDIEYSQVLANECGVENIRRAESLNGNPLFSKALADLVLSHIQSNELCSKQLTLSCPLCVNPVCRETKSFFTSQQL"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27912",
+                  "accession": "27912",
+                  "title": "ENSPPRP00000001938.1 pep scaffold:PanPar1.0:KV860312.1:19766612:19860817:-1 gene:ENSPPRG00000023766.1 transcript:ENSPPRT00000033198.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PIK3R1 description:phosphoinositide-3-kinase regulatory subunit 1 [Source:HGNC Symbol;Acc:HGNC:8979]"
+                }
+              ],
+              "len": 725,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 31.187,
+                  "score": 69,
+                  "evalue": 5.60917,
+                  "identity": 11,
+                  "positive": 17,
+                  "query_from": 2388,
+                  "query_to": 2468,
+                  "query_frame": -2,
+                  "hit_from": 257,
+                  "hit_to": 283,
+                  "align_len": 27,
+                  "gaps": 0,
+                  "qseq": "KNMINCCCIRVIFFPLFFKFPRAGSHH",
+                  "hseq": "KNLLNARVLSELFSPLLFRFPAASSEN",
+                  "midline": "KN++N   +  +F PL F+FP A S +"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6317",
+                  "accession": "6317",
+                  "title": "ENSPPRP00000023558.1 pep scaffold:PanPar1.0:KV860346.1:1483718:1512890:-1 gene:ENSPPRG00000013866.1 transcript:ENSPPRT00000022221.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ENOSF1 description:enolase superfamily member 1 [Source:HGNC Symbol;Acc:HGNC:30365]"
+                }
+              ],
+              "len": 361,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 7.424,
+                  "identity": 25,
+                  "positive": 42,
+                  "query_from": 532,
+                  "query_to": 768,
+                  "query_frame": 1,
+                  "hit_from": 43,
+                  "hit_to": 128,
+                  "align_len": 88,
+                  "gaps": 11,
+                  "qseq": "MWTSKQGEGMVKLLDDLSPNTAPHKYYIGFRYVHPLT--EEAIEEMERDGI-----ERAIAFTQYPQY--SCSTTGSSLNAIYRYYSE",
+                  "hseq": "LWAKQEGKPLWKLLVDMDPRMLLS--CIDFRYITDVLTEEEAYGILQKGQIGKKERERQMLMHGYPAYTTSCAWLGYSDDTLKQLCTE",
+                  "midline": "+W  ++G+ + KLL D+ P        I FRY+  +   EEA   +++  I     ER +    YP Y  SC+  G S + + +  +E"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|27050",
+                  "accession": "27050",
+                  "title": "ENSPPRP00000002816.1 pep scaffold:PanPar1.0:KV860287.1:17851092:17865720:1 gene:ENSPPRG00000023177.1 transcript:ENSPPRT00000000371.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:TIGIT description:T cell immunoreceptor with Ig and ITIM domains [Source:HGNC Symbol;Acc:HGNC:26838]"
+                }
+              ],
+              "len": 308,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 7.71061,
+                  "identity": 18,
+                  "positive": 26,
+                  "query_from": 1378,
+                  "query_to": 1530,
+                  "query_frame": 1,
+                  "hit_from": 26,
+                  "hit_to": 74,
+                  "align_len": 53,
+                  "gaps": 6,
+                  "qseq": "SFFTSQQL*PQPEDPVG--LGKCPTPRYLHCGGDVFRDQGRKLHWYLYRLWAQ",
+                  "hseq": "TLFLLNSVFPRPSLLIGSVLACQPQPRLLPVGPPL----GRSMQWYLFLIWAQ",
+                  "midline": "+ F    + P+P   +G  L   P PR L  G  +    GR + WYL+ +WAQ"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 111,
+            "eff_space": 9946163774,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

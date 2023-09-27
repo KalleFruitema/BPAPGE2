@@ -1,0 +1,240 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_7",
+          "query_title": "seq_007",
+          "query_len": 1381,
+          "query_masking": [
+            {
+              "from": 72,
+              "to": 111
+            },
+            {
+              "from": 126,
+              "to": 162
+            },
+            {
+              "from": 885,
+              "to": 918
+            },
+            {
+              "from": 1083,
+              "to": 1137
+            },
+            {
+              "from": 1146,
+              "to": 1179
+            },
+            {
+              "from": 406,
+              "to": 442
+            },
+            {
+              "from": 694,
+              "to": 730
+            },
+            {
+              "from": 1096,
+              "to": 1129
+            },
+            {
+              "from": 68,
+              "to": 98
+            },
+            {
+              "from": 407,
+              "to": 464
+            },
+            {
+              "from": 695,
+              "to": 740
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|2132",
+                  "accession": "2132",
+                  "title": "ENSPPRP00000027790.1 pep scaffold:PanPar1.0:KV860371.1:4373732:4414047:1 gene:ENSPPRG00000019516.1 transcript:ENSPPRT00000029066.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROS description:uroporphyrinogen III synthase [Source:HGNC Symbol;Acc:HGNC:12592]"
+                }
+              ],
+              "len": 264,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 415.616,
+                  "score": 1067,
+                  "evalue": 3.02375e-145,
+                  "identity": 220,
+                  "positive": 220,
+                  "query_from": 591,
+                  "query_to": 1253,
+                  "query_frame": 3,
+                  "hit_from": 1,
+                  "hit_to": 221,
+                  "align_len": 221,
+                  "gaps": 0,
+                  "qseq": "MKVLLLKDPKEDDCGQDPYIRELGLYGLEATLIPVlsfeflslssfseklsHPEGYGGLIFTSPRAVEAVELCLEKDNKTEVWKHSLKEKWNAKSVYVVGSATSSLVNKIGLDTEGESCGNAEKLAEYICSRESPALPLLFPCGTVKGEILPKMLKDKGIPMESIIVYQKVPHPGIQVNLHSYYSQQGIPASITFFSPSGLTHSLKHIQELSGDNIGRIKV",
+                  "hseq": "MKVLLLKDPKEDDCGQDPYIRELGLYGLEATLIPVLSFEFLSLSSFSEKLSHPEGYGGLIFTSPRAVEAVELCLEKDNKTEVWKHSLKEKWNAKSVYVVGSATSSLVNKIGLDTEGESCGNAEKLAEYICSRESPALPLLFPCGTVKGEILPKMLKDKGIPMESIIVYQKVPHPGIQVNLHSYYSQQGIPASITFFSPSGLTHSLKHIQELSGDNIGRIKF",
+                  "midline": "MKVLLLKDPKEDDCGQDPYIRELGLYGLEATLIPVLSFEFLSLSSFSEKLSHPEGYGGLIFTSPRAVEAVELCLEKDNKTEVWKHSLKEKWNAKSVYVVGSATSSLVNKIGLDTEGESCGNAEKLAEYICSRESPALPLLFPCGTVKGEILPKMLKDKGIPMESIIVYQKVPHPGIQVNLHSYYSQQGIPASITFFSPSGLTHSLKHIQELSGDNIGRIK "
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4638",
+                  "accession": "4638",
+                  "title": "ENSPPRP00000025255.1 pep scaffold:PanPar1.0:KV860340.1:9649458:9659465:1 gene:ENSPPRG00000015536.1 transcript:ENSPPRT00000024374.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEMK1 description:HemK methyltransferase family member 1 [Source:HGNC Symbol;Acc:HGNC:24923]"
+                }
+              ],
+              "len": 340,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.0314,
+                  "score": 66,
+                  "evalue": 4.30007,
+                  "identity": 11,
+                  "positive": 19,
+                  "query_from": 1203,
+                  "query_to": 1283,
+                  "query_frame": 3,
+                  "hit_from": 94,
+                  "hit_to": 120,
+                  "align_len": 27,
+                  "gaps": 0,
+                  "qseq": "LKHIQELSGDNIGRIKVRYSVGFWSFQ",
+                  "hseq": "LQHVQKLSSCRLQRMPLQYILGEWDFQ",
+                  "midline": "L+H+Q+LS   + R+ ++Y +G W FQ"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4102",
+                  "accession": "4102",
+                  "title": "ENSPPRP00000025810.1 pep scaffold:PanPar1.0:KV860347.1:7501172:7512650:-1 gene:ENSPPRG00000016191.1 transcript:ENSPPRT00000025207.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:GORASP1 description:golgi reassembly stacking protein 1 [Source:HGNC Symbol;Acc:HGNC:16769]"
+                }
+              ],
+              "len": 433,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 7.75129,
+                  "identity": 16,
+                  "positive": 18,
+                  "query_from": 153,
+                  "query_to": 245,
+                  "query_frame": 3,
+                  "hit_from": 358,
+                  "hit_to": 388,
+                  "align_len": 31,
+                  "gaps": 0,
+                  "qseq": "ASFPCHPGPGTSEDSLYTLTLPKSLSFDPTP",
+                  "hseq": "VSFPDSPGPQAQPDHLPQLTLPDSLTFTASP",
+                  "midline": " SFP  PGP    D L  LTLP SL+F  +P"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|14962",
+                  "accession": "14962",
+                  "title": "ENSPPRP00000014987.1 pep scaffold:PanPar1.0:KV860278.1:26145755:26169019:-1 gene:ENSPPRG00000007697.1 transcript:ENSPPRT00000013153.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 54,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 26.5646,
+                  "score": 57,
+                  "evalue": 8.40226,
+                  "identity": 12,
+                  "positive": 23,
+                  "query_from": 709,
+                  "query_to": 837,
+                  "query_frame": 1,
+                  "hit_from": 7,
+                  "hit_to": 49,
+                  "align_len": 43,
+                  "gaps": 0,
+                  "qseq": "FCLFPVFLRSCLILKAMGASFLPAPEQWKQWNCVWRKTIKLKS",
+                  "hseq": "FCVFFIFVMSLLLINGQRPANLALRRKLHRHNCLQRRCMPLHS",
+                  "midline": "FC+F +F+ S L++     + L    +  + NC+ R+ + L S"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22707",
+                  "accession": "22707",
+                  "title": "ENSPPRP00000007179.1 pep scaffold:PanPar1.0:KV860275.1:26103759:26286692:1 gene:ENSPPRG00000002405.1 transcript:ENSPPRT00000004941.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:FAT4 description:FAT atypical cadherin 4 [Source:HGNC Symbol;Acc:HGNC:23109]"
+                }
+              ],
+              "len": 4981,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.261,
+                  "score": 64,
+                  "evalue": 8.76874,
+                  "identity": 16,
+                  "positive": 21,
+                  "query_from": 181,
+                  "query_to": 288,
+                  "query_frame": 1,
+                  "hit_from": 4681,
+                  "hit_to": 4725,
+                  "align_len": 45,
+                  "gaps": 9,
+                  "qseq": "GLQKTPSTH*HCPNPCPLTRLPPEP---------KLPTQFLHLGI",
+                  "hseq": "GLRTSSLSHSACPTPNPLSRHSPAPFSKSSTFYRNSPARELHLPI",
+                  "midline": "GL+ +  +H  CP P PL+R  P P           P + LHL I"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 105,
+            "eff_space": 4364239360,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

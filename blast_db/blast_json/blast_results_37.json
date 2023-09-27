@@ -1,0 +1,236 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_37",
+          "query_title": "seq_037",
+          "query_len": 2431,
+          "query_masking": [
+            {
+              "from": 258,
+              "to": 273
+            },
+            {
+              "from": 738,
+              "to": 759
+            },
+            {
+              "from": 1449,
+              "to": 1482
+            },
+            {
+              "from": 1683,
+              "to": 1704
+            },
+            {
+              "from": 2295,
+              "to": 2334
+            },
+            {
+              "from": 715,
+              "to": 754
+            },
+            {
+              "from": 1039,
+              "to": 1090
+            },
+            {
+              "from": 1757,
+              "to": 1778
+            },
+            {
+              "from": 2012,
+              "to": 2042
+            },
+            {
+              "from": 2372,
+              "to": 2411
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|23160",
+                  "accession": "23160",
+                  "title": "ENSPPRP00000006737.1 pep scaffold:PanPar1.0:KV860287.1:3325694:3343291:-1 gene:ENSPPRG00000002075.1 transcript:ENSPPRT00000004457.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CPOX description:coproporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:2321]"
+                }
+              ],
+              "len": 445,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 255.758,
+                  "score": 652,
+                  "evalue": 1.18417e-76,
+                  "identity": 120,
+                  "positive": 120,
+                  "query_from": 3,
+                  "query_to": 362,
+                  "query_frame": 3,
+                  "hit_from": 326,
+                  "hit_to": 445,
+                  "align_len": 120,
+                  "gaps": 0,
+                  "qseq": "GGIFFDDLDSPSKEEVFRFVQSCAQAVVPSYIPLVKKHCDDSFTPQEKLWQQLRRGRYVEFNLVYDRGTKFGLFTPGSRIESILMSLPLTARWEYMHSPPENSKEAEILEVLRHPRDWVH",
+                  "hseq": "GGIFFDDLDSPSKEEVFRFVQSCAQAVVPSYIPLVKKHCDDSFTPQEKLWQQLRRGRYVEFNLVYDRGTKFGLFTPGSRIESILMSLPLTARWEYMHSPPENSKEAEILEVLRHPRDWVH",
+                  "midline": "GGIFFDDLDSPSKEEVFRFVQSCAQAVVPSYIPLVKKHCDDSFTPQEKLWQQLRRGRYVEFNLVYDRGTKFGLFTPGSRIESILMSLPLTARWEYMHSPPENSKEAEILEVLRHPRDWVH"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|18972",
+                  "accession": "18972",
+                  "title": "ENSPPRP00000010862.1 pep scaffold:PanPar1.0:KV860359.1:8136010:8356236:-1 gene:ENSPPRG00000004945.1 transcript:ENSPPRT00000008828.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 662,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 6.74174,
+                  "identity": 11,
+                  "positive": 16,
+                  "query_from": 1887,
+                  "query_to": 1967,
+                  "query_frame": -3,
+                  "hit_from": 536,
+                  "hit_to": 562,
+                  "align_len": 27,
+                  "gaps": 0,
+                  "qseq": "TYCSHTVSLLLCLASFPWHNAVLLFTR",
+                  "hseq": "TYCGESSASSLTMANVPWHEEVVHFVR",
+                  "midline": "TYC  + +  L +A+ PWH  V+ F R"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|18971",
+                  "accession": "18971",
+                  "title": "ENSPPRP00000010893.1 pep scaffold:PanPar1.0:KV860359.1:8136010:8358755:-1 gene:ENSPPRG00000004945.1 transcript:ENSPPRT00000008852.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 709,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 6.93693,
+                  "identity": 11,
+                  "positive": 16,
+                  "query_from": 1887,
+                  "query_to": 1967,
+                  "query_frame": -3,
+                  "hit_from": 583,
+                  "hit_to": 609,
+                  "align_len": 27,
+                  "gaps": 0,
+                  "qseq": "TYCSHTVSLLLCLASFPWHNAVLLFTR",
+                  "hseq": "TYCGESSASSLTMANVPWHEEVVHFVR",
+                  "midline": "TYC  + +  L +A+ PWH  V+ F R"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|29178",
+                  "accession": "29178",
+                  "title": "ENSPPRP00000000658.1 pep scaffold:PanPar1.0:KV860333.1:14281982:14374519:1 gene:ENSPPRG00000024674.1 transcript:ENSPPRT00000034561.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ANKFY1 description:ankyrin repeat and FYVE domain containing 1 [Source:HGNC Symbol;Acc:HGNC:20763]"
+                }
+              ],
+              "len": 1163,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 7.83438,
+                  "identity": 13,
+                  "positive": 23,
+                  "query_from": 1481,
+                  "query_to": 1597,
+                  "query_frame": -1,
+                  "hit_from": 948,
+                  "hit_to": 986,
+                  "align_len": 39,
+                  "gaps": 0,
+                  "qseq": "ICCKIVEESIHFPALKSHIHNHIHLTYSKIMLNNMKILF",
+                  "hseq": "ICSVLLENAVDFAALDENGNNALHLAVMHGRLNNIRVLL",
+                  "midline": "IC  ++E ++ F AL  + +N +HL      LNN+++L "
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|24579",
+                  "accession": "24579",
+                  "title": "ENSPPRP00000005312.1 pep scaffold:PanPar1.0:KV860318.1:11177098:11216310:1 gene:ENSPPRG00000001123.1 transcript:ENSPPRT00000002975.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DSC2 description:desmocollin 2 [Source:HGNC Symbol;Acc:HGNC:3036]"
+                }
+              ],
+              "len": 902,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.0314,
+                  "score": 66,
+                  "evalue": 9.33852,
+                  "identity": 18,
+                  "positive": 27,
+                  "query_from": 204,
+                  "query_to": 362,
+                  "query_frame": 3,
+                  "hit_from": 330,
+                  "hit_to": 385,
+                  "align_len": 56,
+                  "gaps": 3,
+                  "qseq": "GTKFGLFTPGS---RIESILMSLPLTARWEYMHSPPENSKEAEILEVLRHPRDWVH",
+                  "hseq": "GQYFGLQTTSTCIINVEDVNDNLPTFTRTSYVTSVEENRVDVEILRVTVEDKDLIN",
+                  "midline": "G  FGL T  +    +E +  +LP   R  Y+ S  EN  + EIL V    +D ++"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 109,
+            "eff_space": 8534212340,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

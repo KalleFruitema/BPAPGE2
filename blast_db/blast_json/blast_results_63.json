@@ -1,0 +1,309 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_63",
+          "query_title": "seq_063",
+          "query_len": 723,
+          "query_masking": [
+            {
+              "from": 159,
+              "to": 219
+            },
+            {
+              "from": 432,
+              "to": 495
+            },
+            {
+              "from": 148,
+              "to": 190
+            },
+            {
+              "from": 167,
+              "to": 203
+            },
+            {
+              "from": 680,
+              "to": 701
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13193",
+                  "accession": "13193",
+                  "title": "ENSPPRP00000016708.1 pep scaffold:PanPar1.0:KV860423.1:2526115:2530005:1 gene:ENSPPRG00000008923.1 transcript:ENSPPRT00000014971.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 477,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 380.178,
+                  "score": 975,
+                  "evalue": 1.01822e-131,
+                  "identity": 239,
+                  "positive": 239,
+                  "query_from": 1,
+                  "query_to": 720,
+                  "query_frame": 1,
+                  "hit_from": 238,
+                  "hit_to": 477,
+                  "align_len": 240,
+                  "gaps": 0,
+                  "qseq": "QALNTHLTSRGVRILRGQPVCGLSLQADRRWKVSLGDSSLDADHVISAVPASVlgkllpaeaaplaralsaitaVSVAVVNLQYRGARLPVQGFGHLVPSSEDPGVLGIVYDSVAFPEQDGSPPGLRVTVMLGGSWLQTLEARGavlsqellqqqaqeaaatqlglKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAARVLGSEPNS",
+                  "hseq": "QALNTHLTSRGVRILRGQPVCGLSLQADRRWKVSLGDSSLDADHVISAVPASVLGKLLPAEAAPLARALSAITAVSVAVVNLQYRGARLPVQGFGHLVPSSEDPGVLGIVYDSVAFPEQDGSPPGLRVTVMLGGSWLQTLEARGAVLSQELLQQQAQEAAATQLGLKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAAWVLGSEPNS",
+                  "midline": "QALNTHLTSRGVRILRGQPVCGLSLQADRRWKVSLGDSSLDADHVISAVPASVLGKLLPAEAAPLARALSAITAVSVAVVNLQYRGARLPVQGFGHLVPSSEDPGVLGIVYDSVAFPEQDGSPPGLRVTVMLGGSWLQTLEARGAVLSQELLQQQAQEAAATQLGLKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAA VLGSEPNS"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13195",
+                  "accession": "13195",
+                  "title": "ENSPPRP00000016684.1 pep scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 transcript:ENSPPRT00000014941.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 140,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 174.481,
+                  "score": 441,
+                  "evalue": 1.7678e-55,
+                  "identity": 110,
+                  "positive": 110,
+                  "query_from": 388,
+                  "query_to": 720,
+                  "query_frame": 1,
+                  "hit_from": 30,
+                  "hit_to": 140,
+                  "align_len": 111,
+                  "gaps": 0,
+                  "qseq": "VMLGGSWLQTLEARGavlsqellqqqaqeaaatqlglKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAARVLGSEPNS",
+                  "hseq": "VMLGGSWLQTLEARGAVLSQELLQQQAQEAAATQLGLKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAAWVLGSEPNS",
+                  "midline": "VMLGGSWLQTLEARGAVLSQELLQQQAQEAAATQLGLKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAA VLGSEPNS"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13194",
+                  "accession": "13194",
+                  "title": "ENSPPRP00000016679.1 pep scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 transcript:ENSPPRT00000014946.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 185,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 174.866,
+                  "score": 442,
+                  "evalue": 5.39795e-55,
+                  "identity": 110,
+                  "positive": 111,
+                  "query_from": 382,
+                  "query_to": 720,
+                  "query_frame": 1,
+                  "hit_from": 73,
+                  "hit_to": 185,
+                  "align_len": 113,
+                  "gaps": 0,
+                  "qseq": "VTVMLGGSWLQTLEARGavlsqellqqqaqeaaatqlglKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAARVLGSEPNS",
+                  "hseq": "LLVMLGGSWLQTLEARGAVLSQELLQQQAQEAAATQLGLKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAAWVLGSEPNS",
+                  "midline": "+ VMLGGSWLQTLEARGAVLSQELLQQQAQEAAATQLGLKEPPSHCLVHLHKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGVAVNDCIESGRQAAA VLGSEPNS"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|5191",
+                  "accession": "5191",
+                  "title": "ENSPPRP00000024750.1 pep scaffold:PanPar1.0:KV860310.1:10002239:10003321:-1 gene:ENSPPRG00000014929.1 transcript:ENSPPRT00000023691.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:GPR68 description:G protein-coupled receptor 68 [Source:HGNC Symbol;Acc:HGNC:4519]"
+                }
+              ],
+              "len": 360,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 31.187,
+                  "score": 69,
+                  "evalue": 0.759419,
+                  "identity": 15,
+                  "positive": 19,
+                  "query_from": 532,
+                  "query_to": 651,
+                  "query_frame": 1,
+                  "hit_from": 168,
+                  "hit_to": 207,
+                  "align_len": 40,
+                  "gaps": 0,
+                  "qseq": "HKNCIPQYTLGHWQKLEAATQFLASQRLPLTLAGASYEGV",
+                  "hseq": "HRVCFEHYPLEPWQRGINYYRFLVGFLFPLCLLLASYRGI",
+                  "midline": "H+ C   Y L  WQ+     +FL     PL L  ASY G+"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6968",
+                  "accession": "6968",
+                  "title": "ENSPPRP00000022989.1 pep scaffold:PanPar1.0:KV860445.1:71745:164063:-1 gene:ENSPPRG00000013323.1 transcript:ENSPPRT00000021523.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:RB1CC1 description:RB1 inducible coiled-coil 1 [Source:HGNC Symbol;Acc:HGNC:15574]"
+                }
+              ],
+              "len": 1593,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.8018,
+                  "score": 68,
+                  "evalue": 1.23148,
+                  "identity": 17,
+                  "positive": 22,
+                  "query_from": 377,
+                  "query_to": 502,
+                  "query_frame": -3,
+                  "hit_from": 1388,
+                  "hit_to": 1431,
+                  "align_len": 44,
+                  "gaps": 2,
+                  "qseq": "LSVLTGWQLLPGPVVGAAPEIRR--RPWLPASVTRTLPASQSLG",
+                  "hseq": "VSKLRGGSFVPSPYVAAAPELYGACAPELPGEPERSGPETQDEG",
+                  "midline": "+S L G   +P P V AAPE+     P LP    R+ P +Q  G"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|7581",
+                  "accession": "7581",
+                  "title": "ENSPPRP00000022234.1 pep scaffold:PanPar1.0:KV860367.1:2922671:3022032:-1 gene:ENSPPRG00000012906.1 transcript:ENSPPRT00000020749.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ZNF236 description:zinc finger protein 236 [Source:HGNC Symbol;Acc:HGNC:13028]"
+                }
+              ],
+              "len": 1843,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.8758,
+                  "score": 63,
+                  "evalue": 5.43007,
+                  "identity": 16,
+                  "positive": 22,
+                  "query_from": 329,
+                  "query_to": 475,
+                  "query_frame": -3,
+                  "hit_from": 858,
+                  "hit_to": 906,
+                  "align_len": 49,
+                  "gaps": 0,
+                  "qseq": "LPGPVVGAAPEIRRRPWLPASVTRTLPASQSLGGQGGFRPAQGKQLSHT",
+                  "hseq": "LPGPVDQFEERAPAQSFEPAGLSQGFPVTDPYGQQTAFAPVQQLQDSST",
+                  "midline": "LPGPV         + + PA +++  P +   G Q  F P Q  Q S T"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|7580",
+                  "accession": "7580",
+                  "title": "ENSPPRP00000022247.1 pep scaffold:PanPar1.0:KV860367.1:2922671:3024820:-1 gene:ENSPPRG00000012906.1 transcript:ENSPPRT00000020755.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ZNF236 description:zinc finger protein 236 [Source:HGNC Symbol;Acc:HGNC:13028]"
+                }
+              ],
+              "len": 1846,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.4906,
+                  "score": 62,
+                  "evalue": 6.08631,
+                  "identity": 16,
+                  "positive": 22,
+                  "query_from": 329,
+                  "query_to": 475,
+                  "query_frame": -3,
+                  "hit_from": 861,
+                  "hit_to": 909,
+                  "align_len": 49,
+                  "gaps": 0,
+                  "qseq": "LPGPVVGAAPEIRRRPWLPASVTRTLPASQSLGGQGGFRPAQGKQLSHT",
+                  "hseq": "LPGPVDQFEERAPAQSFEPAGLSQGFPVTDPYGQQTAFAPVQQLQDSST",
+                  "midline": "LPGPV         + + PA +++  P +   G Q  F P Q  Q S T"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|14382",
+                  "accession": "14382",
+                  "title": "ENSPPRP00000015382.1 pep scaffold:PanPar1.0:KV860272.1:14997151:15149013:1 gene:ENSPPRG00000008098.1 transcript:ENSPPRT00000013567.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:SPTBN1 description:spectrin beta, non-erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11275]"
+                }
+              ],
+              "len": 2364,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 9.52437,
+                  "identity": 17,
+                  "positive": 28,
+                  "query_from": 221,
+                  "query_to": 421,
+                  "query_frame": -3,
+                  "hit_from": 2100,
+                  "hit_to": 2166,
+                  "align_len": 67,
+                  "gaps": 0,
+                  "qseq": "PASVTRTLPASQSLGGQGGFRPAQGKQLSHTRFPGRPGLLRMAPNVRIPARADGLLGTAGSPQPQTP",
+                  "hseq": "PPSPEPSTKASEEMESQQQWDTSKGEQVSQNGLPTEQGSPRMAEAVDTSEMVNGAAEQRTSSKESSP",
+                  "midline": "P S   +  AS+ +  Q  +  ++G+Q+S    P   G  RMA  V      +G      S +  +P"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 98,
+            "eff_space": 1787842199,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

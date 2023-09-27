@@ -1,0 +1,472 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_38",
+          "query_title": "seq_038",
+          "query_len": 682,
+          "query_masking": [
+            {
+              "from": 213,
+              "to": 234
+            },
+            {
+              "from": 46,
+              "to": 115
+            },
+            {
+              "from": 196,
+              "to": 241
+            },
+            {
+              "from": 586,
+              "to": 619
+            },
+            {
+              "from": 47,
+              "to": 122
+            },
+            {
+              "from": 182,
+              "to": 233
+            },
+            {
+              "from": 629,
+              "to": 665
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13193",
+                  "accession": "13193",
+                  "title": "ENSPPRP00000016708.1 pep scaffold:PanPar1.0:KV860423.1:2526115:2530005:1 gene:ENSPPRG00000008923.1 transcript:ENSPPRT00000014971.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 477,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 410.223,
+                  "score": 1053,
+                  "evalue": 9.12579e-144,
+                  "identity": 215,
+                  "positive": 215,
+                  "query_from": 1,
+                  "query_to": 681,
+                  "query_frame": 1,
+                  "hit_from": 1,
+                  "hit_to": 216,
+                  "align_len": 227,
+                  "gaps": 11,
+                  "qseq": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELGPRGIRPAGALGARTlllfllflRMCGEQVSELGLDSEVLPVRGDHPAAKNRFLYVGGALHALPSGLRGLFRPSPPFSKPLFWAGLRELTAPRGKDPDETVHSFAQRRLGPEVASLAMDSLCRGVFAGNSRELSVRSCFPSLFQAEQTHRSVLLGLLRGAGQSPQPDSALI",
+                  "hseq": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELGPRGIRPAGALGARTLLL-----------VSELGLDSEVLPVRGDHPAAKNRFLYVGGALHALPSGLRGLFRPSPPFSKPLFWAGLRELTAPRGKDPDETVHSFAQRRLGPEVASLAMDSLCRGVFAGNSRELSVRSCFPSLFQAEQTHRSVLLGLLLGAGQSPQPDSALI",
+                  "midline": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELGPRGIRPAGALGARTLLL           VSELGLDSEVLPVRGDHPAAKNRFLYVGGALHALPSGLRGLFRPSPPFSKPLFWAGLRELTAPRGKDPDETVHSFAQRRLGPEVASLAMDSLCRGVFAGNSRELSVRSCFPSLFQAEQTHRSVLLGLL GAGQSPQPDSALI"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13194",
+                  "accession": "13194",
+                  "title": "ENSPPRP00000016679.1 pep scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 transcript:ENSPPRT00000014946.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 185,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 141.354,
+                  "score": 355,
+                  "evalue": 4.13483e-42,
+                  "identity": 71,
+                  "positive": 71,
+                  "query_from": 1,
+                  "query_to": 213,
+                  "query_frame": 1,
+                  "hit_from": 1,
+                  "hit_to": 71,
+                  "align_len": 71,
+                  "gaps": 0,
+                  "qseq": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELGPRGIRPAGALGART",
+                  "hseq": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELGPRGIRPAGALGART",
+                  "midline": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELGPRGIRPAGALGART"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13195",
+                  "accession": "13195",
+                  "title": "ENSPPRP00000016684.1 pep scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 transcript:ENSPPRT00000014941.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 140,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 65.855,
+                  "score": 159,
+                  "evalue": 1.32768e-13,
+                  "identity": 34,
+                  "positive": 39,
+                  "query_from": 1,
+                  "query_to": 150,
+                  "query_frame": 1,
+                  "hit_from": 1,
+                  "hit_to": 44,
+                  "align_len": 50,
+                  "gaps": 6,
+                  "qseq": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPG",
+                  "hseq": "MGRTVVVLGGGISGLAASYHLSRAPCPPKVMLG------GSWLQTLEARG",
+                  "midline": "MGRTVVVLGGGISGLAASYHLSRAPCPPKV+L       G W++++   G"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|14656",
+                  "accession": "14656",
+                  "title": "ENSPPRP00000015257.1 pep scaffold:PanPar1.0:KV860394.1:3138225:3148681:-1 gene:ENSPPRG00000007909.1 transcript:ENSPPRT00000013433.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 527,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 38.5058,
+                  "score": 88,
+                  "evalue": 0.00333843,
+                  "identity": 25,
+                  "positive": 36,
+                  "query_from": 7,
+                  "query_to": 183,
+                  "query_frame": 1,
+                  "hit_from": 55,
+                  "hit_to": 112,
+                  "align_len": 60,
+                  "gaps": 3,
+                  "qseq": "RTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRG-PGGAIFELGPRGI",
+                  "hseq": "KRVVVVGAGMSGLAAAKALQDA--GHQVTILEASHHIGGRVVTYRNEEEGWYYELGPMRI",
+                  "midline": "+ VVV+G G+SGLAA+  L  A    +V ++EAS  +GG + + R    G  +ELGP  I"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|14657",
+                  "accession": "14657",
+                  "title": "ENSPPRP00000015243.1 pep scaffold:PanPar1.0:KV860394.1:3138225:3148681:-1 gene:ENSPPRG00000007909.1 transcript:ENSPPRT00000013426.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 505,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 37.7354,
+                  "score": 86,
+                  "evalue": 0.00469589,
+                  "identity": 25,
+                  "positive": 36,
+                  "query_from": 7,
+                  "query_to": 183,
+                  "query_frame": 1,
+                  "hit_from": 55,
+                  "hit_to": 112,
+                  "align_len": 60,
+                  "gaps": 3,
+                  "qseq": "RTVVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRG-PGGAIFELGPRGI",
+                  "hseq": "KRVVVVGAGMSGLAAAKALQDAGH--QVTILEASHHIGGRVVTYRNEEEGWYYELGPMRI",
+                  "midline": "+ VVV+G G+SGLAA+  L  A    +V ++EAS  +GG + + R    G  +ELGP  I"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|3215",
+                  "accession": "3215",
+                  "title": "ENSPPRP00000026708.1 pep scaffold:PanPar1.0:KV860341.1:5686321:5767254:1 gene:ENSPPRG00000017638.1 transcript:ENSPPRT00000026894.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MAOA description:monoamine oxidase A [Source:HGNC Symbol;Acc:HGNC:6833]"
+                }
+              ],
+              "len": 527,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 36.1946,
+                  "score": 82,
+                  "evalue": 0.0163357,
+                  "identity": 34,
+                  "positive": 54,
+                  "query_from": 13,
+                  "query_to": 336,
+                  "query_frame": 1,
+                  "hit_from": 16,
+                  "hit_to": 122,
+                  "align_len": 116,
+                  "gaps": 17,
+                  "qseq": "VVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELG--------PRGIRPAGALGARTlllfllflRMCGEQVSELGLDSEVLPVRGDHPAAKNRFLYV",
+                  "hseq": "VVVIGGGISGLSAAKLLAEHEV--NVLVLEARDRVGGRTYTVRNEHVNYVDVGGAYVGPTQNRILRLSKELGLET-----YKVNVCERLVQY--VKGKTYPFRGAFPPVWNPVVYL",
+                  "midline": "VVV+GGGISGL+A+  L+       V+++EA +R+GG   +VR       ++G         R +R +  LG  T       + +C   V    +  +  P RG  P   N  +Y+"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6851",
+                  "accession": "6851",
+                  "title": "ENSPPRP00000023119.1 pep scaffold:PanPar1.0:KV860341.1:5785196:5905150:-1 gene:ENSPPRG00000013398.1 transcript:ENSPPRT00000021651.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MAOB description:monoamine oxidase B [Source:HGNC Symbol;Acc:HGNC:6834]"
+                }
+              ],
+              "len": 520,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 36.1946,
+                  "score": 82,
+                  "evalue": 0.0193195,
+                  "identity": 27,
+                  "positive": 40,
+                  "query_from": 13,
+                  "query_to": 213,
+                  "query_frame": 1,
+                  "hit_from": 7,
+                  "hit_to": 79,
+                  "align_len": 75,
+                  "gaps": 10,
+                  "qseq": "VVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELG--------PRGIRPAGALGART",
+                  "hseq": "VIVVGGGISGMAAAKLLHDSGL--NVVVLEARDRVGGRTYTIRNQEVKYVDLGGSYVGPTQNRILRLAKELGLET",
+                  "midline": "V+V+GGGISG+AA+  L  +     VV++EA +R+GG   ++R       +LG         R +R A  LG  T"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|8101",
+                  "accession": "8101",
+                  "title": "ENSPPRP00000021815.1 pep scaffold:PanPar1.0:KV860309.1:19674215:19742592:1 gene:ENSPPRG00000012548.1 transcript:ENSPPRT00000020316.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:KDM1A description:lysine demethylase 1A [Source:HGNC Symbol;Acc:HGNC:29079]"
+                }
+              ],
+              "len": 877,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 33.4982,
+                  "score": 75,
+                  "evalue": 0.155967,
+                  "identity": 20,
+                  "positive": 32,
+                  "query_from": 13,
+                  "query_to": 171,
+                  "query_frame": 1,
+                  "hit_from": 302,
+                  "hit_to": 351,
+                  "align_len": 53,
+                  "gaps": 3,
+                  "qseq": "VVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELG",
+                  "hseq": "VIIIGSGVSGLAAARQLQSFGM--DVTLLEARDRVGGRVATFRK-GNYVADLG",
+                  "midline": "V+++G G+SGLAA+  L        V L+EA +R+GG + + R  G  + +LG"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|8100",
+                  "accession": "8100",
+                  "title": "ENSPPRP00000021837.1 pep scaffold:PanPar1.0:KV860309.1:19674068:19742917:1 gene:ENSPPRG00000012548.1 transcript:ENSPPRT00000020326.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:KDM1A description:lysine demethylase 1A [Source:HGNC Symbol;Acc:HGNC:29079]"
+                }
+              ],
+              "len": 853,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 33.113,
+                  "score": 74,
+                  "evalue": 0.162521,
+                  "identity": 20,
+                  "positive": 32,
+                  "query_from": 13,
+                  "query_to": 171,
+                  "query_frame": 1,
+                  "hit_from": 282,
+                  "hit_to": 331,
+                  "align_len": 53,
+                  "gaps": 3,
+                  "qseq": "VVVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGGWIRSVRGPGGAIFELG",
+                  "hseq": "VIIIGSGVSGLAAARQLQSFGM--DVTLLEARDRVGGRVATFRK-GNYVADLG",
+                  "midline": "V+++G G+SGLAA+  L        V L+EA +R+GG + + R  G  + +LG"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|21871",
+                  "accession": "21871",
+                  "title": "ENSPPRP00000008038.1 pep scaffold:PanPar1.0:KV860312.1:11359764:11431242:1 gene:ENSPPRG00000002973.1 transcript:ENSPPRT00000005852.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DMGDH description:dimethylglycine dehydrogenase [Source:HGNC Symbol;Acc:HGNC:24475]"
+                }
+              ],
+              "len": 864,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 30.4166,
+                  "score": 67,
+                  "evalue": 1.24661,
+                  "identity": 16,
+                  "positive": 24,
+                  "query_from": 16,
+                  "query_to": 123,
+                  "query_frame": 1,
+                  "hit_from": 51,
+                  "hit_to": 85,
+                  "align_len": 36,
+                  "gaps": 1,
+                  "qseq": "VVLGGGISGLAASYHLSRAPCPPKVVLVEASERLGG",
+                  "hseq": "VIIGGGCIGVSLAYHLAKAGM-KDVVLLEKSELTAG",
+                  "midline": "V++GGG  G++ +YHL++A     VVL+E SE   G"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|8306",
+                  "accession": "8306",
+                  "title": "ENSPPRP00000021663.1 pep scaffold:PanPar1.0:KV860382.1:3558626:3579505:1 gene:ENSPPRG00000012402.1 transcript:ENSPPRT00000020135.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:TYK2 description:tyrosine kinase 2 [Source:HGNC Symbol;Acc:HGNC:12440]"
+                }
+              ],
+              "len": 1181,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 29.6462,
+                  "score": 65,
+                  "evalue": 2.81925,
+                  "identity": 13,
+                  "positive": 24,
+                  "query_from": 460,
+                  "query_to": 606,
+                  "query_frame": 1,
+                  "hit_from": 174,
+                  "hit_to": 223,
+                  "align_len": 50,
+                  "gaps": 1,
+                  "qseq": "DETVHSFAQRRLGPEVASLAMDSLCRGV-FAGNSRELSVRSCFPSLFQAE",
+                  "hseq": "EEEIHHFKNESLGMAFLHLCHLALCHGIPLEKVAKKISFKDCIPRSFRLQ",
+                  "midline": "+E +H F    LG     L   +LC G+     ++++S + C P  F+ +"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|11228",
+                  "accession": "11228",
+                  "title": "ENSPPRP00000018575.1 pep scaffold:PanPar1.0:KV860292.1:17264398:17583351:1 gene:ENSPPRG00000010277.1 transcript:ENSPPRT00000016923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COG5 description:component of oligomeric golgi complex 5 [Source:HGNC Symbol;Acc:HGNC:14857]"
+                }
+              ],
+              "len": 861,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 7.37909,
+                  "identity": 16,
+                  "positive": 21,
+                  "query_from": 298,
+                  "query_to": 435,
+                  "query_frame": 1,
+                  "hit_from": 810,
+                  "hit_to": 859,
+                  "align_len": 50,
+                  "gaps": 4,
+                  "qseq": "GDHPAAKNRFLYVGGALHALPSGLRG----LFRPSPPFSKPLFWAGLREL",
+                  "hseq": "DDHPSEKDRLLLIRGALEAYVQSVRSREGKEFAPVYPIMVQLLQKAMSAL",
+                  "midline": " DHP+ K+R L + GAL A    +R      F P  P    L    +  L"
+                }
+              ]
+            },
+            {
+              "num": 13,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|11229",
+                  "accession": "11229",
+                  "title": "ENSPPRP00000018569.1 pep scaffold:PanPar1.0:KV860292.1:17264398:17583351:1 gene:ENSPPRG00000010277.1 transcript:ENSPPRT00000016917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COG5 description:component of oligomeric golgi complex 5 [Source:HGNC Symbol;Acc:HGNC:14857]"
+                }
+              ],
+              "len": 840,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 28.1054,
+                  "score": 61,
+                  "evalue": 7.49222,
+                  "identity": 16,
+                  "positive": 21,
+                  "query_from": 298,
+                  "query_to": 435,
+                  "query_frame": 1,
+                  "hit_from": 789,
+                  "hit_to": 838,
+                  "align_len": 50,
+                  "gaps": 4,
+                  "qseq": "GDHPAAKNRFLYVGGALHALPSGLRG----LFRPSPPFSKPLFWAGLREL",
+                  "hseq": "DDHPSEKDRLLLIRGALEAYVQSVRSREGKEFAPVYPIMVQLLQKAMSAL",
+                  "midline": " DHP+ K+R L + GAL A    +R      F P  P    L    +  L"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 98,
+            "eff_space": 1612808697,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}

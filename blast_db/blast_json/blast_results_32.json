@@ -1,0 +1,96 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastx",
+      "version": "BLASTX 2.12.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+      },
+      "params": {
+        "matrix": "BLOSUM62",
+        "expect": 10,
+        "gap_open": 11,
+        "gap_extend": 1,
+        "filter": "L;",
+        "cbs": 2,
+        "query_gencode": 1
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_32",
+          "query_title": "seq_032",
+          "query_len": 1419,
+          "query_masking": [
+            {
+              "from": 1008,
+              "to": 1038
+            },
+            {
+              "from": 1164,
+              "to": 1233
+            },
+            {
+              "from": 121,
+              "to": 148
+            },
+            {
+              "from": 922,
+              "to": 961
+            },
+            {
+              "from": 1007,
+              "to": 1037
+            },
+            {
+              "from": 1070,
+              "to": 1136
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|4988",
+                  "accession": "4988",
+                  "title": "ENSPPRP00000024961.1 pep scaffold:PanPar1.0:KV860292.1:10140702:10193733:-1 gene:ENSPPRG00000015157.1 transcript:ENSPPRT00000023971.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:BLVRA description:biliverdin reductase A [Source:HGNC Symbol;Acc:HGNC:1062]"
+                }
+              ],
+              "len": 309,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 115.546,
+                  "score": 288,
+                  "evalue": 1.17232e-28,
+                  "identity": 55,
+                  "positive": 55,
+                  "query_from": 1,
+                  "query_to": 165,
+                  "query_frame": 1,
+                  "hit_from": 255,
+                  "hit_to": 309,
+                  "align_len": 55,
+                  "gaps": 0,
+                  "qseq": "QNIFVQKLLGQFSEKELAAEKKRILHCLWLAEEIQKYCYSKKEEKETCGTSKMGP",
+                  "hseq": "QNIFVQKLLGQFSEKELAAEKKRILHCLWLAEEIQKYCYSKKEEKETCGTSKMGP",
+                  "midline": "QNIFVQKLLGQFSEKELAAEKKRILHCLWLAEEIQKYCYSKKEEKETCGTSKMGP"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 15425047,
+            "hsp_len": 105,
+            "eff_space": 4524056576,
+            "kappa": 0.041,
+            "lambda": 0.267,
+            "entropy": 0.14
+          }
+        }
+      }
+    }
+  }
+}
