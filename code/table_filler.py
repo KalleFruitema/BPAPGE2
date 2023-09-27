@@ -61,7 +61,8 @@ def parse_blast(file_list):
                 gene_value_list.append(gene_name)
             except IndexError:
                 gene_value_list.append("unknown")
-            
+
+            # dit is waar ik vastloop, met de sequenties van de genen uit de Entrez database te halen
             try:
                 result = Entrez.esearch(db="nucleotide", term=f"{NCBI_ID}")
             except Exception:
@@ -76,7 +77,7 @@ def parse_blast(file_list):
                         result = None
             if result is None:
                 gene_value_list.append("unknown")
-                # print("Failed")
+                print("Failed")
             else:
                 record = Entrez.read(result)["IdList"][0]
                 print(record)
