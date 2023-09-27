@@ -17,6 +17,8 @@ def create_all_tables(cursor):
 
 
 def fill_all_tables(cursor):
+    # hoe dit werkt is tijdelijk, ik maak later een functie in table_filler.py om alles te vullen
+    # (daarnaast geeft het waarschijnlijk nu een error dus voor testen run gwn table_filler.py ipv main.py)
     tf_main(cursor)
 
 
