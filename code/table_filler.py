@@ -8,6 +8,7 @@ Entrez.api_key = "MyAPIKey"
 Entrez.email = "kallefruitema@gmail.com"
 
 
+# deze functie werkt helemaal
 def fill_table_brokstuk(cursor):
     with open('blast_db/seq2.fa') as file:
         inhoud = file.read().strip().split('\n')
@@ -23,6 +24,7 @@ def fill_table_brokstuk(cursor):
         cursor.execute(sql, key_val)
 
 
+# deze functie werkt, alleen de GENE tabel moet eerst gevuld worden vanwege foreign keys
 def fill_table_alignment(cursor, data):
     sql = """INSERT INTO ALIGNMENT(brokstuk_header, alignment_ID, NCBI_gene_ID, 
     alignment_length, e_value, bit_score, percentage_identity, gaps,
@@ -31,7 +33,7 @@ def fill_table_alignment(cursor, data):
     for line in data:    
         cursor.execute(sql, line)
 
-
+# ik loop vast op de data hiervan krijgen
 def fill_table_gene(cursor, data):
     ...
 
@@ -55,9 +57,7 @@ def parse_blast(file_list):
             # gene tabel data
             gene_value_list.append(NCBI_ID)
             try:
-                print(description, "\n\n")
                 gene_name = description.split("description:")[1]
-                print(gene_name, "\n\n\n\n")
                 gene_value_list.append(gene_name)
             except IndexError:
                 gene_value_list.append("unknown")
