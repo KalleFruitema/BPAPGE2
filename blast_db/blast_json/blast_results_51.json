@@ -1,313 +1,37 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_51",
           "query_title": "seq_051",
           "query_len": 372,
-          "query_masking": [
-            {
-              "from": 157,
-              "to": 190
-            },
-            {
-              "from": 29,
-              "to": 80
-            }
-          ],
           "hits": [
-            {
-              "num": 1,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|8402",
-                  "accession": "8402",
-                  "title": "ENSPPRP00000021566.1 pep scaffold:PanPar1.0:KV860274.1:25562347:25589650:-1 gene:ENSPPRG00000012339.1 transcript:ENSPPRT00000020047.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
-                }
-              ],
-              "len": 529,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 68.5514,
-                  "score": 166,
-                  "evalue": 1.54215e-14,
-                  "identity": 41,
-                  "positive": 64,
-                  "query_from": 22,
-                  "query_to": 363,
-                  "query_frame": 1,
-                  "hit_from": 9,
-                  "hit_to": 120,
-                  "align_len": 114,
-                  "gaps": 2,
-                  "qseq": "VFLLLQLSCYFSSGSCGQVLVWPTEYSYWINMKAILDELVQRGHEVTVLTS*ASILVDPSKSSTIKYEIYPTLLLKDDFRILFRKLITKWTCDLSKDTFWAYFSQLQENSWEYS",
-                  "hseq": "VLFMLHLY-FFDSGRTGKILVWPLDFSHWINLKVILDQLQLRGHEVTVLVPSPSYLFDHTKIP-FNVEILQLPVTKETLMEEFNGILYDISFEVPKLSWWSMQGKLTELVYRFS",
-                  "midline": "V  +L L  +F SG  G++LVWP ++S+WIN+K ILD+L  RGHEVTVL    S L D +K      EI    + K+     F  ++   + ++ K ++W+   +L E  + +S"
-                }
-              ]
-            },
-            {
-              "num": 2,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|6398",
-                  "accession": "6398",
-                  "title": "ENSPPRP00000023466.1 pep scaffold:PanPar1.0:KV860274.1:25405436:25469306:1 gene:ENSPPRG00000013797.1 transcript:ENSPPRT00000022102.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UGT2A1 description:UDP glucuronosyltransferase family 2 member A1 complex locus [Source:HGNC Symbol;Acc:HGNC:12542]"
-                }
-              ],
-              "len": 528,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 67.3958,
-                  "score": 163,
-                  "evalue": 4.1063e-14,
-                  "identity": 29,
-                  "positive": 53,
-                  "query_from": 70,
-                  "query_to": 345,
-                  "query_frame": 1,
-                  "hit_from": 22,
-                  "hit_to": 114,
-                  "align_len": 93,
-                  "gaps": 1,
-                  "qseq": "GQVLVWPTEYSYWINMKAILDELVQRGHEVTVLTS*ASILVDPSKSSTIKYEIYPTLLLKDDFRILFRKLITKWTCDL-SKDTFWAYFSQLQE",
-                  "hseq": "GNVLIWPMEGSHWLNIKIIIDELIEKEHNVTVLVASGALFITPTSTPSLTFEIYKVAFGKERIEGLIKDFVLTWMEKRPSPSTIWRFYQDIAK",
-                  "midline": "G VL+WP E S+W+N+K I+DEL+++ H VTVL +  ++ + P+ + ++ +EIY     K+    L +  +  W     S  T W ++  + +"
-                }
-              ]
-            },
-            {
-              "num": 3,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|6397",
-                  "accession": "6397",
-                  "title": "ENSPPRP00000023480.1 pep scaffold:PanPar1.0:KV860274.1:25405436:25469306:1 gene:ENSPPRG00000013797.1 transcript:ENSPPRT00000022116.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UGT2A1 description:UDP glucuronosyltransferase family 2 member A1 complex locus [Source:HGNC Symbol;Acc:HGNC:12542]"
-                }
-              ],
-              "len": 694,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 67.3958,
-                  "score": 163,
-                  "evalue": 4.16849e-14,
-                  "identity": 29,
-                  "positive": 53,
-                  "query_from": 70,
-                  "query_to": 345,
-                  "query_frame": 1,
-                  "hit_from": 22,
-                  "hit_to": 114,
-                  "align_len": 93,
-                  "gaps": 1,
-                  "qseq": "GQVLVWPTEYSYWINMKAILDELVQRGHEVTVLTS*ASILVDPSKSSTIKYEIYPTLLLKDDFRILFRKLITKWTCDL-SKDTFWAYFSQLQE",
-                  "hseq": "GNVLIWPMEGSHWLNIKIIIDELIEKEHNVTVLVASGALFITPTSTPSLTFEIYKVAFGKERIEGLIKDFVLTWMEKRPSPSTIWRFYQDIAK",
-                  "midline": "G VL+WP E S+W+N+K I+DEL+++ H VTVL +  ++ + P+ + ++ +EIY     K+    L +  +  W     S  T W ++  + +"
-                },
-                {
-                  "num": 2,
-                  "bit_score": 50.8322,
-                  "score": 120,
-                  "evalue": 2.8313e-08,
-                  "identity": 24,
-                  "positive": 44,
-                  "query_from": 100,
-                  "query_to": 345,
-                  "query_frame": 1,
-                  "hit_from": 242,
-                  "hit_to": 324,
-                  "align_len": 83,
-                  "gaps": 1,
-                  "qseq": "SYWINMKAILDELVQRGHEVTVLTS*ASILVDPSKSSTIKYEIYPTLLLKDDFRILFRKLITKWTCDLSKD-TFWAYFSQLQE",
-                  "hseq": "SHWLNIELILEELIQRNHNVTALASSATLFINSNPDSPVNFEVIPISYKSSNIDSLIEHMIMLWIDHRPTPLTLWTFYKELGK",
-                  "midline": "S+W+N++ IL+EL+QR H VT L S A++ ++ +  S + +E+ P      +   L   +I  W        T W ++ +L +"
-                }
-              ]
-            },
-            {
-              "num": 4,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|6399",
-                  "accession": "6399",
-                  "title": "ENSPPRP00000023470.1 pep scaffold:PanPar1.0:KV860274.1:25417894:25469306:1 gene:ENSPPRG00000013797.1 transcript:ENSPPRT00000022108.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UGT2A1 description:UDP glucuronosyltransferase family 2 member A1 complex locus [Source:HGNC Symbol;Acc:HGNC:12542]"
-                }
-              ],
-              "len": 536,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 66.6254,
-                  "score": 161,
-                  "evalue": 8.94087e-14,
-                  "identity": 30,
-                  "positive": 51,
-                  "query_from": 70,
-                  "query_to": 339,
-                  "query_frame": 1,
-                  "hit_from": 30,
-                  "hit_to": 120,
-                  "align_len": 91,
-                  "gaps": 1,
-                  "qseq": "GQVLVWPTEYSYWINMKAILDELVQRGHEVTVLTS*ASILVDPSKSSTIKYEIYPTLLLKDDFRILFRKLITKWTCDLSKD-TFWAYFSQL",
-                  "hseq": "GNVLIWPTDGSHWLNIELILEELIQRNHNVTALASSATLFINSNPDSPVNFEVIPISYKSSNIDSLIEHMIMLWIDHRPTPLTLWTFYKEL",
-                  "midline": "G VL+WPT+ S+W+N++ IL+EL+QR H VT L S A++ ++ +  S + +E+ P      +   L   +I  W        T W ++ +L"
-                }
-              ]
-            },
-            {
-              "num": 5,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|713",
-                  "accession": "713",
-                  "title": "ENSPPRP00000029223.1 pep scaffold:PanPar1.0:KV860301.1:15272541:15364642:1 gene:ENSPPRG00000021731.1 transcript:ENSPPRT00000031604.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ANO5 description:anoctamin 5 [Source:HGNC Symbol;Acc:HGNC:27337]"
-                }
-              ],
-              "len": 913,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.1054,
-                  "score": 61,
-                  "evalue": 2.05337,
-                  "identity": 24,
-                  "positive": 44,
-                  "query_from": 43,
-                  "query_to": 318,
-                  "query_frame": 1,
-                  "hit_from": 571,
-                  "hit_to": 664,
-                  "align_len": 96,
-                  "gaps": 6,
-                  "qseq": "SCYFSSGSCGQVLVWPTEYSYWINM-KAILDELVQRGHEVTVLTS*ASILVDPSKSSTIKYEIYPTLL---LKDDFRILFRKLITKWTCDLSKDTF",
-                  "hseq": "SCFYVAFFKGKFVGYPGKYTYLFNVWRS--EECDPGGCLIELTTQLTIIMTGKQIFGNIKEAIYPMVLNWWRRRKARTNSEKLYSRWEQDHDLETF",
-                  "midline": "SC++ +   G+ + +P +Y+Y  N+ ++  +E    G  + + T    I+        IK  IYP +L    +   R    KL ++W  D   +TF"
-                }
-              ]
-            },
-            {
-              "num": 6,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|17479",
-                  "accession": "17479",
-                  "title": "ENSPPRP00000012439.1 pep scaffold:PanPar1.0:KV860326.1:10937227:10941213:1 gene:ENSPPRG00000005967.1 transcript:ENSPPRT00000010502.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:FDXACB1 description:ferredoxin-fold anticodon binding domain containing 1 [Source:HGNC Symbol;Acc:HGNC:25110]"
-                }
-              ],
-              "len": 624,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 26.9498,
-                  "score": 58,
-                  "evalue": 5.79872,
-                  "identity": 14,
-                  "positive": 23,
-                  "query_from": 223,
-                  "query_to": 366,
-                  "query_frame": 1,
-                  "hit_from": 255,
-                  "hit_to": 305,
-                  "align_len": 51,
-                  "gaps": 3,
-                  "qseq": "EIYPTLLLKDDFRILFR---KLITKWTCDLSKDTFWAYFSQLQENSWEYSD",
-                  "hseq": "KVFPLKRLKCPFPLLPQGSTSALTSWNCDILSAAFWISLREDDSNSESLTD",
-                  "midline": "+++P   LK  F +L +     +T W CD+    FW    +   NS   +D"
-                }
-              ]
-            },
-            {
-              "num": 7,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|352",
-                  "accession": "352",
-                  "title": "ENSPPRP00000029555.1 pep scaffold:PanPar1.0:KV860301.1:11751810:11792313:-1 gene:ENSPPRG00000022226.1 transcript:ENSPPRT00000032156.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HPS5 description:HPS5 biogenesis of lysosomal organelles complex 2 subunit 2 [Source:HGNC Symbol;Acc:HGNC:17022]"
-                }
-              ],
-              "len": 1129,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 26.9498,
-                  "score": 58,
-                  "evalue": 6.20898,
-                  "identity": 13,
-                  "positive": 18,
-                  "query_from": 253,
-                  "query_to": 369,
-                  "query_frame": 1,
-                  "hit_from": 186,
-                  "hit_to": 222,
-                  "align_len": 39,
-                  "gaps": 2,
-                  "qseq": "DFRILFRKLITKWTCDLSKDTFWAYFSQLQENSWEYSDC",
-                  "hseq": "DGRLLISSLTRSFLCDTEREKFWKIGS--KERDGEYGAC",
-                  "midline": "D R+L   L   + CD  ++ FW   S  +E   EY  C"
-                }
-              ]
-            },
-            {
-              "num": 8,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|1536",
-                  "accession": "1536",
-                  "title": "ENSPPRP00000028420.1 pep scaffold:PanPar1.0:KV860274.1:31299713:31300524:-1 gene:ENSPPRG00000020504.1 transcript:ENSPPRT00000030219.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
-                }
-              ],
-              "len": 70,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 25.0238,
-                  "score": 53,
-                  "evalue": 8.39197,
-                  "identity": 9,
-                  "positive": 12,
-                  "query_from": 334,
-                  "query_to": 372,
-                  "query_frame": -1,
-                  "hit_from": 2,
-                  "hit_to": 14,
-                  "align_len": 13,
-                  "gaps": 0,
-                  "qseq": "NTVRIFPRVFLQL",
-                  "hseq": "HSVRIFPRAFLQI",
-                  "midline": "++VRIFPR FLQ+"
-                }
-              ]
-            }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 89,
-            "eff_space": 446978000,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
-          }
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 15883690572,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          },
+          "message": "No hits found"
         }
       }
     }

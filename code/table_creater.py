@@ -16,12 +16,11 @@ def create_table_alignment(cursor):
     alignment_length INTEGER NOT NULL,
     e_value DOUBLE PRECISION NOT NULL,
     bit_score INTEGER NOT NULL,
-    percentage_identity NUMERIC(5,3) NOT NULL,
+    percentage_identity NUMERIC(6,3) NOT NULL,
     gaps INTEGER NOT NULL,
     mismatches INTEGER NOT NULL,
     startpos_hit INTEGER NOT NULL,
     endpos_hit INTEGER NOT NULL,
-    best_hit_brokstuk BOOLEAN NOT NULL,
 
     CONSTRAINT fk_brokstuk_header
     FOREIGN KEY(brokstuk_header)

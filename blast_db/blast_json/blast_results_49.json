@@ -1,44 +1,25 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_49",
           "query_title": "seq_049",
           "query_len": 868,
-          "query_masking": [
-            {
-              "from": 3,
-              "to": 33
-            },
-            {
-              "from": 337,
-              "to": 388
-            },
-            {
-              "from": 56,
-              "to": 92
-            },
-            {
-              "from": 740,
-              "to": 860
-            }
-          ],
           "hits": [
             {
               "num": 1,
@@ -46,28 +27,28 @@
                 {
                   "id": "gnl|BL_ORD_ID|22610",
                   "accession": "22610",
-                  "title": "ENSPPRP00000007149.1 pep scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004913.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                  "title": "ENSPPRT00000004913.1 cds scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
                 }
               ],
-              "len": 361,
+              "len": 1086,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 486.493,
-                  "score": 1251,
-                  "evalue": 1.5869e-174,
-                  "identity": 238,
-                  "positive": 238,
+                  "bit_score": 1315.93,
+                  "score": 712,
+                  "evalue": 0,
+                  "identity": 714,
                   "query_from": 154,
-                  "query_to": 867,
-                  "query_frame": 1,
+                  "query_to": 868,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 238,
-                  "align_len": 238,
+                  "hit_to": 715,
+                  "hit_strand": "Plus",
+                  "align_len": 715,
                   "gaps": 0,
-                  "qseq": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL",
-                  "hseq": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL",
-                  "midline": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL"
+                  "qseq": "ATGTCTGACAATGGCAACGCGGCCGCGACGGCGGAAGAAAACAGCCCAAAGATGAGAGTGATTCGCGTGGGTACCCGAAAAAGCCAGCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGTGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGC",
+                  "hseq": "ATGTCTGACAATGGCAACGCGGCCGCGACGGCGGAAGAAAACAGCCCAAAGATGAGAGTGATTCGCGTGGGTACCCGAAAAAGCCAGCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGCGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGC",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             },
@@ -77,28 +58,28 @@
                 {
                   "id": "gnl|BL_ORD_ID|22609",
                   "accession": "22609",
-                  "title": "ENSPPRP00000007165.1 pep scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004927.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                  "title": "ENSPPRT00000004927.1 cds scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
                 }
               ],
-              "len": 344,
+              "len": 1035,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 451.055,
-                  "score": 1159,
-                  "evalue": 1.05573e-160,
-                  "identity": 221,
-                  "positive": 221,
+                  "bit_score": 1221.76,
+                  "score": 661,
+                  "evalue": 0,
+                  "identity": 663,
                   "query_from": 205,
-                  "query_to": 867,
-                  "query_frame": 1,
+                  "query_to": 868,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 221,
-                  "align_len": 221,
+                  "hit_to": 664,
+                  "hit_strand": "Plus",
+                  "align_len": 664,
                   "gaps": 0,
-                  "qseq": "MRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL",
-                  "hseq": "MRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL",
-                  "midline": "MRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL"
+                  "qseq": "ATGAGAGTGATTCGCGTGGGTACCCGAAAAAGCCAGCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGTGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGC",
+                  "hseq": "ATGAGAGTGATTCGCGTGGGTACCCGAAAAAGCCAGCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGCGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGC",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             },
@@ -108,28 +89,28 @@
                 {
                   "id": "gnl|BL_ORD_ID|22612",
                   "accession": "22612",
-                  "title": "ENSPPRP00000007137.1 pep scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004887.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                  "title": "ENSPPRT00000004887.1 cds scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
                 }
               ],
-              "len": 321,
+              "len": 966,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 447.973,
-                  "score": 1151,
-                  "evalue": 7.60848e-160,
-                  "identity": 217,
-                  "positive": 217,
+                  "bit_score": 1205.14,
+                  "score": 652,
+                  "evalue": 0,
+                  "identity": 652,
                   "query_from": 154,
-                  "query_to": 804,
-                  "query_frame": 1,
+                  "query_to": 805,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 217,
-                  "align_len": 217,
+                  "hit_to": 652,
+                  "hit_strand": "Plus",
+                  "align_len": 652,
                   "gaps": 0,
-                  "qseq": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQ",
-                  "hseq": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQ",
-                  "midline": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQ"
+                  "qseq": "ATGTCTGACAATGGCAACGCGGCCGCGACGGCGGAAGAAAACAGCCCAAAGATGAGAGTGATTCGCGTGGGTACCCGAAAAAGCCAGCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGG",
+                  "hseq": "ATGTCTGACAATGGCAACGCGGCCGCGACGGCGGAAGAAAACAGCCCAAAGATGAGAGTGATTCGCGTGGGTACCCGAAAAAGCCAGCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             },
@@ -139,164 +120,76 @@
                 {
                   "id": "gnl|BL_ORD_ID|22611",
                   "accession": "22611",
-                  "title": "ENSPPRP00000007136.1 pep scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 transcript:ENSPPRT00000004894.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                  "title": "ENSPPRT00000004894.1 cds scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
                 }
               ],
-              "len": 330,
+              "len": 993,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 400.208,
-                  "score": 1027,
-                  "evalue": 6.88537e-141,
-                  "identity": 207,
-                  "positive": 207,
+                  "bit_score": 972.458,
+                  "score": 526,
+                  "evalue": 0,
+                  "identity": 526,
+                  "query_from": 240,
+                  "query_to": 765,
+                  "query_strand": "Plus",
+                  "hit_from": 33,
+                  "hit_to": 558,
+                  "hit_strand": "Plus",
+                  "align_len": 526,
+                  "gaps": 0,
+                  "qseq": "GCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAG",
+                  "hseq": "GCTGGCTCGCATACAAACAGACAGTGTGGTGGCAGTGCTGAAAGCCTTATACCCAGGCCTGCAGTTTGAAATCGTTGCTATGTCCACCACAGGGGACAAGATTCTTGATACTGCGCTCTCTAAGATTGGCGAGAAGAGCCTGTTTACCAAGGAGCTGGAACACGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 124.846,
+                  "score": 67,
+                  "evalue": 1.00596e-27,
+                  "identity": 71,
+                  "query_from": 796,
+                  "query_to": 868,
+                  "query_strand": "Plus",
+                  "hit_from": 550,
+                  "hit_to": 622,
+                  "hit_strand": "Plus",
+                  "align_len": 73,
+                  "gaps": 0,
+                  "qseq": "GTGGGTCAGGGGGCCCTGGGTGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGC",
+                  "hseq": "GTGGGACAGGGGGCCCTGGGCGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGC",
+                  "midline": "||||| |||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 62.0597,
+                  "score": 33,
+                  "evalue": 7.99972e-09,
+                  "identity": 33,
                   "query_from": 154,
-                  "query_to": 867,
-                  "query_frame": 1,
+                  "query_to": 186,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 207,
-                  "align_len": 238,
-                  "gaps": 31,
-                  "qseq": "MSDNGNAAATAEENSPKMRVIRVGTRKSQLARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHRVGQILHPEECMYAVGQGALGVEVRAKDQDILDLVGVL",
-                  "hseq": "MSDNGNAAATA------------------LARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHR-------------VGQGALGVEVRAKDQDILDLVGVL",
-                  "midline": "MSDNGNAAATA                  LARIQTDSVVAVLKALYPGLQFEIVAMSTTGDKILDTALSKIGEKSLFTKELEHALEKNEVDLVVHSLKDLPTVLPPGFTIGAICKRENPYDAVVFHPKFVGKTLETLPEKSVVGTSSLRRAAQLQRKFPHLEFKSIRGNLNTRLRKLDEFQEFSAIILAAAGLQRMGWQHR             VGQGALGVEVRAKDQDILDLVGVL"
-                }
-              ]
-            },
-            {
-              "num": 5,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|22521",
-                  "accession": "22521",
-                  "title": "ENSPPRP00000007310.1 pep scaffold:PanPar1.0:KV860292.1:2080327:2221620:-1 gene:ENSPPRG00000002539.1 transcript:ENSPPRT00000005082.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:TNS3 description:tensin 3 [Source:HGNC Symbol;Acc:HGNC:21616]"
-                }
-              ],
-              "len": 1441,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 31.9574,
-                  "score": 71,
-                  "evalue": 0.717632,
-                  "identity": 18,
-                  "positive": 26,
-                  "query_from": 694,
-                  "query_to": 819,
-                  "query_frame": -2,
-                  "hit_from": 344,
-                  "hit_to": 387,
-                  "align_len": 44,
-                  "gaps": 2,
-                  "qseq": "HTQGPLTHSIHALLRVEYLSHPVLP--AHALQASCSQDDGTELL",
-                  "hseq": "HTQGPVDGSLYAKVRKKSTSDPGIPGGAPAVPAATSPDHGDHTL",
-                  "midline": "HTQGP+  S++A +R +  S P +P  A A+ A+ S D G   L"
-                }
-              ]
-            },
-            {
-              "num": 6,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|22638",
-                  "accession": "22638",
-                  "title": "ENSPPRP00000007265.1 pep scaffold:PanPar1.0:KV860315.1:2207166:2239097:1 gene:ENSPPRG00000002454.1 transcript:ENSPPRT00000005034.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:VPS4B description:vacuolar protein sorting 4 homolog B [Source:HGNC Symbol;Acc:HGNC:10895]"
-                }
-              ],
-              "len": 444,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.8018,
-                  "score": 68,
-                  "evalue": 1.22943,
-                  "identity": 10,
-                  "positive": 13,
-                  "query_from": 85,
-                  "query_to": 141,
-                  "query_frame": 1,
-                  "hit_from": 379,
-                  "hit_to": 397,
-                  "align_len": 19,
+                  "hit_to": 33,
+                  "hit_strand": "Plus",
+                  "align_len": 33,
                   "gaps": 0,
-                  "qseq": "DLRLPCTPGDPGGTSRTYL",
-                  "hseq": "DLLTPCSPGDPGAIEMTWM",
-                  "midline": "DL  PC+PGDPG    T++"
-                }
-              ]
-            },
-            {
-              "num": 7,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|12361",
-                  "accession": "12361",
-                  "title": "ENSPPRP00000017544.1 pep scaffold:PanPar1.0:KV860277.1:6611164:6703606:1 gene:ENSPPRG00000009495.1 transcript:ENSPPRT00000015841.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COL6A5 description:collagen type VI alpha 5 chain [Source:HGNC Symbol;Acc:HGNC:26674]"
-                }
-              ],
-              "len": 2575,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.8758,
-                  "score": 63,
-                  "evalue": 5.79037,
-                  "identity": 10,
-                  "positive": 15,
-                  "query_from": 62,
-                  "query_to": 136,
-                  "query_frame": 2,
-                  "hit_from": 1383,
-                  "hit_to": 1407,
-                  "align_len": 25,
-                  "gaps": 0,
-                  "qseq": "CTWCPLAGTSGFPVLPGTLAAPPGP",
-                  "hseq": "CTFCKCSGSAGLPGMPGLQAMKGSP",
-                  "midline": "CT+C  +G++G P +PG  A    P"
-                }
-              ]
-            },
-            {
-              "num": 8,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|4452",
-                  "accession": "4452",
-                  "title": "ENSPPRP00000025452.1 pep scaffold:PanPar1.0:KV860309.1:17172810:17236881:1 gene:ENSPPRG00000015751.1 transcript:ENSPPRT00000024652.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:VWA5B1 description:von Willebrand factor A domain containing 5B1 [Source:HGNC Symbol;Acc:HGNC:26538]"
-                }
-              ],
-              "len": 1223,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.4906,
-                  "score": 62,
-                  "evalue": 9.63446,
-                  "identity": 17,
-                  "positive": 24,
-                  "query_from": 565,
-                  "query_to": 681,
-                  "query_frame": -2,
-                  "hit_from": 817,
-                  "hit_to": 855,
-                  "align_len": 40,
-                  "gaps": 2,
-                  "qseq": "LPKACVEISPNALELQVWELSLQLGRP-PQGAGSHHTLLW",
-                  "hseq": "LGKAVVKGLRDSQRLQ-WEVSFELGPPGPERGGAHEADLW",
-                  "midline": "L KA V+   ++  LQ WE+S +LG P P+  G+H   LW"
+                  "qseq": "ATGTCTGACAATGGCAACGCGGCCGCGACGGCG",
+                  "hseq": "ATGTCTGACAATGGCAACGCGGCCGCGACGGCG",
+                  "midline": "|||||||||||||||||||||||||||||||||"
                 }
               ]
             }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 100,
-            "eff_space": 2351679183,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
+            "db_len": 46358541,
+            "hsp_len": 25,
+            "eff_space": 38451730338,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
           }
         }
       }

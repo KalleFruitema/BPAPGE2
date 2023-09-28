@@ -1,44 +1,25 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_2",
           "query_title": "seq_002",
           "query_len": 372,
-          "query_masking": [
-            {
-              "from": 78,
-              "to": 138
-            },
-            {
-              "from": 300,
-              "to": 321
-            },
-            {
-              "from": 283,
-              "to": 331
-            },
-            {
-              "from": 98,
-              "to": 146
-            }
-          ],
           "hits": [
             {
               "num": 1,
@@ -46,133 +27,40 @@
                 {
                   "id": "gnl|BL_ORD_ID|4988",
                   "accession": "4988",
-                  "title": "ENSPPRP00000024961.1 pep scaffold:PanPar1.0:KV860292.1:10140702:10193733:-1 gene:ENSPPRG00000015157.1 transcript:ENSPPRT00000023971.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:BLVRA description:biliverdin reductase A [Source:HGNC Symbol;Acc:HGNC:1062]"
+                  "title": "ENSPPRT00000023971.1 cds scaffold:PanPar1.0:KV860292.1:10140702:10193733:-1 gene:ENSPPRG00000015157.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:BLVRA description:biliverdin reductase A [Source:HGNC Symbol;Acc:HGNC:1062]"
                 }
               ],
-              "len": 309,
+              "len": 930,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 44.2838,
-                  "score": 103,
-                  "evalue": 4.64152e-06,
-                  "identity": 29,
-                  "positive": 30,
-                  "query_from": 283,
+                  "bit_score": 165.472,
+                  "score": 89,
+                  "evalue": 2.4484e-40,
+                  "identity": 89,
+                  "query_from": 284,
                   "query_to": 372,
-                  "query_frame": 1,
-                  "hit_from": 4,
-                  "hit_to": 33,
-                  "align_len": 30,
+                  "query_strand": "Plus",
+                  "hit_from": 11,
+                  "hit_to": 99,
+                  "hit_strand": "Plus",
+                  "align_len": 89,
                   "gaps": 0,
-                  "qseq": "KPERKFgvvvvgvgRAGSVRIRDLRNPHAS",
-                  "hseq": "EPERKFGVVVVGVGRAGSVRIRDLRNPHAS",
-                  "midline": "+PERKFGVVVVGVGRAGSVRIRDLRNPHAS"
-                }
-              ]
-            },
-            {
-              "num": 2,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|5207",
-                  "accession": "5207",
-                  "title": "ENSPPRP00000024721.1 pep scaffold:PanPar1.0:KV860398.1:1581979:1598519:-1 gene:ENSPPRG00000014911.1 transcript:ENSPPRT00000023661.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:SRR description:serine racemase [Source:HGNC Symbol;Acc:HGNC:14398]"
-                }
-              ],
-              "len": 339,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 27.7202,
-                  "score": 60,
-                  "evalue": 2.6817,
-                  "identity": 18,
-                  "positive": 23,
-                  "query_from": 47,
-                  "query_to": 166,
-                  "query_frame": -3,
-                  "hit_from": 202,
-                  "hit_to": 249,
-                  "align_len": 48,
-                  "gaps": 8,
-                  "qseq": "PSVAAWDVQEANADDCSELKEK-EGSPSPL-------GRKGHGSLNPW",
-                  "hseq": "PSVKVYAAEPLNADDCYQSKLKGELTPNPYPPETIADGVKSSIGLNTW",
-                  "midline": "PSV  +  +  NADDC + K K E +P+P        G K    LN W"
-                }
-              ]
-            },
-            {
-              "num": 3,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|24543",
-                  "accession": "24543",
-                  "title": "ENSPPRP00000005356.1 pep scaffold:PanPar1.0:KV860305.1:16191867:16246299:1 gene:ENSPPRG00000001144.1 transcript:ENSPPRT00000003018.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:NHLRC2 description:NHL repeat containing 2 [Source:HGNC Symbol;Acc:HGNC:24731]"
-                }
-              ],
-              "len": 726,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 27.335,
-                  "score": 59,
-                  "evalue": 4.22182,
-                  "identity": 16,
-                  "positive": 22,
-                  "query_from": 151,
-                  "query_to": 270,
-                  "query_frame": -1,
-                  "hit_from": 62,
-                  "hit_to": 104,
-                  "align_len": 43,
-                  "gaps": 3,
-                  "qseq": "HWLSAFQPTSLPR-YCGSLPITQ--VYCWVLCIHLGPFLQWLR",
-                  "hseq": "EWLNTEEPISVYKDLCGKVVILDFFTYCCINCIHLLPDLHALE",
-                  "midline": " WL+  +P S+ +  CG + I     YC + CIHL P L  L "
-                }
-              ]
-            },
-            {
-              "num": 4,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|13296",
-                  "accession": "13296",
-                  "title": "ENSPPRP00000016603.1 pep scaffold:PanPar1.0:KV860274.1:8279100:8322048:1 gene:ENSPPRG00000008848.1 transcript:ENSPPRT00000014856.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
-                }
-              ],
-              "len": 655,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 26.5646,
-                  "score": 57,
-                  "evalue": 7.03212,
-                  "identity": 12,
-                  "positive": 14,
-                  "query_from": 229,
-                  "query_to": 297,
-                  "query_frame": -1,
-                  "hit_from": 554,
-                  "hit_to": 576,
-                  "align_len": 23,
-                  "gaps": 0,
-                  "qseq": "LSLRLVQIPHWLSAFQPTSLPRY",
-                  "hseq": "LLVNLTTIQPWLSWFQYFSIPRY",
-                  "midline": "L + L  I  WLS FQ  S+PRY"
+                  "qseq": "AGCCTGAGAGAAAGTTTGGAGTGGTGGTGGTTGGCGTTGGCAGAGCTGGCTCAGTGCGGATCAGGGACTTGCGGAATCCACATGCTTCC",
+                  "hseq": "AGCCTGAGAGAAAGTTTGGAGTGGTGGTGGTTGGCGTTGGCAGAGCTGGCTCAGTGCGGATCAGGGACTTGCGGAATCCACATGCTTCC",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 89,
-            "eff_space": 446978000,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 15883690572,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
           }
         }
       }

@@ -1,36 +1,25 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_15",
           "query_title": "seq_015",
           "query_len": 744,
-          "query_masking": [
-            {
-              "from": 28,
-              "to": 61
-            },
-            {
-              "from": 518,
-              "to": 551
-            }
-          ],
           "hits": [
             {
               "num": 1,
@@ -38,28 +27,28 @@
                 {
                   "id": "gnl|BL_ORD_ID|2571",
                   "accession": "2571",
-                  "title": "ENSPPRP00000027313.1 pep scaffold:PanPar1.0:KV860305.1:3164066:3177793:-1 gene:ENSPPRG00000018767.1 transcript:ENSPPRT00000028117.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COX15 description:cytochrome c oxidase assembly homolog COX15 [Source:HGNC Symbol;Acc:HGNC:2263]"
+                  "title": "ENSPPRT00000028117.1 cds scaffold:PanPar1.0:KV860305.1:3164066:3177793:-1 gene:ENSPPRG00000018767.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COX15 description:cytochrome c oxidase assembly homolog COX15 [Source:HGNC Symbol;Acc:HGNC:2263]"
                 }
               ],
-              "len": 413,
+              "len": 1242,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 324.324,
-                  "score": 830,
-                  "evalue": 1.68476e-110,
-                  "identity": 155,
-                  "positive": 155,
+                  "bit_score": 854.272,
+                  "score": 462,
+                  "evalue": 0,
+                  "identity": 464,
                   "query_from": 280,
                   "query_to": 744,
-                  "query_frame": 1,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 155,
-                  "align_len": 155,
+                  "hit_to": 465,
+                  "hit_strand": "Plus",
+                  "align_len": 465,
                   "gaps": 0,
-                  "qseq": "MQRLLFPRLKALMGSPCLWLLGPRAAPRTQCGCSCGIRHLLRPGQYSTISEVALQSGRGTVSLPSKAAERVVGRWLLVCSGTVAGAVILGGMTRLTESGLSMVDWNLIKEMKPPTHQEEWEAEFQKYQQFPEFKILNHDMTLAEFKFIWYMEYSH",
-                  "hseq": "MQRLLFPRLKALMGSPCLWLLGPRAAPRTQCGCSCGIRHLLRPGQYSTISEVALQSGRGTVSLPSKAAERVVGRWLLVCSGTVAGAVILGGMTRLTESGLSMVDWNLIKEMKPPTHQEEWEAEFQKYQQFPEFKILNHDMTLAEFKFIWYMEYSH",
-                  "midline": "MQRLLFPRLKALMGSPCLWLLGPRAAPRTQCGCSCGIRHLLRPGQYSTISEVALQSGRGTVSLPSKAAERVVGRWLLVCSGTVAGAVILGGMTRLTESGLSMVDWNLIKEMKPPTHQEEWEAEFQKYQQFPEFKILNHDMTLAEFKFIWYMEYSH"
+                  "qseq": "ATGCAGCGATTACTCTTTCCGCGCCTGAAGGCCTTGATGGGGAGCCCGTGCCTCTGGCTCCTGGGTCCTAGGGCGGCGCCTAGAACGCAGTGTGGTTGCAGCTGTGGGATCAGGCACCTCTTAAGGCCAGGGCAATACAGCACCATCTCTGAAGTAGCTTTGCAGTCTGGAAGGGGTACAGTGTCCCTTCCCTCAAAAGCTGCTGAGCGGGTGGTGGGCCGATGGCTCCTGGTCTGCAGTGGAACAGTGGCTGGAGCAGTTATTCTTGGTGGAATGACTAGGTTGACAGAGTCTGGCCTCTCAATGGTAGACTGGAATTTAATAAAGGAGATGAAGCCACCTACACACCAAGAGGAATGGGAAGCAGAATTCCAAAAATATCAGCAATTTCCAGAATTTAAAATCTTGAATCATGATATGACACTGGCCGAATTCAAGTTCATCTGGTACATGGAGTACTCACAT",
+                  "hseq": "ATGCAGCGATTACTCTTTCCGCGCCTGAAGGCCTTGATGGGGAGCCCGTGCCTCTGGCTCCTGGGTCCTAGGGCGGCGCCTAGAACGCAGTGTGGTTGCAGCTGTGGGATCAGGCACCTCTTAAGGCCAGGGCAATACAGCACCATCTCTGAAGTAGCTTTGCAGTCTGGAAGGGGTACAGTGTCCCTTCCCTCAAAAGCTGCTGAGCGGGTGGTGGGCCGATGGCTCCTGGTCTGCAGTGGAACAGTGGCTGGAGCAGTTATTCTTGGTGGAATGACTAGGTTGACAGAGTCTGGCCTCTCAATGGTAGACTGGAATTTAATAAAGGAGATGAAGCCACCTACACACCAAGAGGAATGGGAAGCAGAATTCCAAAAATACCAGCAATTTCCAGAATTTAAAATCTTGAATCATGATATGACACTGGCCGAATTCAAGTTCATCTGGTACATGGAGTACTCACAT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             },
@@ -69,164 +58,40 @@
                 {
                   "id": "gnl|BL_ORD_ID|2570",
                   "accession": "2570",
-                  "title": "ENSPPRP00000027332.1 pep scaffold:PanPar1.0:KV860305.1:3162949:3177610:-1 gene:ENSPPRG00000018767.1 transcript:ENSPPRT00000028147.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COX15 description:cytochrome c oxidase assembly homolog COX15 [Source:HGNC Symbol;Acc:HGNC:2263]"
-                }
-              ],
-              "len": 369,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 308.145,
-                  "score": 788,
-                  "evalue": 1.10136e-104,
-                  "identity": 151,
-                  "positive": 151,
-                  "query_from": 280,
-                  "query_to": 744,
-                  "query_frame": 1,
-                  "hit_from": 1,
-                  "hit_to": 153,
-                  "align_len": 155,
-                  "gaps": 2,
-                  "qseq": "MQRLLFPRLKALMGSPCLWLLGPRAAPRTQCGCSCGIRHLLRPGQYSTISEVALQSGRGTVSLPSKAAERVVGRWLLVCSGTVAGAVILGGMTRLTESGLSMVDWNLIKEMKPPTHQEEWEAEFQKYQQFPEFKILNHDMTLAEFKFIWYMEYSH",
-                  "hseq": "MQRLLFPRLKALMGSPCLWLLGPRAAPRTQV--LCGIRHLLRPGQYSTISEVALQSGRGTVSLPSKAAERVVGRWLLVCSGTVAGAVILGGMTRLTESGLSMVDWNLIKEMKPPTHQEEWEAEFQKYQQFPEFKILNHDMTLAEFKFIWYMEYSH",
-                  "midline": "MQRLLFPRLKALMGSPCLWLLGPRAAPRTQ    CGIRHLLRPGQYSTISEVALQSGRGTVSLPSKAAERVVGRWLLVCSGTVAGAVILGGMTRLTESGLSMVDWNLIKEMKPPTHQEEWEAEFQKYQQFPEFKILNHDMTLAEFKFIWYMEYSH"
-                }
-              ]
-            },
-            {
-              "num": 3,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|12489",
-                  "accession": "12489",
-                  "title": "ENSPPRP00000017347.1 pep scaffold:PanPar1.0:KV860355.1:1386835:1507745:1 gene:ENSPPRG00000009403.1 transcript:ENSPPRT00000015625.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:RAPGEF1 description:Rap guanine nucleotide exchange factor 1 [Source:HGNC Symbol;Acc:HGNC:4568]"
-                }
-              ],
-              "len": 1095,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 29.261,
-                  "score": 64,
-                  "evalue": 3.42104,
-                  "identity": 15,
-                  "positive": 20,
-                  "query_from": 352,
-                  "query_to": 471,
-                  "query_frame": 1,
-                  "hit_from": 484,
-                  "hit_to": 523,
-                  "align_len": 40,
-                  "gaps": 0,
-                  "qseq": "AAPRTQCGCSCGIRHLLRPGQYSTISEVALQSGRGTVSLP",
-                  "hseq": "AASQTTDSSGCRVSYERHPSQYDNISEVDLQNPASAPSVP",
-                  "midline": "AA +T     C + +   P QY  ISEV LQ+     S+P"
-                }
-              ]
-            },
-            {
-              "num": 4,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|12490",
-                  "accession": "12490",
-                  "title": "ENSPPRP00000017324.1 pep scaffold:PanPar1.0:KV860355.1:1433106:1507745:1 gene:ENSPPRG00000009403.1 transcript:ENSPPRT00000015613.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:RAPGEF1 description:Rap guanine nucleotide exchange factor 1 [Source:HGNC Symbol;Acc:HGNC:4568]"
+                  "title": "ENSPPRT00000028147.1 cds scaffold:PanPar1.0:KV860305.1:3162949:3177610:-1 gene:ENSPPRG00000018767.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:COX15 description:cytochrome c oxidase assembly homolog COX15 [Source:HGNC Symbol;Acc:HGNC:2263]"
                 }
               ],
               "len": 1107,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 29.261,
-                  "score": 64,
-                  "evalue": 3.42409,
-                  "identity": 15,
-                  "positive": 20,
-                  "query_from": 352,
-                  "query_to": 471,
-                  "query_frame": 1,
-                  "hit_from": 489,
-                  "hit_to": 528,
-                  "align_len": 40,
-                  "gaps": 0,
-                  "qseq": "AAPRTQCGCSCGIRHLLRPGQYSTISEVALQSGRGTVSLP",
-                  "hseq": "AASQTTDSSGCRVSYERHPSQYDNISEVDLQNPASAPSVP",
-                  "midline": "AA +T     C + +   P QY  ISEV LQ+     S+P"
-                }
-              ]
-            },
-            {
-              "num": 5,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|1846",
-                  "accession": "1846",
-                  "title": "ENSPPRP00000028093.1 pep scaffold:PanPar1.0:KV860310.1:21693123:21693725:-1 gene:ENSPPRG00000020034.1 transcript:ENSPPRT00000029667.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
-                }
-              ],
-              "len": 200,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.1054,
-                  "score": 61,
-                  "evalue": 5.69525,
-                  "identity": 12,
-                  "positive": 14,
-                  "query_from": 257,
-                  "query_to": 313,
-                  "query_frame": 2,
-                  "hit_from": 85,
-                  "hit_to": 103,
-                  "align_len": 19,
-                  "gaps": 0,
-                  "qseq": "GFLTLSSVCSDYSFRA*RP",
-                  "hseq": "GFVVLYSVCSEASFEAVRP",
-                  "midline": "GF+ L SVCS+ SF A RP"
-                }
-              ]
-            },
-            {
-              "num": 6,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|13725",
-                  "accession": "13725",
-                  "title": "ENSPPRP00000015972.1 pep scaffold:PanPar1.0:KV860324.1:9723284:10111277:-1 gene:ENSPPRG00000008568.1 transcript:ENSPPRT00000014199.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:RIMS2 description:regulating synaptic membrane exocytosis 2 [Source:HGNC Symbol;Acc:HGNC:17283]"
-                }
-              ],
-              "len": 1188,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.4906,
-                  "score": 62,
-                  "evalue": 7.00523,
-                  "identity": 21,
-                  "positive": 34,
-                  "query_from": 418,
-                  "query_to": 576,
-                  "query_frame": 1,
-                  "hit_from": 408,
-                  "hit_to": 469,
-                  "align_len": 64,
-                  "gaps": 13,
-                  "qseq": "STISEVALQSGRGTVS-LPSKAAERVVGRWLLV----------CSGTVAGAVILGGMTRLTESG",
-                  "hseq": "TTLNEEHSHSDKHPVTWQPSKDGDRLIGRILLNKRLKDGSVPRDSGAMLGLKVVGG--KMTESG",
-                  "midline": "+T++E    S +  V+  PSK  +R++GR LL            SG + G  ++GG  ++TESG"
+                  "bit_score": 804.413,
+                  "score": 435,
+                  "evalue": 0,
+                  "identity": 456,
+                  "query_from": 280,
+                  "query_to": 744,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 459,
+                  "hit_strand": "Plus",
+                  "align_len": 465,
+                  "gaps": 6,
+                  "qseq": "ATGCAGCGATTACTCTTTCCGCGCCTGAAGGCCTTGATGGGGAGCCCGTGCCTCTGGCTCCTGGGTCCTAGGGCGGCGCCTAGAACGCAGTGTGGTTGCAGCTGTGGGATCAGGCACCTCTTAAGGCCAGGGCAATACAGCACCATCTCTGAAGTAGCTTTGCAGTCTGGAAGGGGTACAGTGTCCCTTCCCTCAAAAGCTGCTGAGCGGGTGGTGGGCCGATGGCTCCTGGTCTGCAGTGGAACAGTGGCTGGAGCAGTTATTCTTGGTGGAATGACTAGGTTGACAGAGTCTGGCCTCTCAATGGTAGACTGGAATTTAATAAAGGAGATGAAGCCACCTACACACCAAGAGGAATGGGAAGCAGAATTCCAAAAATATCAGCAATTTCCAGAATTTAAAATCTTGAATCATGATATGACACTGGCCGAATTCAAGTTCATCTGGTACATGGAGTACTCACAT",
+                  "hseq": "ATGCAGCGATTACTCTTTCCGCGCCTGAAGGCCTTGATGGGGAGCCCGTGCCTCTGGCTCCTGGGTCCTAGGGCGGCGCCTAGAACGCAG----G-TAC-TCTGTGGGATCAGGCACCTCTTAAGGCCAGGGCAATACAGCACCATCTCTGAAGTAGCTTTGCAGTCTGGAAGGGGTACAGTGTCCCTTCCCTCAAAAGCTGCTGAGCGGGTGGTGGGCCGATGGCTCCTGGTCTGCAGTGGAACAGTGGCTGGAGCAGTTATTCTTGGTGGAATGACTAGGTTGACAGAGTCTGGCCTCTCAATGGTAGACTGGAATTTAATAAAGGAGATGAAGCCACCTACACACCAAGAGGAATGGGAAGCAGAATTCCAAAAATACCAGCAATTTCCAGAATTTAAAATCTTGAATCATGATATGACACTGGCCGAATTCAAGTTCATCTGGTACATGGAGTACTCACAT",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||    | | |  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 99,
-            "eff_space": 1858412930,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
+            "db_len": 46358541,
+            "hsp_len": 25,
+            "eff_space": 32795722554,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
           }
         }
       }

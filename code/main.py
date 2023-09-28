@@ -39,7 +39,7 @@ def main():
         print('Succes!')
     except Exception as e:
         conn.close()
-        print(e)
+        print("Error: ", e)
 
 if __name__ == "__main__":
     main()

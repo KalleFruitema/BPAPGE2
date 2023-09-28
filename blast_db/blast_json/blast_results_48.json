@@ -1,84 +1,25 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_48",
           "query_title": "seq_048",
           "query_len": 868,
-          "query_masking": [
-            {
-              "from": 15,
-              "to": 69
-            },
-            {
-              "from": 750,
-              "to": 795
-            },
-            {
-              "from": 154,
-              "to": 214
-            },
-            {
-              "from": 319,
-              "to": 379
-            },
-            {
-              "from": 409,
-              "to": 469
-            },
-            {
-              "from": 562,
-              "to": 586
-            },
-            {
-              "from": 622,
-              "to": 679
-            },
-            {
-              "from": 697,
-              "to": 748
-            },
-            {
-              "from": 793,
-              "to": 823
-            },
-            {
-              "from": 41,
-              "to": 80
-            },
-            {
-              "from": 341,
-              "to": 401
-            },
-            {
-              "from": 461,
-              "to": 527
-            },
-            {
-              "from": 638,
-              "to": 671
-            },
-            {
-              "from": 764,
-              "to": 860
-            }
-          ],
           "hits": [
             {
               "num": 1,
@@ -86,288 +27,40 @@
                 {
                   "id": "gnl|BL_ORD_ID|28826",
                   "accession": "28826",
-                  "title": "ENSPPRP00000001025.1 pep scaffold:PanPar1.0:KV860285.1:20494755:20502236:1 gene:ENSPPRG00000024423.1 transcript:ENSPPRT00000034171.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMOX1 description:heme oxygenase 1 [Source:HGNC Symbol;Acc:HGNC:5013]"
+                  "title": "ENSPPRT00000034171.1 cds scaffold:PanPar1.0:KV860285.1:20494755:20502236:1 gene:ENSPPRG00000024423.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMOX1 description:heme oxygenase 1 [Source:HGNC Symbol;Acc:HGNC:5013]"
                 }
               ],
-              "len": 288,
+              "len": 867,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 445.662,
-                  "score": 1145,
-                  "evalue": 1.57086e-159,
-                  "identity": 236,
-                  "positive": 236,
+                  "bit_score": 1304.85,
+                  "score": 706,
+                  "evalue": 0,
+                  "identity": 714,
                   "query_from": 130,
-                  "query_to": 867,
-                  "query_frame": 1,
+                  "query_to": 847,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 246,
-                  "align_len": 246,
+                  "hit_to": 718,
+                  "hit_strand": "Plus",
+                  "align_len": 718,
                   "gaps": 0,
-                  "qseq": "MERPQPDSMPQDLSEALKEATKEVHVQAENAAFMNYFQKGQVTRKGFKLVMASLYHIYVALEEEIERNKENPVYAPLYFPEELHRRAALERDMAFWYGPRWEDAIPYTQATRRYVRRLHEVGRKEPELLVAHAYTRYLGDLSGGQVLKKIAQKALDLPSSGEGVDFFTFPNVASATKFKQLYRSRMNTLEMTPEVRQRVIEEAKAAFllniqlfeelqellgqDAEDQSPSQAPGLRRRXXXSLSD",
-                  "hseq": "MERPQPDSMPQDLSEALKEATKEVHVQAENAEFMKNFQKGQVTRKGFKLVMASLYHIYVALEEEIEHNKENPVYAPLYFPEELHRRAALERDMAFWYGPRWEDAIPYTQATRRYVRRLHEVGRKEPELLVAHAYTRYLGDLSGGQVLKKIAQKALDLPSSGEGVDFFTFPNVASATKFKQLYRSRMNTLEMTPEVRQRVIEEAKAAFLLNIQLFEELQELLGQDAEDQSPSQAPGLRRRVGSGARD",
-                  "midline": "MERPQPDSMPQDLSEALKEATKEVHVQAENA FM  FQKGQVTRKGFKLVMASLYHIYVALEEEIE NKENPVYAPLYFPEELHRRAALERDMAFWYGPRWEDAIPYTQATRRYVRRLHEVGRKEPELLVAHAYTRYLGDLSGGQVLKKIAQKALDLPSSGEGVDFFTFPNVASATKFKQLYRSRMNTLEMTPEVRQRVIEEAKAAFLLNIQLFEELQELLGQDAEDQSPSQAPGLRRR      D"
-                }
-              ]
-            },
-            {
-              "num": 2,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|24059",
-                  "accession": "24059",
-                  "title": "ENSPPRP00000005830.1 pep scaffold:PanPar1.0:KV860325.1:3141637:3157147:1 gene:ENSPPRG00000001476.1 transcript:ENSPPRT00000003528.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMOX2 description:heme oxygenase 2 [Source:HGNC Symbol;Acc:HGNC:5014]"
-                }
-              ],
-              "len": 316,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 249.98,
-                  "score": 637,
-                  "evalue": 5.17316e-82,
-                  "identity": 116,
-                  "positive": 155,
-                  "query_from": 118,
-                  "query_to": 750,
-                  "query_frame": 1,
-                  "hit_from": 18,
-                  "hit_to": 227,
-                  "align_len": 211,
-                  "gaps": 1,
-                  "qseq": "SAGRMERPQPDSMPQDLSEALKEATKEVHVQAENAAFMNYFQKGQVTRKGFKLVMASLYHIYVALEEEIERNKENPVYAPLYFPEELHRRAALERDMAFWYGPRWEDAIPYTQATRRYVRRLHEVGRKEPELLVAHAYTRYLGDLSGGQVLKKIAQKALDLPSSGEGVDFFTFPNVASATKFKQLYRSRMNTLEMTPEVRQRVIEEAKAAF",
-                  "hseq": "SFGASEKENHTRMA-DLSELLKEGTKEAHDRAENTQFVKDFLKGNIRKELFKLATTALYFTYSALEEEMERNKDHPAFAPLYFPTELHRKEALTKDMEYFFGKNWEEQVQCSQAAQKYVERIHYVGQNEPELLVAHAYTRYMGDLSGGQVLKKVAQRALKLPSTGEGTQFYKFENVDNAQQFKQFYRARMNALDLNLKTKEKIVEEANKAF",
-                  "midline": "S G  E+     M  DLSE LKE TKE H +AEN  F+  F KG + ++ FKL   +LY  Y ALEEE+ERNK++P +APLYFP ELHR+ AL +DM +++G  WE+ +  +QA ++YV R+H VG+ EPELLVAHAYTRY+GDLSGGQVLKK+AQ+AL LPS+GEG  F+ F NV +A +FKQ YR+RMN L++  + +++++EEA  AF"
-                }
-              ]
-            },
-            {
-              "num": 3,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|23317",
-                  "accession": "23317",
-                  "title": "ENSPPRP00000006521.1 pep scaffold:PanPar1.0:KV860283.1:8587647:8643222:-1 gene:ENSPPRG00000001961.1 transcript:ENSPPRT00000004242.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DNA2 description:DNA replication helicase/nuclease 2 [Source:HGNC Symbol;Acc:HGNC:2939]"
-                }
-              ],
-              "len": 1061,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.8018,
-                  "score": 68,
-                  "evalue": 1.67185,
-                  "identity": 15,
-                  "positive": 27,
-                  "query_from": 559,
-                  "query_to": 720,
-                  "query_frame": 1,
-                  "hit_from": 158,
-                  "hit_to": 211,
-                  "align_len": 54,
-                  "gaps": 0,
-                  "qseq": "GQVLKKIAQKALDLPSSGEGVDFFTFPNVASATKFKQLYRSRMNTLEMTPEVRQ",
-                  "hseq": "GTVLHEVFQKAISNSFAPEKLQEYAFQTIQEIKHLKEMYRLNLNQDEIKQEVEE",
-                  "midline": "G VL ++ QKA+    + E +  + F  +      K++YR  +N  E+  EV +"
-                }
-              ]
-            },
-            {
-              "num": 4,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|9185",
-                  "accession": "9185",
-                  "title": "ENSPPRP00000020546.1 pep scaffold:PanPar1.0:KV860390.1:61848:150921:1 gene:ENSPPRG00000011739.1 transcript:ENSPPRT00000018977.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEPH description:hephaestin [Source:HGNC Symbol;Acc:HGNC:4866]"
-                }
-              ],
-              "len": 1198,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.0314,
-                  "score": 66,
-                  "evalue": 2.56609,
-                  "identity": 24,
-                  "positive": 31,
-                  "query_from": 382,
-                  "query_to": 564,
-                  "query_frame": -2,
-                  "hit_from": 139,
-                  "hit_to": 219,
-                  "align_len": 81,
-                  "gaps": 20,
-                  "qseq": "LAPRQIAEVAGVGVGHQQLRLLAPHLVEP--------------PHVAPGGLRVGDGVLPAGP------VPEGHVPLQGGPA",
-                  "hseq": "LGPVLQAEVGDVILIHLKNFATRPYTIHPHGVFYEKDSEGSLYPDGSSGQLKVDDFVPPGGSHIYNWTIPEGHAPTDADPA",
-                  "midline": "L P   AEV  V + H +     P+ + P              P  + G L+V D V P G       +PEGH P    PA"
-                }
-              ]
-            },
-            {
-              "num": 5,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|9184",
-                  "accession": "9184",
-                  "title": "ENSPPRP00000020559.1 pep scaffold:PanPar1.0:KV860390.1:61720:151412:1 gene:ENSPPRG00000011739.1 transcript:ENSPPRT00000018998.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEPH description:hephaestin [Source:HGNC Symbol;Acc:HGNC:4866]"
-                }
-              ],
-              "len": 1158,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.0314,
-                  "score": 66,
-                  "evalue": 2.84065,
-                  "identity": 24,
-                  "positive": 31,
-                  "query_from": 382,
-                  "query_to": 564,
-                  "query_frame": -2,
-                  "hit_from": 99,
-                  "hit_to": 179,
-                  "align_len": 81,
-                  "gaps": 20,
-                  "qseq": "LAPRQIAEVAGVGVGHQQLRLLAPHLVEP--------------PHVAPGGLRVGDGVLPAGP------VPEGHVPLQGGPA",
-                  "hseq": "LGPVLQAEVGDVILIHLKNFATRPYTIHPHGVFYEKDSEGSLYPDGSSGQLKVDDFVPPGGSHIYNWTIPEGHAPTDADPA",
-                  "midline": "L P   AEV  V + H +     P+ + P              P  + G L+V D V P G       +PEGH P    PA"
-                }
-              ]
-            },
-            {
-              "num": 6,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|9186",
-                  "accession": "9186",
-                  "title": "ENSPPRP00000020534.1 pep scaffold:PanPar1.0:KV860390.1:70756:150921:1 gene:ENSPPRG00000011739.1 transcript:ENSPPRT00000018965.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEPH description:hephaestin [Source:HGNC Symbol;Acc:HGNC:4866]"
-                }
-              ],
-              "len": 969,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.0314,
-                  "score": 66,
-                  "evalue": 2.84402,
-                  "identity": 24,
-                  "positive": 31,
-                  "query_from": 382,
-                  "query_to": 564,
-                  "query_frame": -2,
-                  "hit_from": 102,
-                  "hit_to": 182,
-                  "align_len": 81,
-                  "gaps": 20,
-                  "qseq": "LAPRQIAEVAGVGVGHQQLRLLAPHLVEP--------------PHVAPGGLRVGDGVLPAGP------VPEGHVPLQGGPA",
-                  "hseq": "LGPVLQAEVGDVILIHLKNFATRPYTIHPHGVFYEKDSEGSLYPDGSSGQLKVDDFVPPGGSHIYNWTIPEGHAPTDADPA",
-                  "midline": "L P   AEV  V + H +     P+ + P              P  + G L+V D V P G       +PEGH P    PA"
-                }
-              ]
-            },
-            {
-              "num": 7,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|26843",
-                  "accession": "26843",
-                  "title": "ENSPPRP00000003014.1 pep scaffold:PanPar1.0:KV860320.1:999574:1121835:1 gene:ENSPPRG00000023041.1 transcript:ENSPPRT00000000573.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CCDC57 description:coiled-coil domain containing 57 [Source:HGNC Symbol;Acc:HGNC:27564]"
-                }
-              ],
-              "len": 898,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 29.261,
-                  "score": 64,
-                  "evalue": 4.33979,
-                  "identity": 18,
-                  "positive": 22,
-                  "query_from": 102,
-                  "query_to": 230,
-                  "query_frame": 3,
-                  "hit_from": 837,
-                  "hit_to": 878,
-                  "align_len": 43,
-                  "gaps": 1,
-                  "qseq": "PAASTERRPDGAPAARQHAPGFVRGPEGGHQGGARPGRECRVH",
-                  "hseq": "PAADSLRHPDGSPVGAQAALA-IEGVKTEAQAKARPARTARAH",
-                  "midline": "PAA + R PDG+P   Q A   + G +   Q  ARP R  R H"
-                }
-              ]
-            },
-            {
-              "num": 8,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|10007",
-                  "accession": "10007",
-                  "title": "ENSPPRP00000018552.1 pep scaffold:PanPar1.0:KV860293.1:15873856:15913490:-1 gene:ENSPPRG00000011144.1 transcript:ENSPPRT00000016898.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:KTN1 description:kinectin 1 [Source:HGNC Symbol;Acc:HGNC:6467]"
-                }
-              ],
-              "len": 594,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.8758,
-                  "score": 63,
-                  "evalue": 6.50215,
-                  "identity": 12,
-                  "positive": 14,
-                  "query_from": 223,
-                  "query_to": 291,
-                  "query_frame": -2,
-                  "hit_from": 277,
-                  "hit_to": 299,
-                  "align_len": 23,
-                  "gaps": 0,
-                  "qseq": "QGGHHQLKSFPGHLALLKVVHER",
-                  "hseq": "QQNYQQASSFPPHEELLKVISER",
-                  "midline": "Q  + Q  SFP H  LLKV+ ER"
-                }
-              ]
-            },
-            {
-              "num": 9,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|23318",
-                  "accession": "23318",
-                  "title": "ENSPPRP00000006516.1 pep scaffold:PanPar1.0:KV860283.1:8608162:8643222:-1 gene:ENSPPRG00000001961.1 transcript:ENSPPRT00000004239.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DNA2 description:DNA replication helicase/nuclease 2 [Source:HGNC Symbol;Acc:HGNC:2939]"
-                }
-              ],
-              "len": 686,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.8758,
-                  "score": 63,
-                  "evalue": 6.7612,
-                  "identity": 15,
-                  "positive": 27,
-                  "query_from": 559,
-                  "query_to": 720,
-                  "query_frame": 1,
-                  "hit_from": 158,
-                  "hit_to": 211,
-                  "align_len": 54,
-                  "gaps": 0,
-                  "qseq": "GQVLKKIAQKALDLPSSGEGVDFFTFPNVASATKFKQLYRSRMNTLEMTPEVRQ",
-                  "hseq": "GTVLHEVFQKAISNSFAPEKLQEYAFQTIQEIKHLKEMYRLNLNQDEIKQEVEE",
-                  "midline": "G VL ++ QKA+    + E +  + F  +      K++YR  +N  E+  EV +"
+                  "qseq": "ATGGAGCGCCCGCAGCCCGACAGCATGCCCCAGGATTTGTCAGAGGCCCTGAAGGAGGCCACCAAGGAGGTGCACGTCCAGGCAGAGAATGCCGCGTTCATGAACTACTTTCAGAAGGGCCAGGTGACCCGGAAAGGATTTAAGCTGGTGATGGCCTCCCTGTACCACATCTACGTGGCTCTGGAGGAAGAGATCGAGCGCAACAAGGAGAACCCCGTCTATGCCCCCCTCTACTTCCCCGAAGAGCTGCACCGCAGGGCCGCCCTGGAGCGGGACATGGCCTTCTGGTACGGGCCCCGCTGGGAGGACGCCATCCCCTACACGCAGGCCACCAGGCGCTACGTGCGGCGGCTCCACGAGGTGGGGCGCAAGGAGCCGGAGCTGCTGGTGGCCCACGCCTACACCCGCTACCTCGGCGATCTGTCTGGGGGCCAGGTCCTCAAGAAGATTGCTCAGAAGGCCCTGGACCTGCCCAGCTCCGGGGAGGGCGTGGACTTCTTCACCTTCCCCAACGTCGCCAGCGCCACCAAGTTCAAGCAGCTGTACCGCTCCCGTATGAACACTCTGGAGATGACCCCCGAGGTCAGGCAGAGGGTCATCGAAGAGGCCAAGGCTGCGTTCCTGCTCAACATTCAGCTGTTTGAGGAGCTGCAGGAGCTGCTGGGCCAGGACGCCGAGGACCAGAGCCCCTCGCAGGCACCGGGGCTGCGCCGGCGGG",
+                  "hseq": "ATGGAGCGCCCGCAGCCCGACAGCATGCCCCAGGATTTGTCAGAGGCCCTGAAGGAGGCCACCAAGGAGGTGCACGTCCAGGCAGAGAATGCCGAGTTCATGAAGAACTTTCAGAAGGGCCAGGTGACCCGGAAAGGATTTAAGCTGGTGATGGCCTCCCTGTACCACATCTACGTGGCTCTGGAGGAAGAGATCGAGCACAACAAGGAGAACCCCGTCTATGCCCCCCTCTACTTCCCCGAAGAGCTGCACCGCAGGGCCGCCCTGGAGCGGGACATGGCCTTCTGGTACGGGCCCCGCTGGGAGGACGCCATCCCCTACACGCAGGCCACCAGGCGCTACGTGCGGCGGCTCCACGAGGTGGGGCGCAAGGAGCCGGAGCTGCTGGTGGCCCACGCCTACACCCGCTACCTCGGCGATCTGTCTGGGGGCCAGGTCCTCAAGAAGATTGCTCAGAAGGCCCTGGACCTGCCCAGCTCCGGGGAGGGCGTGGACTTCTTCACCTTCCCCAACGTCGCCAGCGCCACCAAGTTCAAGCAGCTGTACCGCTCCCGTATGAACACTCTGGAGATGACCCCCGAGGTCAGGCAGAGGGTCATCGAAGAGGCCAAGGCTGCGTTCCTGCTCAACATTCAGCTGTTTGAGGAGCTGCAGGAGCTGCTGGGCCAGGACGCCGAGGACCAGAGCCCCTCGCAGGCACCGGGGCTGCGCCGGCGGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 100,
-            "eff_space": 2351679183,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
+            "db_len": 46358541,
+            "hsp_len": 25,
+            "eff_space": 38451730338,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
           }
         }
       }

@@ -1,40 +1,25 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_9",
           "query_title": "seq_009",
           "query_len": 654,
-          "query_masking": [
-            {
-              "from": 181,
-              "to": 214
-            },
-            {
-              "from": 406,
-              "to": 439
-            },
-            {
-              "from": 74,
-              "to": 113
-            }
-          ],
           "hits": [
             {
               "num": 1,
@@ -42,28 +27,28 @@
                 {
                   "id": "gnl|BL_ORD_ID|17532",
                   "accession": "17532",
-                  "title": "ENSPPRP00000012327.1 pep scaffold:PanPar1.0:KV860394.1:5074769:5078153:1 gene:ENSPPRG00000005917.1 transcript:ENSPPRT00000010367.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
+                  "title": "ENSPPRT00000010367.1 cds scaffold:PanPar1.0:KV860394.1:5074769:5078153:1 gene:ENSPPRG00000005917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
                 }
               ],
-              "len": 367,
+              "len": 1104,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 358.607,
-                  "score": 919,
-                  "evalue": 3.78068e-125,
-                  "identity": 189,
-                  "positive": 189,
-                  "query_from": 3,
-                  "query_to": 569,
-                  "query_frame": 3,
-                  "hit_from": 179,
-                  "hit_to": 367,
-                  "align_len": 189,
+                  "bit_score": 1046.32,
+                  "score": 566,
+                  "evalue": 0,
+                  "identity": 570,
+                  "query_from": 1,
+                  "query_to": 572,
+                  "query_strand": "Plus",
+                  "hit_from": 533,
+                  "hit_to": 1104,
+                  "hit_strand": "Plus",
+                  "align_len": 572,
                   "gaps": 0,
-                  "qseq": "RWLYQRPQASHQLLRILTDALVPYlvgqvaagaqalqlFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERVGKTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGLYPDMDPEHVGAFVDAVHRYSRLLRQN",
-                  "hseq": "RWLYQRPQASHQLLRILTDALVPYLVGQVAAGAQALQLFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERVGKTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGLYPDMDPEHVGAFVDAVHRYSRLLRQN",
-                  "midline": "RWLYQRPQASHQLLRILTDALVPYLVGQVAAGAQALQLFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERVGKTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGLYPDMDPEHVGAFVDAVHRYSRLLRQN"
+                  "qseq": "AGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGCATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAGAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "hseq": "AGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGAATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAAAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             },
@@ -71,30 +56,30 @@
               "num": 2,
               "description": [
                 {
-                  "id": "gnl|BL_ORD_ID|17533",
-                  "accession": "17533",
-                  "title": "ENSPPRP00000012314.1 pep scaffold:PanPar1.0:KV860394.1:5074882:5078078:1 gene:ENSPPRG00000005917.1 transcript:ENSPPRT00000010355.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
+                  "id": "gnl|BL_ORD_ID|17534",
+                  "accession": "17534",
+                  "title": "ENSPPRT00000010346.1 cds scaffold:PanPar1.0:KV860394.1:5074882:5077938:1 gene:ENSPPRG00000005917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
                 }
               ],
-              "len": 321,
+              "len": 897,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 256.144,
-                  "score": 653,
-                  "evalue": 2.07423e-85,
-                  "identity": 136,
-                  "positive": 138,
-                  "query_from": 3,
-                  "query_to": 569,
-                  "query_frame": 3,
-                  "hit_from": 179,
-                  "hit_to": 321,
-                  "align_len": 189,
-                  "gaps": 46,
-                  "qseq": "RWLYQRPQASHQLLRILTDALVPYlvgqvaagaqalqlFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERVGKTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGLYPDMDPEHVGAFVDAVHRYSRLLRQN",
-                  "hseq": "RWLYQRPQASHQLLRILTDALVPY-------------------------------------LVGQVAAGAQ---------IIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERVGKTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGLYPDMDPEHVGAFVDAVHRYSRLLRQN",
-                  "midline": "RWLYQRPQASHQLLRILTDALVPY                                     +  +V A  Q         IIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERVGKTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGLYPDMDPEHVGAFVDAVHRYSRLLRQN"
+                  "bit_score": 625.288,
+                  "score": 338,
+                  "evalue": 1.68784e-178,
+                  "identity": 342,
+                  "query_from": 1,
+                  "query_to": 344,
+                  "query_strand": "Plus",
+                  "hit_from": 533,
+                  "hit_to": 876,
+                  "hit_strand": "Plus",
+                  "align_len": 344,
+                  "gaps": 0,
+                  "qseq": "AGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGCATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAGAAAGCCCGG",
+                  "hseq": "AGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGAATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAAAAAGCCCGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||"
                 }
               ]
             },
@@ -102,166 +87,60 @@
               "num": 3,
               "description": [
                 {
-                  "id": "gnl|BL_ORD_ID|17534",
-                  "accession": "17534",
-                  "title": "ENSPPRP00000012303.1 pep scaffold:PanPar1.0:KV860394.1:5074882:5077938:1 gene:ENSPPRG00000005917.1 transcript:ENSPPRT00000010346.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
+                  "id": "gnl|BL_ORD_ID|17533",
+                  "accession": "17533",
+                  "title": "ENSPPRT00000010355.1 cds scaffold:PanPar1.0:KV860394.1:5074882:5078078:1 gene:ENSPPRG00000005917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
                 }
               ],
-              "len": 299,
+              "len": 966,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 204.527,
-                  "score": 519,
-                  "evalue": 1.80758e-65,
-                  "identity": 115,
-                  "positive": 116,
-                  "query_from": 3,
-                  "query_to": 353,
-                  "query_frame": 3,
-                  "hit_from": 179,
-                  "hit_to": 295,
-                  "align_len": 117,
-                  "gaps": 0,
-                  "qseq": "RWLYQRPQASHQLLRILTDALVPYlvgqvaagaqalqlFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARERV",
-                  "hseq": "RWLYQRPQASHQLLRILTDALVPYLVGQVAAGAQALQLFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKARRRL",
-                  "midline": "RWLYQRPQASHQLLRILTDALVPYLVGQVAAGAQALQLFESHAGHLGPQLFNKFALPYIRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEELAQAGYEVVGLDWTVAPEKAR R+"
-                }
-              ]
-            },
-            {
-              "num": 4,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|19243",
-                  "accession": "19243",
-                  "title": "ENSPPRP00000010676.1 pep scaffold:PanPar1.0:KV860311.1:17862947:17888810:-1 gene:ENSPPRG00000004763.1 transcript:ENSPPRT00000008620.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CRLS1 description:cardiolipin synthase 1 [Source:HGNC Symbol;Acc:HGNC:16148]"
-                }
-              ],
-              "len": 302,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.4906,
-                  "score": 62,
-                  "evalue": 4.29641,
-                  "identity": 19,
-                  "positive": 29,
-                  "query_from": 455,
-                  "query_to": 649,
-                  "query_frame": 2,
-                  "hit_from": 97,
-                  "hit_to": 165,
-                  "align_len": 69,
-                  "gaps": 4,
-                  "qseq": "ATALHCQPGPWTLP*HGPRTCGGLCGCRAQILTSASTELSIHVFPQLPLTKMIDCF----QENKSSELG",
-                  "hseq": "ASAASLYENPWTIPNMLSMTRIGLAPVLGYLIIEEDFNIALGVFALAGLTDLLDGFIARNWANQKSALG",
-                  "midline": "A+A      PWT+P     T  GL      ++      +++ VF    LT ++D F      N+ S LG"
-                }
-              ]
-            },
-            {
-              "num": 5,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|2980",
-                  "accession": "2980",
-                  "title": "ENSPPRP00000026934.1 pep scaffold:PanPar1.0:KV860281.1:27330075:27493895:-1 gene:ENSPPRG00000018062.1 transcript:ENSPPRT00000027382.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:IGF2BP3 description:insulin like growth factor 2 mRNA binding protein 3 [Source:HGNC Symbol;Acc:HGNC:28868]"
-                }
-              ],
-              "len": 579,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.4906,
-                  "score": 62,
-                  "evalue": 5.32176,
-                  "identity": 15,
-                  "positive": 26,
-                  "query_from": 357,
-                  "query_to": 491,
-                  "query_frame": 3,
-                  "hit_from": 325,
-                  "hit_to": 368,
-                  "align_len": 45,
+                  "bit_score": 614.208,
+                  "score": 332,
+                  "evalue": 3.65354e-175,
+                  "identity": 337,
+                  "query_from": 234,
+                  "query_to": 572,
+                  "query_strand": "Plus",
+                  "hit_from": 629,
+                  "hit_to": 966,
+                  "hit_strand": "Plus",
+                  "align_len": 339,
                   "gaps": 1,
-                  "qseq": "KTVTLQGNLDPCALYASEEEIGRLVQQMLNDFGPQRYIANLGHGL",
-                  "hseq": "RTITVKGNVETCA-KAEEEIMKKIRESYENDIASMNLQAHLIPGL",
-                  "midline": "+T+T++GN++ CA  A EE + ++ +   ND       A+L  GL"
-                }
-              ]
-            },
-            {
-              "num": 6,
-              "description": [
+                  "qseq": "GTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAGAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "hseq": "GTGCCCA-GATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAAAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "midline": "||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
                 {
-                  "id": "gnl|BL_ORD_ID|28131",
-                  "accession": "28131",
-                  "title": "ENSPPRP00000001720.1 pep scaffold:PanPar1.0:KV860314.1:19799955:19842509:-1 gene:ENSPPRG00000023911.1 transcript:ENSPPRT00000033424.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:SECISBP2 description:SECIS binding protein 2 [Source:HGNC Symbol;Acc:HGNC:30972]"
-                }
-              ],
-              "len": 841,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 28.1054,
-                  "score": 61,
-                  "evalue": 6.03828,
-                  "identity": 20,
-                  "positive": 33,
-                  "query_from": 177,
-                  "query_to": 350,
-                  "query_frame": 3,
-                  "hit_from": 530,
-                  "hit_to": 589,
-                  "align_len": 60,
-                  "gaps": 2,
-                  "qseq": "IRDVAKRVKARLQESGLAPVPMIIFAKDGHFALEE-LAQAGYEVV-GLDWTVAPEKARER",
-                  "hseq": "LKERQERKQQRLQENTVSPAPASDASLDGESGGDEALEQAEPSVAEGTEESVAPTPAGQR",
-                  "midline": "+++  +R + RLQE+ ++P P    + DG    +E L QA   V  G + +VAP  A +R"
-                }
-              ]
-            },
-            {
-              "num": 7,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|11649",
-                  "accession": "11649",
-                  "title": "ENSPPRP00000018236.1 pep scaffold:PanPar1.0:KV860303.1:633042:772066:-1 gene:ENSPPRG00000009986.1 transcript:ENSPPRT00000016560.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:ABCA4 description:ATP binding cassette subfamily A member 4 [Source:HGNC Symbol;Acc:HGNC:34]"
-                }
-              ],
-              "len": 2266,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 27.7202,
-                  "score": 60,
-                  "evalue": 9.37974,
-                  "identity": 13,
-                  "positive": 16,
-                  "query_from": 57,
-                  "query_to": 155,
-                  "query_frame": -2,
-                  "hit_from": 2127,
-                  "hit_to": 2159,
-                  "align_len": 33,
+                  "num": 2,
+                  "bit_score": 187.632,
+                  "score": 101,
+                  "evalue": 9.43857e-47,
+                  "identity": 103,
+                  "query_from": 1,
+                  "query_to": 104,
+                  "query_strand": "Plus",
+                  "hit_from": 533,
+                  "hit_to": 636,
+                  "hit_strand": "Plus",
+                  "align_len": 104,
                   "gaps": 0,
-                  "qseq": "EELWAKMPCMGLKELQCLGTSSHLSYQIWDQSI",
-                  "hseq": "EALCTRLAIMVKGTFQCLGTIQHLKYKFGDGYI",
-                  "midline": "E L  ++  M     QCLGT  HL Y+  D  I"
+                  "qseq": "AGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGCATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAG",
+                  "hseq": "AGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGAATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 97,
-            "eff_space": 1516398136,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
+            "db_len": 46358541,
+            "hsp_len": 25,
+            "eff_space": 28690555614,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
           }
         }
       }

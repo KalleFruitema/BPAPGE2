@@ -1,14 +1,14 @@
 import os
 import json
 from pprint import pprint
-from Bio import Entrez
+from Bio import SeqIO
 
 
-Entrez.api_key = "MyAPIKey"
-Entrez.email = "kallefruitema@gmail.com"
+# Entrez.api_key = "MyAPIKey"
+# Entrez.email = "kallefruitema@gmail.com"
 
 
-# deze functie werkt helemaal
+# deze functie werkt helemaal goed
 def fill_table_brokstuk(cursor):
     with open('blast_db/seq2.fa') as file:
         inhoud = file.read().strip().split('\n')
@@ -22,33 +22,53 @@ def fill_table_brokstuk(cursor):
         sql = """INSERT INTO BROKSTUK(brokstuk_header, brokstuk_sequence)
         VALUES(%s, %s)"""
         cursor.execute(sql, key_val)
+    print("Brokstuk table filled!")
 
 
 # deze functie werkt, alleen de GENE tabel moet eerst gevuld worden vanwege foreign keys
 def fill_table_alignment(cursor, data):
     sql = """INSERT INTO ALIGNMENT(brokstuk_header, alignment_ID, NCBI_gene_ID, 
     alignment_length, e_value, bit_score, percentage_identity, gaps,
-    mismatches, startpos_hit, endpos_hit, best_hit_brokstuk)
-    VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
-    for line in data:    
+    mismatches, startpos_hit, endpos_hit)
+    VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+    for line in data:
         cursor.execute(sql, line)
+    print("Alignment table filled!")
 
 # ik loop vast op de data hiervan krijgen
 def fill_table_gene(cursor, data):
-    ...
+    sql = """INSERT INTO GENE(NCBI_gene_ID, gene_name, 
+    gene_sequence, gene_description)
+    VALUES(%s, %s, %s, %s)"""
+    for line in data:
+        cursor.execute(sql, line)
+    print("Gene table filled!")
 
 
 def parse_blast(file_list):
     # os.popen('sh blast_db/blast_json/blast_script.sh')
     alignment_data = []
-    gene_data = []
+    gene_data = set()
+    blast_db = []
+    path = r"blast_db\blast_json\Panthera_pardus.PanPar1.0.cds.all.fa"
+    for seq_record in SeqIO.parse(path, "fasta"):
+        blast_db.append(seq_record)
     for i, jsonpath in enumerate(file_list):
         with open(jsonpath) as jsonfile:
             j = json.load(jsonfile)
         search = j['BlastOutput2']['report']['results']['search']
+        try:
+            if search["message"] == "No hits found":
+                print("Breaked at:", jsonpath)
+                continue
+        except Exception:
+            pass
         brokstuk_header = f">{search['query_title']}"
         query_len = search['query_len']
         for hit in search['hits']:
+            if hit['num'] > 1:
+                break
+                
             alignment_value_list = []
             gene_value_list = []
             NCBI_ID, description = hit['description'][0]['title'].split(' ', 1)
@@ -56,32 +76,20 @@ def parse_blast(file_list):
 
             # gene tabel data
             gene_value_list.append(NCBI_ID)
+
             try:
                 gene_name = description.split("description:")[1]
                 gene_value_list.append(gene_name)
             except IndexError:
                 gene_value_list.append("unknown")
+                
+            for seq_rec in blast_db:
+                if seq_rec.id == NCBI_ID:
+                    gene_value_list.append(seq_rec.seq.__str__())
 
-            # dit is waar ik vastloop, met de sequenties van de genen uit de Entrez database te halen
-            try:
-                result = Entrez.esearch(db="nucleotide", term=f"{NCBI_ID}")
-            except Exception:
-                try:
-                    term = description.split("gene:")[1].split(" ")[0]
-                    result = Entrez.esearch(db="nucleotide", term=f"{term}")
-                except Exception:
-                    try:
-                        term = description.split("transcript:")[1].split(" ")[0]
-                        result = Entrez.esearch(db="nucleotide", term=f"{term}")
-                    except Exception:
-                        result = None
-            if result is None:
-                gene_value_list.append("unknown")
-                print("Failed")
-            else:
-                record = Entrez.read(result)["IdList"][0]
-                print(record)
             gene_value_list.append(description)
+
+            gene_data.add(tuple(gene_value_list))
 
             # alignment tabel data
             alignment_value_list.append(brokstuk_header)
@@ -95,29 +103,27 @@ def parse_blast(file_list):
             alignment_value_list.append(hsp['align_len'] - hsp['identity'] - hsp['gaps'])
             alignment_value_list.append(hsp['hit_from'])
             alignment_value_list.append(hsp['hit_to'])
-            if hit['num'] == 1:
-                alignment_value_list.append(True)
-            else:
-                alignment_value_list.append(False)
             alignment_data.append(alignment_value_list)
-            gene_data.append(gene_value_list)
-        break
-    return alignment_data
+    return alignment_data, gene_data
 
 
-def tf_main():
-    directory = r'blast_db\blast_json'
+def tf_main(cursor):
+    directory = r'blast_db/blast_json'
     file_list = []
+    with open(f"{directory}/blast_results.json") as file:
+        j = json.load(file)
+
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         if "blast_results_" in filename:
             file_list.append(f)
     file_list.sort(key= lambda x: int(x.split("_")[-1].split(".")[0]))
 
-    blast_results = parse_blast(file_list)
-    # fill_table_brokstuk(cursor)
-    # fill_table_alignment(cursor, blast_results)
-
+    align_data, gene_data = parse_blast(file_list)
+    fill_table_brokstuk(cursor)
+    fill_table_gene(cursor, gene_data)
+    fill_table_alignment(cursor, align_data)
+    
 
 if __name__ == "__main__":
     tf_main()

@@ -1,80 +1,25 @@
 {
   "BlastOutput2": {
     "report": {
-      "program": "blastx",
-      "version": "BLASTX 2.12.0+",
-      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.pep.all.fa"
+        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
       },
       "params": {
-        "matrix": "BLOSUM62",
         "expect": 10,
-        "gap_open": 11,
-        "gap_extend": 1,
-        "filter": "L;",
-        "cbs": 2,
-        "query_gencode": 1
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
       },
       "results": {
         "search": {
           "query_id": "Query_50",
           "query_title": "seq_050",
           "query_len": 2399,
-          "query_masking": [
-            {
-              "from": 234,
-              "to": 282
-            },
-            {
-              "from": 474,
-              "to": 507
-            },
-            {
-              "from": 630,
-              "to": 663
-            },
-            {
-              "from": 666,
-              "to": 711
-            },
-            {
-              "from": 1101,
-              "to": 1128
-            },
-            {
-              "from": 1902,
-              "to": 1941
-            },
-            {
-              "from": 1987,
-              "to": 2017
-            },
-            {
-              "from": 2050,
-              "to": 2116
-            },
-            {
-              "from": 140,
-              "to": 167
-            },
-            {
-              "from": 251,
-              "to": 272
-            },
-            {
-              "from": 581,
-              "to": 617
-            },
-            {
-              "from": 1988,
-              "to": 2018
-            },
-            {
-              "from": 2144,
-              "to": 2213
-            }
-          ],
           "hits": [
             {
               "num": 1,
@@ -82,164 +27,40 @@
                 {
                   "id": "gnl|BL_ORD_ID|4988",
                   "accession": "4988",
-                  "title": "ENSPPRP00000024961.1 pep scaffold:PanPar1.0:KV860292.1:10140702:10193733:-1 gene:ENSPPRG00000015157.1 transcript:ENSPPRT00000023971.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:BLVRA description:biliverdin reductase A [Source:HGNC Symbol;Acc:HGNC:1062]"
+                  "title": "ENSPPRT00000023971.1 cds scaffold:PanPar1.0:KV860292.1:10140702:10193733:-1 gene:ENSPPRG00000015157.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:BLVRA description:biliverdin reductase A [Source:HGNC Symbol;Acc:HGNC:1062]"
                 }
               ],
-              "len": 309,
+              "len": 930,
               "hsps": [
                 {
                   "num": 1,
-                  "bit_score": 565.844,
-                  "score": 1457,
+                  "bit_score": 1652.03,
+                  "score": 894,
                   "evalue": 0,
-                  "identity": 303,
-                  "positive": 303,
+                  "identity": 918,
                   "query_from": 225,
-                  "query_to": 1145,
-                  "query_frame": 3,
+                  "query_to": 1148,
+                  "query_strand": "Plus",
                   "hit_from": 1,
-                  "hit_to": 309,
-                  "align_len": 309,
-                  "gaps": 2,
-                  "qseq": "MNAEPERKFgvvvvgvgRAGSVRIRDLRNPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKvlheehvellmeeFAFLKKEVVGKDLLKGSLLFTAGP--XERLGFSVFSGISRLTWLVSLFGELSLISATLEERKEDQHMKMTVCLETENKRPLTWIEEKGPGLKRNRHLSFHFKSGSLENMPNVGVNKNIFLKDQNIFVQKLLGQFSEKELAAEKKRILHCLWLAEEIQKYCYSKKEEKETCGTSKMGP",
-                  "hseq": "MNAEPERKFGVVVVGVGRAGSVRIRDLRNPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVLHEEHVELLMEEFAFLKKEVVGKDLLKGSLLFTAGPLEEERFGFPAFSGISRLTWLVSLFGELSLISATLEERKEDQHMKMTVCLETENKRPLTWIEEKGPGLKRNRHLSFHFKSGSLENMPNVGVNKNIFLKDQNIFVQKLLGQFSEKELAAEKKRILHCLWLAEEIQKYCYSKKEEKETCGTSKMGP",
-                  "midline": "MNAEPERKFGVVVVGVGRAGSVRIRDLRNPHASSAFLNLIGFVSRRELGNIDEVQQISLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKGKVLHEEHVELLMEEFAFLKKEVVGKDLLKGSLLFTAGP   ER GF  FSGISRLTWLVSLFGELSLISATLEERKEDQHMKMTVCLETENKRPLTWIEEKGPGLKRNRHLSFHFKSGSLENMPNVGVNKNIFLKDQNIFVQKLLGQFSEKELAAEKKRILHCLWLAEEIQKYCYSKKEEKETCGTSKMGP"
-                }
-              ]
-            },
-            {
-              "num": 2,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|27190",
-                  "accession": "27190",
-                  "title": "ENSPPRP00000002674.1 pep scaffold:PanPar1.0:KV860375.1:3280541:3295878:-1 gene:ENSPPRG00000023269.1 transcript:ENSPPRT00000000221.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DHDH description:dihydrodiol dehydrogenase [Source:HGNC Symbol;Acc:HGNC:17887]"
-                }
-              ],
-              "len": 242,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 38.1206,
-                  "score": 87,
-                  "evalue": 0.016024,
-                  "identity": 21,
-                  "positive": 31,
-                  "query_from": 396,
-                  "query_to": 578,
-                  "query_frame": 3,
-                  "hit_from": 57,
-                  "hit_to": 117,
-                  "align_len": 61,
-                  "gaps": 0,
-                  "qseq": "SLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKG",
-                  "hseq": "SYEELAKDPNVEVAYIGTQHPQHKAAVLLCLAAGKAVLCEKPMGVNAAEVREMVAEARSRG",
-                  "midline": "S E     P VEVAYI ++   H+  +   L AGK VL E PM ++    +++   A  +G"
-                }
-              ]
-            },
-            {
-              "num": 3,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|27189",
-                  "accession": "27189",
-                  "title": "ENSPPRP00000002684.1 pep scaffold:PanPar1.0:KV860375.1:3280175:3295924:-1 gene:ENSPPRG00000023269.1 transcript:ENSPPRT00000000228.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:DHDH description:dihydrodiol dehydrogenase [Source:HGNC Symbol;Acc:HGNC:17887]"
-                }
-              ],
-              "len": 335,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 38.5058,
-                  "score": 88,
-                  "evalue": 0.0182394,
-                  "identity": 21,
-                  "positive": 31,
-                  "query_from": 396,
-                  "query_to": 578,
-                  "query_frame": 3,
-                  "hit_from": 57,
-                  "hit_to": 117,
-                  "align_len": 61,
-                  "gaps": 0,
-                  "qseq": "SLENALSSPEVEVAYICSESSSHEDYIRQFLNAGKHVLVEYPMTLSWEAAQDLWKLAEQKG",
-                  "hseq": "SYEELAKDPNVEVAYIGTQHPQHKAAVLLCLAAGKAVLCEKPMGVNAAEVREMVAEARSRG",
-                  "midline": "S E     P VEVAYI ++   H+  +   L AGK VL E PM ++    +++   A  +G"
-                }
-              ]
-            },
-            {
-              "num": 4,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|26014",
-                  "accession": "26014",
-                  "title": "ENSPPRP00000003864.1 pep scaffold:PanPar1.0:KV860392.1:5004404:5026398:-1 gene:ENSPPRG00000000169.1 transcript:ENSPPRT00000001466.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:RIOK2 description:RIO kinase 2 [Source:HGNC Symbol;Acc:HGNC:18999]"
-                }
-              ],
-              "len": 552,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.4166,
-                  "score": 67,
-                  "evalue": 7.81113,
-                  "identity": 13,
-                  "positive": 22,
-                  "query_from": 501,
-                  "query_to": 620,
-                  "query_frame": -1,
-                  "hit_from": 224,
-                  "hit_to": 266,
-                  "align_len": 43,
-                  "gaps": 3,
-                  "qseq": "LLH---QEFNMLLMQDLSFLLSQLPQVLSCFPRQCHWIFHKDM",
-                  "hseq": "LIHGDFNEFNLILDKDDHITMIDFPQMVSTSHHNAEWYFDRDV",
-                  "midline": "L+H    EFN++L +D    +   PQ++S       W F +D+"
-                }
-              ]
-            },
-            {
-              "num": 5,
-              "description": [
-                {
-                  "id": "gnl|BL_ORD_ID|17491",
-                  "accession": "17491",
-                  "title": "ENSPPRP00000012404.1 pep scaffold:PanPar1.0:KV860297.1:23750527:23781517:1 gene:ENSPPRG00000005952.1 transcript:ENSPPRT00000010449.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:SH3TC1 description:SH3 domain and tetratricopeptide repeats 1 [Source:HGNC Symbol;Acc:HGNC:26009]"
-                }
-              ],
-              "len": 1280,
-              "hsps": [
-                {
-                  "num": 1,
-                  "bit_score": 30.0314,
-                  "score": 66,
-                  "evalue": 9.53281,
-                  "identity": 24,
-                  "positive": 36,
-                  "query_from": 375,
-                  "query_to": 614,
-                  "query_frame": -1,
-                  "hit_from": 925,
-                  "hit_to": 998,
-                  "align_len": 81,
-                  "gaps": 8,
-                  "qseq": "HQEFNMLLMQDLS-FLLSQLPQVLSCFPRQCHWIFHKDMLTSIKELPDIVLMAGALTADISNLYLWAGKSIFQRNLLDFIN",
-                  "hseq": "HLEGQLLAVQRLCHFYSTVMPSEAQCV------VYHEFQLSLARRVADKVL-EGQLLETISRLYLSLGTERAYRSALDYTK",
-                  "midline": "H E  +L +Q L  F  + +P    C       ++H+  L+  + + D VL  G L   IS LYL  G     R+ LD+  "
+                  "hit_to": 930,
+                  "hit_strand": "Plus",
+                  "align_len": 930,
+                  "gaps": 6,
+                  "qseq": "ATGAATGCAGAGCCTGAGAGAAAGTTTGGAGTGGTGGTGGTTGGCGTTGGCAGAGCTGGCTCAGTGCGGATCAGGGACTTGCGGAATCCACATGCTTCCTCGGCGTTCCTGAACCTGATTGGCTTCGTATCCAGACGAGAGCTCGGGAACATTGATGAAGTCCAGCAGATTTCTTTGGAAAATGCTCTTTCCAGCCCAGAGGTAGAGGTTGCTTATATCTGCAGTGAGAGCTCCAGCCATGAGGACTATATCAGGCAGTTCCTTAATGCTGGTAAGCATGTCCTTGTGGAATATCCAATGACACTGTCTTGGGAAGCAGCTCAGGACCTGTGGAAGCTGGCTGAGCAGAAAGGAAAGGTCTTGCATGAGGAGCATGTTGAACTCTTGATGGAGGAGTTTGCATTCCTGAAAAAAGAAGTGGTGGGAAAAGACCTGCTAAAAGGGTCTCTCCTCTTTACAGCTGGCCCNNN------AGAGCGGTTGGGCTTCTCTGTGTTCAGTGGCATTTCTCGCCTGACCTGGCTGGTCTCCCTCTTTGGGGAACTTTCTCTTATATCCGCCACTTTGGAAGAGCGAAAGGAAGATCAACATATGAAAATGACTGTGTGCTTAGAGACAGAGAACAAACGTCCGCTCACATGGATTGAAGAGAAAGGACCTGGTCTAAAACGAAACAGACATTTAAGCTTCCATTTTAAATCTGGGTCCCTGGAGAATATGCCAAATGTAGGAGTCAATAAGAATATTTTCCTGAAAGATCAAAACATATTTGTCCAGAAACTCTTGGGCCAGTTCTCTGAAAAGGAACTGGCTGCTGAAAAGAAACGCATCCTGCACTGCCTGTGGCTTGCAGAAGAAATCCAGAAATACTGCTACTCAAAGAAGGAAGAGAAGGAAACATGCGGCACATCTAAGATGGGACCATAG",
+                  "hseq": "ATGAATGCAGAGCCTGAGAGAAAGTTTGGAGTGGTGGTGGTTGGCGTTGGCAGAGCTGGCTCAGTGCGGATCAGGGACTTGCGGAATCCACATGCTTCCTCGGCGTTCCTGAACCTGATTGGCTTCGTATCCAGACGAGAGCTCGGGAACATTGATGAAGTCCAGCAGATTTCTTTGGAAAATGCTCTTTCCAGCCCAGAGGTAGAGGTTGCTTATATCTGCAGTGAGAGCTCCAGCCATGAGGACTATATCAGGCAGTTCCTTAATGCTGGTAAGCATGTCCTTGTGGAATATCCAATGACACTGTCTTGGGAAGCAGCTCAGGACCTGTGGAAGCTGGCTGAGCAGAAAGGAAAGGTCTTGCATGAGGAGCATGTTGAACTCTTGATGGAGGAGTTTGCATTCCTGAAAAAAGAAGTGGTGGGAAAAGACCTGCTAAAAGGGTCTCTCCTCTTTACAGCTGGCCCATTGGAAGAAGAGCGGTTTGGCTTCCCTGCGTTCAGTGGCATTTCTCGCCTGACCTGGCTGGTCTCCCTCTTTGGGGAACTTTCTCTTATATCCGCCACTTTGGAAGAGCGAAAGGAAGATCAACATATGAAAATGACTGTGTGCTTAGAGACAGAGAACAAACGTCCGCTCACATGGATTGAAGAGAAAGGACCTGGTCTAAAACGAAACAGACATTTAAGCTTCCATTTTAAATCTGGGTCCCTGGAGAATATGCCAAATGTAGGAGTCAATAAGAATATTTTCCTGAAAGATCAAAACATATTTGTCCAGAAACTCTTGGGCCAGTTCTCTGAAAAGGAACTGGCTGCTGAAAAGAAACGCATCCTGCACTGCCTGTGGCTTGCAGAAGAAATCCAGAAATACTGCTACTCAAAGAAGGAAGAGAAGGAAACATGCGGCACATCTAAGATGGGACCATAG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||         ||||||||| |||||| ||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
                 }
               ]
             }
           ],
           "stat": {
             "db_num": 29823,
-            "db_len": 15425047,
-            "hsp_len": 109,
-            "eff_space": 8400294600,
-            "kappa": 0.041,
-            "lambda": 0.267,
-            "entropy": 0.14
+            "db_len": 46358541,
+            "hsp_len": 26,
+            "eff_space": 108168798339,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
           }
         }
       }
