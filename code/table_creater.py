@@ -12,7 +12,7 @@ def create_table_alignment(cursor):
     sql = """CREATE TABLE ALIGNMENT(
     brokstuk_header VARCHAR(255) NOT NULL,
     alignment_ID INTEGER NOT NULL,
-    NCBI_gene_ID VARCHAR(255) NOT NULL,
+    ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
     alignment_length INTEGER NOT NULL,
     e_value DOUBLE PRECISION NOT NULL,
     bit_score INTEGER NOT NULL,
@@ -26,34 +26,34 @@ def create_table_alignment(cursor):
     FOREIGN KEY(brokstuk_header)
     REFERENCES BROKSTUK(brokstuk_header),
 
-    CONSTRAINT fk_NCBI_gene_ID
-    FOREIGN KEY(NCBI_gene_ID)
-    REFERENCES GENE(NCBI_gene_ID)
+    CONSTRAINT fk_ENSEMBL_gene_ID
+    FOREIGN KEY(ENSEMBL_gene_ID)
+    REFERENCES GENE(ENSEMBL_gene_ID)
     )"""
     cursor.execute(sql)
 
 
 def create_table_gene(cursor):
     sql = """CREATE TABLE GENE(
-    NCBI_gene_ID VARCHAR(255) NOT NULL UNIQUE,
+    ENSEMBL_gene_ID VARCHAR(255) NOT NULL UNIQUE,
     gene_name VARCHAR(255) NOT NULL,
     gene_sequence TEXT NOT NULL UNIQUE,
     gene_description TEXT,
 
-    CONSTRAINT pk_NCBI_gene_ID
-    PRIMARY KEY(NCBI_gene_ID)
+    CONSTRAINT pk_ENSEMBL_gene_ID
+    PRIMARY KEY(ENSEMBL_gene_ID)
     )"""
     cursor.execute(sql)
 
 
 def create_table_gene_protein(cursor):
     sql = """CREATE TABLE GENE_PROTEIN(
-    NCBI_gene_ID VARCHAR(255) NOT NULL,
+    ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
     NCBI_prot_ID VARCHAR(255) NOT NULL,
 
-    CONSTRAINT fk_NCBI_gene_ID
-    FOREIGN KEY(NCBI_gene_ID)
-    REFERENCES GENE(NCBI_gene_ID),
+    CONSTRAINT fk_ENSEMBL_gene_ID
+    FOREIGN KEY(ENSEMBL_gene_ID)
+    REFERENCES GENE(ENSEMBL_gene_ID),
 
     CONSTRAINT fk_NCBI_prot_ID
     FOREIGN KEY(NCBI_prot_ID)
@@ -132,15 +132,15 @@ def create_table_function(cursor):
 
 def create_table_spliced_gene(cursor):
     sql = """CREATE TABLE SPLICED_GENE(
-    NCBI_gene_ID VARCHAR(255) NOT NULL UNIQUE,
+    ENSEMBL_gene_ID VARCHAR(255) NOT NULL UNIQUE,
     splice_gene_ID VARCHAR(255) NOT NULL UNIQUE,
     start_intron INTEGER NOT NULL,
     eind_intron INTEGER NOT NULL,
     NCBI_prot_ID VARCHAR(255) NOT NULL,
 
-    CONSTRAINT fk_NCBI_gene_ID
-    FOREIGN KEY(NCBI_gene_ID)
-    REFERENCES GENE(NCBI_gene_ID),
+    CONSTRAINT fk_ENSEMBL_gene_ID
+    FOREIGN KEY(ENSEMBL_gene_ID)
+    REFERENCES GENE(ENSEMBL_gene_ID),
 
     CONSTRAINT fk_NCBI_prot_ID
     FOREIGN KEY(NCBI_prot_ID)

@@ -30,7 +30,7 @@ def main():
     conn = psycopg2.connect(conn_string)
     cursor = conn.cursor()
     try:       
-        # create_all_tables(cursor)
+        create_all_tables(cursor)
 
         fill_all_tables(cursor)
         
