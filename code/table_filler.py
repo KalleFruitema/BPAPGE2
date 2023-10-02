@@ -5,11 +5,6 @@ from Bio import SeqIO
 import requests
 
 
-# Entrez.api_key = "MyAPIKey"
-# Entrez.email = "kallefruitema@gmail.com"
-
-
-# deze functie werkt helemaal goed
 def fill_table_brokstuk(cursor):
     with open('blast_db/seq2.fa') as file:
         inhoud = file.read().strip().split('\n')
@@ -26,7 +21,6 @@ def fill_table_brokstuk(cursor):
     print("Brokstuk table filled!")
 
 
-# deze functie werkt, alleen de GENE tabel moet eerst gevuld worden vanwege foreign keys
 def fill_table_alignment(cursor, data):
     sql = """INSERT INTO ALIGNMENT(brokstuk_header, alignment_ID, ENSEMBL_gene_ID, 
     alignment_length, e_value, bit_score, percentage_identity, gaps,
@@ -36,7 +30,7 @@ def fill_table_alignment(cursor, data):
         cursor.execute(sql, line)
     print("Alignment table filled!")
 
-# ik loop vast op de data hiervan krijgen
+
 def fill_table_gene(cursor, data):
     sql = """INSERT INTO GENE(ENSEMBL_gene_ID, gene_name, 
     gene_sequence, gene_description)
