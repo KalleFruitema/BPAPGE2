@@ -1,11 +1,14 @@
 def create_table_brokstuk(cursor):
+    print("in brokstuk func")
     sql = """CREATE TABLE BROKSTUK(
     brokstuk_header VARCHAR(255) NOT NULL UNIQUE,
     brokstuk_sequence TEXT NOT NULL UNIQUE,
+
     CONSTRAINT pk_brokstuk_header
     PRIMARY KEY(brokstuk_header)
     )"""
     cursor.execute(sql)
+    print("Brokstuk table created!")
 
 
 def create_table_alignment(cursor):
@@ -31,6 +34,7 @@ def create_table_alignment(cursor):
     REFERENCES GENE(ENSEMBL_gene_ID)
     )"""
     cursor.execute(sql)
+    print("Alignment table created!")
 
 
 def create_table_gene(cursor):
@@ -44,6 +48,7 @@ def create_table_gene(cursor):
     PRIMARY KEY(ENSEMBL_gene_ID)
     )"""
     cursor.execute(sql)
+    print("Gene table created!")
 
 
 def create_table_gene_protein(cursor):
@@ -60,25 +65,26 @@ def create_table_gene_protein(cursor):
     REFERENCES PROTEIN(NCBI_prot_ID)
     )"""
     cursor.execute(sql)
+    print("Gene_protein table created!")
 
 
 def create_table_pathway(cursor):
     sql = """CREATE TABLE PATHWAY(
-    pathway_ID INTEGER NOT NULL UNIQUE,
+    pathway_ID VARCHAR(255) NOT NULL UNIQUE,
     pathway_name VARCHAR(255) NOT NULL,
     pathway_description TEXT NULL,
-    pathway_EC VARCHAR(255) NOT NULL,
 
     CONSTRAINT pk_pathway_ID
     PRIMARY KEY(pathway_ID) 
     )"""
     cursor.execute(sql)
+    print("Pathway table created!")
 
 
 def create_table_pathway_protein(cursor):
     sql = """CREATE TABLE PATHWAY_PROTEIN(
     NCBI_prot_ID VARCHAR(255) NOT NULL,
-    pathway_ID INTEGER NOT NULL,
+    pathway_ID VARCHAR(255) NOT NULL,
 
     CONSTRAINT fk_NCBI_prot_ID
     FOREIGN KEY(NCBI_prot_ID)
@@ -89,6 +95,7 @@ def create_table_pathway_protein(cursor):
     REFERENCES PATHWAY(pathway_ID)
     )"""
     cursor.execute(sql)
+    print("Pathway_protein table created!")
 
 
 def create_table_protein(cursor):
@@ -101,12 +108,13 @@ def create_table_protein(cursor):
     PRIMARY KEY(NCBI_prot_ID)
     )"""
     cursor.execute(sql)
+    print("Protein table created!")
 
 
-def create_table_fuction_protein(cursor):
+def create_table_function_protein(cursor):
     sql = """CREATE TABLE FUNCTION_PROTEIN(
     NCBI_prot_ID VARCHAR(255) NOT NULL,
-    prot_function_ID INTEGER NOT NULL,
+    prot_function_ID VARCHAR(255) NOT NULL,
 
     CONSTRAINT fk_NCBI_prot_ID
     FOREIGN KEY(NCBI_prot_ID)
@@ -117,17 +125,19 @@ def create_table_fuction_protein(cursor):
     REFERENCES FUNCTION(prot_function_ID)
     )"""
     cursor.execute(sql)
+    print("Function_protein table created!")
 
 
 def create_table_function(cursor):
     sql = """CREATE TABLE FUNCTION(
-    prot_function_ID INTEGER NOT NULL UNIQUE,
+    prot_function_ID VARCHAR(255) NOT NULL UNIQUE,
     prot_function TEXT NOT NULL UNIQUE,
 
     CONSTRAINT pk_prot_function_ID
     PRIMARY KEY(prot_function_ID)
     )"""
     cursor.execute(sql)
+    print("Function table created!")
 
 
 def create_table_spliced_gene(cursor):
@@ -147,3 +157,4 @@ def create_table_spliced_gene(cursor):
     REFERENCES PROTEIN(NCBI_prot_ID)
     )"""
     cursor.execute(sql)
+    print("Spliced_gene table created!")

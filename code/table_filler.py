@@ -2,6 +2,7 @@ import os
 import json
 from pprint import pprint
 from Bio import SeqIO
+import requests
 
 
 # Entrez.api_key = "MyAPIKey"
@@ -45,6 +46,73 @@ def fill_table_gene(cursor, data):
     print("Gene table filled!")
 
 
+def fill_table_protein(cursor, data):
+    sql = """INSERT INTO PROTEIN
+    VALUES(%s, %s, %s)"""
+    data_check = set()
+    for item in data:
+        data_check.add(tuple([item["NCBI_prot_ID"], item["prot_name"], item["prot_sequence"]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Protein table filled!")
+
+
+def fill_table_gene_protein(cursor, data):
+    sql = """INSERT INTO GENE_PROTEIN
+    VALUES(%s, %s)"""
+    data_check = set()
+    for item in data:
+        data_check.add(tuple([item["ENSEMBL_gene_ID"], item["NCBI_prot_ID"]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Gene_protein table filled!")
+
+
+def fill_table_pathway(cursor, data):
+    sql = """INSERT INTO PATHWAY
+    VALUES(%s, %s, %s)"""
+    data_check = set()
+    for item in data:
+        data_check.add(tuple([item["pathway_ID"], item["pathway_name"], item["pathway_description"]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Pathway table filled!")
+
+
+def fill_table_pathway_protein(cursor, data):
+    sql = """INSERT INTO PATHWAY_PROTEIN
+    VALUES(%s, %s)"""
+    data_check = set()
+    for item in data:
+        data_check.add(tuple([item["NCBI_prot_ID"], item["pathway_ID"]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Pathway_protein table filled!")
+
+
+def fill_table_function(cursor, data):
+    sql = """INSERT INTO FUNCTION
+    VALUES(%s, %s)"""
+    data_check = set()
+    for item in data:
+        data_check.add(tuple([item["prot_function_ID"], item["prot_function"]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Function table filled!")
+
+
+def fill_table_function_protein(cursor, data, data_ids):
+    sql = """INSERT INTO FUNCTION_PROTEIN
+    VALUES(%s, %s)"""
+    data_check = set()
+    for item in data:
+        _id = [fn_id["prot_function_ID"] for fn_id in data_ids if fn_id["prot_function"] == item["prot_function"]]
+        data_check.add(tuple([item["NCBI_prot_ID"], _id[0]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Function_protein table filled!")
+
+
 def parse_blast(file_list):
     # os.popen('sh blast_db/blast_json/blast_script.sh')
     alignment_data = []
@@ -59,7 +127,7 @@ def parse_blast(file_list):
         search = j['BlastOutput2']['report']['results']['search']
         try:
             if search["message"] == "No hits found":
-                print("Breaked at:", jsonpath)
+                # print("Breaked at:", jsonpath)
                 continue
         except Exception:
             pass
@@ -107,7 +175,63 @@ def parse_blast(file_list):
     return alignment_data, gene_data
 
 
-def tf_main(cursor):
+def togows(gene_data):
+    kegg_gene_url = "http://togows.org/entry/kegg-genes/ppad:{}.json"
+    json_dict = {}
+    for i in gene_data:
+        if i[1] == "unknown":
+            continue
+        gene_req = requests.get(kegg_gene_url.format(i[1])).json()
+        if gene_req:
+            json_dict.update({
+                i[0]: gene_req
+            })
+    protein_data = []
+    for i, y in json_dict.items():
+        dict_insert = {
+            "ENSEMBL_gene_ID": i,
+            "NCBI_prot_ID": y[0]["dblinks"]["NCBI-ProteinID"][0],
+            "prot_name": y[0]["name"],
+            "prot_sequence": y[0]["aaseq"],
+            "pathways": y[0]["pathways"]
+        }
+        if dict_insert not in protein_data:
+            protein_data.append(dict_insert)
+
+    kegg_pathway_url = "http://togows.org/entry/kegg-pathway/{}.json"
+    pathway_data = []
+    function_data = []
+    func_list = set()
+    for prot in protein_data:
+        for pw_id, pw_name in prot["pathways"].items():
+            pw_req = requests.get(kegg_pathway_url.format(pw_id)).json()
+            if not any([1 if pw_id in used.values() else 0 for used in pathway_data]):
+                pathway_data.append({
+                    "NCBI_prot_ID": prot["NCBI_prot_ID"],
+                    "pathway_ID": pw_id,
+                    "pathway_name": pw_name,
+                    "pathway_description": pw_req[0]["description"]
+                })
+            for func in pw_req[0]["classes"]:
+                dict_insert = {
+                    "NCBI_prot_ID": prot["NCBI_prot_ID"],
+                    "prot_function": func
+                }
+                func_list.add(func)
+                if dict_insert not in function_data:
+                    function_data.append(dict_insert)
+    function_data_ids = []
+    count = 1
+    for func in func_list:
+        function_data_ids.append({
+            "prot_function_ID": f"func_{count}",
+            "prot_function": func
+        })
+        count += 1
+    return protein_data, pathway_data, function_data, function_data_ids
+
+
+def get_table_data():
     directory = r'blast_db/blast_json'
     file_list = []
     with open(f"{directory}/blast_results.json") as file:
@@ -120,9 +244,30 @@ def tf_main(cursor):
     file_list.sort(key= lambda x: int(x.split("_")[-1].split(".")[0]))
 
     align_data, gene_data = parse_blast(file_list)
-    fill_table_brokstuk(cursor)
-    fill_table_gene(cursor, gene_data)
-    fill_table_alignment(cursor, align_data)
+    protein_data, pathway_data, function_data, function_data_ids\
+          = togows(gene_data)
+    return align_data, gene_data, protein_data, pathway_data, \
+        function_data, function_data_ids
+
+
+def tf_main():
+    directory = r'blast_db/blast_json'
+    file_list = []
+    with open(f"{directory}/blast_results.json") as file:
+        j = json.load(file)
+
+    for filename in os.listdir(directory):
+        f = os.path.join(directory, filename)
+        if "blast_results_" in filename:
+            file_list.append(f)
+    file_list.sort(key= lambda x: int(x.split("_")[-1].split(".")[0]))
+
+    align_data, gene_data = parse_blast(file_list)
+    protein_data, pathway_data, function_data, function_data_ids\
+          = togows(gene_data)
+    pprint(pathway_data)
+    print("===="*100)
+    pprint(function_data)
     
 
 if __name__ == "__main__":
