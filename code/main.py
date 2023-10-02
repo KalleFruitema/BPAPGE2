@@ -4,7 +4,6 @@ from table_filler import *
 
 
 def create_all_tables(cursor):
-    print("me in function")
     create_table_brokstuk(cursor)
     create_table_gene(cursor)
     create_table_alignment(cursor)
