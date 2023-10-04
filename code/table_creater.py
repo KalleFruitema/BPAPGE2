@@ -139,13 +139,14 @@ def create_table_function(cursor):
     print("Function table created!")
 
 
-def create_table_spliced_gene(cursor):
-    sql = """CREATE TABLE SPLICED_GENE(
-    ENSEMBL_gene_ID VARCHAR(255) NOT NULL UNIQUE,
-    splice_gene_ID VARCHAR(255) NOT NULL UNIQUE,
-    start_intron INTEGER NOT NULL,
-    eind_intron INTEGER NOT NULL,
+def create_table_feature(cursor):
+    sql = """CREATE TABLE FEATURE(
+    ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
+    feature_db_xref VARCHAR(255) NULL,
     NCBI_prot_ID VARCHAR(255) NOT NULL,
+    feature_type VARCHAR(255) NOT NULL,
+    feature_position VARCHAR(255) NOT NULL,
+    feature_note TEXT NULL,
 
     CONSTRAINT fk_ENSEMBL_gene_ID
     FOREIGN KEY(ENSEMBL_gene_ID)
@@ -156,4 +157,18 @@ def create_table_spliced_gene(cursor):
     REFERENCES PROTEIN(NCBI_prot_ID)
     )"""
     cursor.execute(sql)
-    print("Spliced_gene table created!")
+    print("Feature table created!")
+
+
+def create_all_tables(cursor):
+    create_table_brokstuk(cursor)
+    create_table_gene(cursor)
+    create_table_alignment(cursor)
+    create_table_function(cursor)
+    create_table_pathway(cursor)
+    create_table_protein(cursor)
+    create_table_pathway_protein(cursor)
+    create_table_function_protein(cursor)
+    create_table_gene_protein(cursor)
+    create_table_feature(cursor)
+    print("All tables created!")

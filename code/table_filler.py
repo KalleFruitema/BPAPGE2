@@ -107,6 +107,18 @@ def fill_table_function_protein(cursor, data, data_ids):
     print("Function_protein table filled!")
 
 
+def fill_table_feature(cursor, data):
+    sql = """INSERT INTO FEATURE
+    VALUES(%s, %s, %s, %s, %s, %s)"""
+    data_check = set()
+    for item in data:
+        data_check.add(tuple([item["ENSEMBL_gene_ID"], item["feature_db_xref"], item["NCBI_prot_ID"], 
+                             item["feature_type"], item["feature_position"], item["feature_note"]]))
+    for line in data_check:
+        cursor.execute(sql, line)
+    print("Feature table filled!")
+
+
 def parse_blast(file_list):
     # os.popen('sh blast_db/blast_json/blast_script.sh')
     alignment_data = []
@@ -200,11 +212,14 @@ def togows(gene_data):
         for pw_id, pw_name in prot["pathways"].items():
             pw_req = requests.get(kegg_pathway_url.format(pw_id)).json()
             if not any([1 if pw_id in used.values() else 0 for used in pathway_data]):
+                pathway_desc = pw_req[0]["description"]
+                if pathway_desc == "":
+                    pathway_desc = None
                 pathway_data.append({
                     "NCBI_prot_ID": prot["NCBI_prot_ID"],
                     "pathway_ID": pw_id,
                     "pathway_name": pw_name,
-                    "pathway_description": pw_req[0]["description"]
+                    "pathway_description": pathway_desc
                 })
             for func in pw_req[0]["classes"]:
                 dict_insert = {
@@ -222,7 +237,28 @@ def togows(gene_data):
             "prot_function": func
         })
         count += 1
-    return protein_data, pathway_data, function_data, function_data_ids
+
+    ncbi_protein_url = "http://togows.org/entry/ncbi-protein/{}.json"
+    feature_data = []
+
+    for item in protein_data:
+        feat_req = requests.get(ncbi_protein_url.format(item["NCBI_prot_ID"])).json()
+        for feat in feat_req[0]["features"]:
+            note = None
+            if "note" in feat:
+                note = feat["note"][0]
+            db_xref = None
+            if "db_xref" in feat:
+                db_xref = feat["db_xref"][0]
+            feature_data.append({
+                "ENSEMBL_gene_ID": item["ENSEMBL_gene_ID"],
+                "feature_db_xref": db_xref,
+                "NCBI_prot_ID": item["NCBI_prot_ID"],
+                "feature_type": feat["feature"],
+                "feature_position": feat["position"].strip("order").strip("(").strip(")"),
+                "feature_note": note
+            })
+    return protein_data, pathway_data, function_data, function_data_ids, feature_data
 
 
 def get_table_data():
@@ -238,10 +274,26 @@ def get_table_data():
     file_list.sort(key= lambda x: int(x.split("_")[-1].split(".")[0]))
 
     align_data, gene_data = parse_blast(file_list)
-    protein_data, pathway_data, function_data, function_data_ids\
-          = togows(gene_data)
+    protein_data, pathway_data, function_data, function_data_ids,\
+        feature_data = togows(gene_data)
     return align_data, gene_data, protein_data, pathway_data, \
-        function_data, function_data_ids
+        function_data, function_data_ids, feature_data
+
+
+def fill_all_tables(cursor):
+    align_data, gene_data, protein_data, pathway_data, \
+        function_data, function_data_ids, feature_data = get_table_data()
+    fill_table_brokstuk(cursor)
+    fill_table_gene(cursor, gene_data)
+    fill_table_alignment(cursor, align_data)
+    fill_table_protein(cursor, protein_data)
+    fill_table_gene_protein(cursor, protein_data)
+    fill_table_pathway(cursor, pathway_data)
+    fill_table_pathway_protein(cursor, pathway_data)
+    fill_table_function(cursor, function_data_ids)
+    fill_table_function_protein(cursor, function_data, function_data_ids)
+    fill_table_feature(cursor, feature_data)
+    print("All tables filled!")
 
 
 def tf_main():
