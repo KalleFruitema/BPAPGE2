@@ -1,0 +1,13 @@
+(
+Alligator:0.47400,
+(
+(
+Reuzenpanda:0.37890,
+(
+Soepschildpad:0.34933,
+Vogelbekdier:0.32052)
+:0.04354)
+:0.09099,
+Tasmaanse_duivel:0.47119)
+:0.00715,
+Luipaard:0.46620);
