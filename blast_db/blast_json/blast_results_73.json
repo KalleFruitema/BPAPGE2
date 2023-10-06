@@ -5,7 +5,7 @@
       "version": "BLASTN 2.12.0+",
       "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
       "search_target": {
-        "db": "Panthera_pardus.PanPar1.0.cds.all.fa"
+        "db": "blast_db/pan_par_proteome.fa"
       },
       "params": {
         "expect": 10,

@@ -3,6 +3,7 @@ import json
 from pprint import pprint
 from Bio import SeqIO
 import requests
+import subprocess
 
 
 def fill_table_brokstuk(cursor):
@@ -15,25 +16,30 @@ def fill_table_brokstuk(cursor):
                 line: inhoud[i+1]
             })
     for key_val in fasta_dict.items():
-        sql = """INSERT INTO BROKSTUK(brokstuk_header, brokstuk_sequence)
+        sql = """INSERT INTO BROKSTUK
         VALUES(%s, %s)"""
         cursor.execute(sql, key_val)
     print("Brokstuk table filled!")
 
 
 def fill_table_alignment(cursor, data):
-    sql = """INSERT INTO ALIGNMENT(brokstuk_header, alignment_ID, ENSEMBL_gene_ID, 
-    alignment_length, e_value, bit_score, percentage_identity, gaps,
-    mismatches, startpos_hit, endpos_hit)
-    VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+    sql = """INSERT INTO ALIGNMENT
+    VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
     for line in data:
         cursor.execute(sql, line)
     print("Alignment table filled!")
 
 
+def fill_table_transcript_gene(cursor, data):
+    sql = """INSERT INTO TRANSCRIPT_GENE
+    VALUES(%s, %s)"""
+    for line in data:
+        cursor.execute(sql, line)
+    print("Transcript_gene table filled!")
+
+
 def fill_table_gene(cursor, data):
-    sql = """INSERT INTO GENE(ENSEMBL_gene_ID, gene_name, 
-    gene_sequence, gene_description)
+    sql = """INSERT INTO GENE
     VALUES(%s, %s, %s, %s)"""
     for line in data:
         cursor.execute(sql, line)
@@ -109,22 +115,28 @@ def fill_table_function_protein(cursor, data, data_ids):
 
 def fill_table_feature(cursor, data):
     sql = """INSERT INTO FEATURE
-    VALUES(%s, %s, %s, %s, %s, %s)"""
+    VALUES(%s, %s, %s, %s, %s)"""
     data_check = set()
     for item in data:
-        data_check.add(tuple([item["ENSEMBL_gene_ID"], item["feature_db_xref"], item["NCBI_prot_ID"], 
+        data_check.add(tuple([item["NCBI_prot_ID"], item["feature_db_xref"], 
                              item["feature_type"], item["feature_position"], item["feature_note"]]))
     for line in data_check:
         cursor.execute(sql, line)
     print("Feature table filled!")
 
 
+# def blast():
+#     print("Blasting...")
+#     subprocess.run()
+#     print("Blast finished!")
+
+
 def parse_blast(file_list):
-    # os.popen('sh blast_db/blast_json/blast_script.sh')
-    alignment_data = []
+    alignment_data = set()
     gene_data = set()
+    transcript_data = set()
     blast_db = []
-    path = r"blast_db\blast_json\Panthera_pardus.PanPar1.0.cds.all.fa"
+    path = "blast_db/pan_par_proteome.fa"
     for seq_record in SeqIO.parse(path, "fasta"):
         blast_db.append(seq_record)
     for i, jsonpath in enumerate(file_list):
@@ -145,30 +157,38 @@ def parse_blast(file_list):
                 
             alignment_value_list = []
             gene_value_list = []
-            NCBI_ID, description = hit['description'][0]['title'].split(' ', 1)
+            description = hit['description'][0]['title']
+            transcript_id = description.split(' ', 1)[0]
+            gene_id = description.split("gene:", 1)[-1].split(" ", 1)[0]
+            
+            transcript_data.add(tuple([transcript_id, gene_id]))
+
             hsp = hit['hsps'][0]
 
             # gene tabel data
-            gene_value_list.append(NCBI_ID)
+            for line in gene_data:
+                if line[0] == gene_id:
+                    break
+            else:
+                gene_value_list.append(gene_id)
 
-            try:
-                gene_name = description.split("gene_symbol:")[1].split(" ")[0]
-                gene_value_list.append(gene_name)
-            except IndexError:
-                gene_value_list.append("unknown")
+                try:
+                    gene_name = description.split("gene_symbol:")[1].split(" ")[0]
+                    gene_value_list.append(gene_name)
+                except IndexError:
+                    gene_value_list.append("unknown")
+                    
+                gene_value_list.append(description)
                 
-            for seq_rec in blast_db:
-                if seq_rec.id == NCBI_ID:
-                    gene_value_list.append(seq_rec.seq.__str__())
-
-            gene_value_list.append(description)
-
-            gene_data.add(tuple(gene_value_list))
+                for seq_rec in blast_db:
+                    if seq_rec.id == transcript_id:
+                        gene_value_list.append(seq_rec.seq.__str__())
+            
+                gene_data.add(tuple(gene_value_list))
 
             # alignment tabel data
             alignment_value_list.append(brokstuk_header)
-            alignment_value_list.append(hit['num'])
-            alignment_value_list.append(NCBI_ID)
+            alignment_value_list.append(transcript_id)
             alignment_value_list.append(hsp['align_len'])
             alignment_value_list.append(hsp['evalue'])
             alignment_value_list.append(hsp['bit_score'])
@@ -177,8 +197,8 @@ def parse_blast(file_list):
             alignment_value_list.append(hsp['align_len'] - hsp['identity'] - hsp['gaps'])
             alignment_value_list.append(hsp['hit_from'])
             alignment_value_list.append(hsp['hit_to'])
-            alignment_data.append(alignment_value_list)
-    return alignment_data, gene_data
+            alignment_data.add(tuple(alignment_value_list))
+    return alignment_data, transcript_data, gene_data
 
 
 def togows(gene_data):
@@ -251,9 +271,8 @@ def togows(gene_data):
             if "db_xref" in feat:
                 db_xref = feat["db_xref"][0]
             feature_data.append({
-                "ENSEMBL_gene_ID": item["ENSEMBL_gene_ID"],
-                "feature_db_xref": db_xref,
                 "NCBI_prot_ID": item["NCBI_prot_ID"],
+                "feature_db_xref": db_xref,
                 "feature_type": feat["feature"],
                 "feature_position": feat["position"].strip("order").strip("(").strip(")"),
                 "feature_note": note
@@ -262,6 +281,7 @@ def togows(gene_data):
 
 
 def get_table_data():
+    # blast()
     directory = r'blast_db/blast_json'
     file_list = []
     with open(f"{directory}/blast_results.json") as file:
@@ -273,18 +293,19 @@ def get_table_data():
             file_list.append(f)
     file_list.sort(key= lambda x: int(x.split("_")[-1].split(".")[0]))
 
-    align_data, gene_data = parse_blast(file_list)
+    align_data, transcript_data, gene_data = parse_blast(file_list)
     protein_data, pathway_data, function_data, function_data_ids,\
         feature_data = togows(gene_data)
-    return align_data, gene_data, protein_data, pathway_data, \
+    return align_data, transcript_data, gene_data, protein_data, pathway_data, \
         function_data, function_data_ids, feature_data
 
 
 def fill_all_tables(cursor):
-    align_data, gene_data, protein_data, pathway_data, \
+    align_data, transcript_data, gene_data, protein_data, pathway_data, \
         function_data, function_data_ids, feature_data = get_table_data()
     fill_table_brokstuk(cursor)
     fill_table_gene(cursor, gene_data)
+    fill_table_transcript_gene(cursor, transcript_data)
     fill_table_alignment(cursor, align_data)
     fill_table_protein(cursor, protein_data)
     fill_table_gene_protein(cursor, protein_data)
