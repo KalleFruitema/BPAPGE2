@@ -1,2 +1,3 @@
-./blast_db/blast_json/blast_script.sh
+./code/blast_script.sh
+./code/module_downloader.sh
 python3 code/main.py

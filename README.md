@@ -24,6 +24,6 @@ Voor wanneer je alleen de json blast bestanden wilt aanmaken:
 
 - Stap 1: Open bash
 
-- Stap 2: Run blast_script.sh (command= "./blast_db/blast_json/blast_script.sh")
+- Stap 2: Run blast_script.sh (command= "./code/blast_script.sh")
 
 - Stap 3: klaar

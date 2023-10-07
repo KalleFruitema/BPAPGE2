@@ -7,7 +7,7 @@ import subprocess
 
 
 def fill_table_brokstuk(cursor):
-    with open('blast_db/seq2.fa') as file:
+    with open('data/seq2.fa') as file:
         inhoud = file.read().strip().split('\n')
     fasta_dict = {}
     for i, line in enumerate(inhoud):
@@ -125,12 +125,6 @@ def fill_table_feature(cursor, data):
     print("Feature table filled!")
 
 
-# def blast():
-#     print("Blasting...")
-#     subprocess.run()
-#     print("Blast finished!")
-
-
 def parse_blast(file_list):
     alignment_data = set()
     gene_data = set()
@@ -145,7 +139,6 @@ def parse_blast(file_list):
         search = j['BlastOutput2']['report']['results']['search']
         try:
             if search["message"] == "No hits found":
-                # print("Breaked at:", jsonpath)
                 continue
         except Exception:
             pass
@@ -157,9 +150,9 @@ def parse_blast(file_list):
                 
             alignment_value_list = []
             gene_value_list = []
-            description = hit['description'][0]['title']
-            transcript_id = description.split(' ', 1)[0]
-            gene_id = description.split("gene:", 1)[-1].split(" ", 1)[0]
+            transcript_id, description = hit['description'][0]['title'].split(' ', 1)
+            gene_id, desc_end = description.split("gene:", 1)[-1].split(" ", 1)
+            description = "".join([description.split("gene:", 1)[0], desc_end])
             
             transcript_data.add(tuple([transcript_id, gene_id]))
 
@@ -281,12 +274,8 @@ def togows(gene_data):
 
 
 def get_table_data():
-    # blast()
-    directory = r'blast_db/blast_json'
+    directory = 'data/blast_results_json'
     file_list = []
-    with open(f"{directory}/blast_results.json") as file:
-        j = json.load(file)
-
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         if "blast_results_" in filename:
