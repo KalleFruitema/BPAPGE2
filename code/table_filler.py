@@ -3,7 +3,6 @@ import json
 from pprint import pprint
 from Bio import SeqIO
 import requests
-import subprocess
 
 
 def fill_table_brokstuk(cursor):
@@ -309,9 +308,6 @@ def fill_all_tables(cursor):
 def tf_main():
     directory = r'blast_db/blast_json'
     file_list = []
-    with open(f"{directory}/blast_results.json") as file:
-        j = json.load(file)
-
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         if "blast_results_" in filename:
