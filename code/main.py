@@ -1,4 +1,5 @@
 import psycopg2
+
 from table_creater import create_all_tables
 from table_filler import fill_all_tables
 

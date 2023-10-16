@@ -1,5 +1,6 @@
 import os
 import json
+
 from Bio import SeqIO
 import requests
 
