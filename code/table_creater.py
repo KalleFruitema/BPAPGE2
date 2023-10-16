@@ -1,4 +1,12 @@
 def create_table_brokstuk(cursor):
+    """
+    Maakt de brokstuk tabel aan met de juiste waarden,
+    datatypen van de waarden en constraints.
+
+    :param cursor: Dit wordt gebruikt om de sql code te runnen
+    op de database server
+    :return None:
+    """
     sql = """CREATE TABLE BROKSTUK(
     brokstuk_header VARCHAR(255) NOT NULL UNIQUE,
     brokstuk_sequence TEXT NOT NULL UNIQUE,
@@ -11,6 +19,14 @@ def create_table_brokstuk(cursor):
 
 
 def create_table_alignment(cursor):
+    """
+    Maakt de alignment tabel aan met de juiste waarden,
+    datatypen van de waarden en constraints.
+
+    :param cursor: Dit wordt gebruikt om de sql code te runnen
+    op de database server
+    :return None:
+    """
     sql = """CREATE TABLE ALIGNMENT(
     brokstuk_header VARCHAR(255) NOT NULL,
     ENSEMBL_transcript_ID VARCHAR(255) NOT NULL,
@@ -39,6 +55,14 @@ def create_table_alignment(cursor):
 
 
 def create_table_transcript_gene(cursor):
+    """
+    Maakt de transcript_gene tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE TRANSCRIPT_GENE(
     ENSEMBL_transcript_ID VARCHAR(255) NOT NULL UNIQUE,
     ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
@@ -55,6 +79,14 @@ def create_table_transcript_gene(cursor):
 
 
 def create_table_gene(cursor):
+    """
+    Maakt de gene tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE GENE(
     ENSEMBL_gene_ID VARCHAR(255) NOT NULL UNIQUE,
     gene_name VARCHAR(255) NOT NULL,
@@ -69,6 +101,14 @@ def create_table_gene(cursor):
 
 
 def create_table_gene_protein(cursor):
+    """
+    Maakt de gene_protein tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE GENE_PROTEIN(
     ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
     NCBI_prot_ID VARCHAR(255) NOT NULL,
@@ -89,6 +129,14 @@ def create_table_gene_protein(cursor):
 
 
 def create_table_pathway(cursor):
+    """
+    Maakt de pathway tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE PATHWAY(
     pathway_ID VARCHAR(255) NOT NULL UNIQUE,
     pathway_name VARCHAR(255) NOT NULL,
@@ -102,6 +150,14 @@ def create_table_pathway(cursor):
 
 
 def create_table_pathway_protein(cursor):
+    """
+    Maakt de pathway_protein tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE PATHWAY_PROTEIN(
     NCBI_prot_ID VARCHAR(255) NOT NULL,
     pathway_ID VARCHAR(255) NOT NULL,
@@ -122,6 +178,14 @@ def create_table_pathway_protein(cursor):
 
 
 def create_table_protein(cursor):
+    """
+    Maakt de protein tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE PROTEIN(
     NCBI_prot_ID VARCHAR(255) NOT NULL UNIQUE,
     prot_name VARCHAR(255) NOT NULL,
@@ -135,6 +199,14 @@ def create_table_protein(cursor):
 
 
 def create_table_function_protein(cursor):
+    """
+    Maakt de function_protein tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE FUNCTION_PROTEIN(
     NCBI_prot_ID VARCHAR(255) NOT NULL,
     prot_function_ID VARCHAR(255) NOT NULL,
@@ -155,6 +227,14 @@ def create_table_function_protein(cursor):
 
 
 def create_table_function(cursor):
+    """
+    Maakt de function tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE FUNCTION(
     prot_function_ID VARCHAR(255) NOT NULL UNIQUE,
     prot_function TEXT NOT NULL UNIQUE,
@@ -167,6 +247,14 @@ def create_table_function(cursor):
 
 
 def create_table_feature(cursor):
+    """
+    Maakt de feature tabel aan met de juiste waarden, 
+    datatypen van de waarden en constraints.
+    
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     sql = """CREATE TABLE FEATURE(
     NCBI_prot_ID VARCHAR(255) NOT NULL,
     feature_db_xref VARCHAR(255) NULL,
@@ -183,6 +271,14 @@ def create_table_feature(cursor):
 
 
 def create_all_tables(cursor):
+    """
+    Maakt alle tabellen aan in 1 functie, zodat deze vanuit de
+    main makkelijk aangeroepen kan worden.
+
+    :param cursor: Dit object wordt gebruikt om de sql code te 
+    runnen op de database server.
+    :return None: 
+    """
     create_table_brokstuk(cursor)
     create_table_gene(cursor)
     create_table_transcript_gene(cursor)

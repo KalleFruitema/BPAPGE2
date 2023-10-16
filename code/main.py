@@ -4,6 +4,16 @@ from table_filler import fill_all_tables
 
 
 def main():
+    """
+    Deze functie krijgt geen argumenten mee, en geeft niks terug, 
+    er wordt naar de bpapge2 database server connectie gemaakt, 
+    dan worden met andere functies alle tables gemaakt en gevuld,
+    en hierna worden de veranderingen gecommit en wordt de connectie
+    gesloten. Als er een error ergens optreedt na het connecten, 
+    wordt de connectie ook gesloten.
+    
+    :return None:
+    """
     print("Program started.")
     conn_string = """
     host='145.97.18.240' dbname='bpapge2_db'
