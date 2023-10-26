@@ -1,5 +1,14 @@
-import os
+"""
+File: table_filler.py
+Author: Kalle Fruitema
+Date: 25/10/2023
+Description: Haalt alle data op en vult alle tabellen hiermee.
+Version: Python v3.10.6
+"""
+
+
 import json
+import os
 
 from Bio import SeqIO
 import requests
@@ -28,7 +37,7 @@ def fill_table_brokstuk(cursor):
         sql = """INSERT INTO BROKSTUK
         VALUES(%s, %s)"""
         cursor.execute(sql, key_val)
-    print("Brokstuk table filled!")
+    print("Brokstuk table filled.")
 
 
 def fill_table_alignment(cursor, data):
@@ -46,7 +55,7 @@ def fill_table_alignment(cursor, data):
     VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
     for line in data:
         cursor.execute(sql, line)
-    print("Alignment table filled!")
+    print("Alignment table filled.")
 
 
 def fill_table_transcript_gene(cursor, data):
@@ -64,7 +73,7 @@ def fill_table_transcript_gene(cursor, data):
     VALUES(%s, %s)"""
     for line in data:
         cursor.execute(sql, line)
-    print("Transcript_gene table filled!")
+    print("Transcript_gene table filled.")
 
 
 def fill_table_gene(cursor, data):
@@ -82,7 +91,7 @@ def fill_table_gene(cursor, data):
     VALUES(%s, %s, %s, %s)"""
     for line in data:
         cursor.execute(sql, line)
-    print("Gene table filled!")
+    print("Gene table filled.")
 
 
 def fill_table_protein(cursor, data):
@@ -107,7 +116,7 @@ def fill_table_protein(cursor, data):
                               item["prot_sequence"]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Protein table filled!")
+    print("Protein table filled.")
 
 
 def fill_table_gene_protein(cursor, data):
@@ -132,7 +141,7 @@ def fill_table_gene_protein(cursor, data):
                               item["NCBI_prot_ID"]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Gene_protein table filled!")
+    print("Gene_protein table filled.")
 
 
 def fill_table_pathway(cursor, data):
@@ -157,7 +166,7 @@ def fill_table_pathway(cursor, data):
                               item["pathway_description"]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Pathway table filled!")
+    print("Pathway table filled.")
 
 
 def fill_table_pathway_protein(cursor, data):
@@ -181,7 +190,7 @@ def fill_table_pathway_protein(cursor, data):
         data_check.add(tuple([item["NCBI_prot_ID"], item["pathway_ID"]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Pathway_protein table filled!")
+    print("Pathway_protein table filled.")
 
 
 def fill_table_function(cursor, data):
@@ -206,7 +215,7 @@ def fill_table_function(cursor, data):
                               item["prot_function"]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Function table filled!")
+    print("Function table filled.")
 
 
 def fill_table_function_protein(cursor, data, data_ids):
@@ -234,7 +243,7 @@ def fill_table_function_protein(cursor, data, data_ids):
         data_check.add(tuple([item["NCBI_prot_ID"], _id[0]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Function_protein table filled!")
+    print("Function_protein table filled.")
 
 
 def fill_table_feature(cursor, data):
@@ -260,7 +269,7 @@ def fill_table_feature(cursor, data):
                              item["feature_note"]]))
     for line in data_check:
         cursor.execute(sql, line)
-    print("Feature table filled!")
+    print("Feature table filled.")
 
 
 def parse_blast(file_list):
@@ -425,18 +434,15 @@ def togows(gene_data):
         for pw_id, pw_name in prot["pathways"].items():
             # data wordt opgehaald met requests.get().json()
             pw_req = requests.get(kegg_pathway_url.format(pw_id)).json()
-            # deze if statement checkt gewoon of het een duplicate is
-            if not any([1 if pw_id in used.values() else 0 \
-                        for used in pathway_data]):
-                pathway_desc = pw_req[0]["description"]
-                if pathway_desc == "":
-                    pathway_desc = None
-                pathway_data.append({
-                    "NCBI_prot_ID": prot["NCBI_prot_ID"],
-                    "pathway_ID": pw_id,
-                    "pathway_name": pw_name,
-                    "pathway_description": pathway_desc
-                })
+            pathway_desc = pw_req[0]["description"]
+            if pathway_desc == "":
+                pathway_desc = None
+            pathway_data.append({
+                "NCBI_prot_ID": prot["NCBI_prot_ID"],
+                "pathway_ID": pw_id,
+                "pathway_name": pw_name,
+                "pathway_description": pathway_desc
+            })
             for func in pw_req[0]["classes"]:
                 dict_insert = {
                     "NCBI_prot_ID": prot["NCBI_prot_ID"],
@@ -445,7 +451,7 @@ def togows(gene_data):
                 func_list.add(func)
                 if dict_insert not in function_data:
                     function_data.append(dict_insert)
-    
+
     # function_data_ids verbindt de functies aan hun ID's
     function_data_ids = []
     count = 1

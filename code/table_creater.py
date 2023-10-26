@@ -1,3 +1,12 @@
+"""
+File: table_creater.py
+Author: Kalle Fruitema
+Date: 25/10/2023
+Description: Maakt alle tabellen aan.
+Version: Python v3.10.6
+"""
+
+
 def create_table_brokstuk(cursor):
     """
     Maakt de brokstuk tabel aan met de juiste waarden,
@@ -15,7 +24,7 @@ def create_table_brokstuk(cursor):
     PRIMARY KEY(brokstuk_header)
     )"""
     cursor.execute(sql)
-    print("Brokstuk table created!")
+    print("Brokstuk table created.")
 
 
 def create_table_alignment(cursor):
@@ -51,7 +60,7 @@ def create_table_alignment(cursor):
     REFERENCES TRANSCRIPT_GENE(ENSEMBL_transcript_ID)
     )"""
     cursor.execute(sql)
-    print("Alignment table created!")
+    print("Alignment table created.")
 
 
 def create_table_transcript_gene(cursor):
@@ -75,7 +84,7 @@ def create_table_transcript_gene(cursor):
     REFERENCES GENE(ENSEMBL_gene_ID)
     )"""
     cursor.execute(sql)
-    print("Transcript_gene table created!")
+    print("Transcript_gene table created.")
 
 
 def create_table_gene(cursor):
@@ -97,7 +106,7 @@ def create_table_gene(cursor):
     PRIMARY KEY(ENSEMBL_gene_ID)
     )"""
     cursor.execute(sql)
-    print("Gene table created!")
+    print("Gene table created.")
 
 
 def create_table_gene_protein(cursor):
@@ -125,7 +134,7 @@ def create_table_gene_protein(cursor):
     PRIMARY KEY(ENSEMBL_gene_ID, NCBI_prot_ID)
     )"""
     cursor.execute(sql)
-    print("Gene_protein table created!")
+    print("Gene_protein table created.")
 
 
 def create_table_pathway(cursor):
@@ -146,7 +155,7 @@ def create_table_pathway(cursor):
     PRIMARY KEY(pathway_ID) 
     )"""
     cursor.execute(sql)
-    print("Pathway table created!")
+    print("Pathway table created.")
 
 
 def create_table_pathway_protein(cursor):
@@ -174,7 +183,7 @@ def create_table_pathway_protein(cursor):
     PRIMARY KEY(NCBI_prot_ID, pathway_ID)
     )"""
     cursor.execute(sql)
-    print("Pathway_protein table created!")
+    print("Pathway_protein table created.")
 
 
 def create_table_protein(cursor):
@@ -195,7 +204,7 @@ def create_table_protein(cursor):
     PRIMARY KEY(NCBI_prot_ID)
     )"""
     cursor.execute(sql)
-    print("Protein table created!")
+    print("Protein table created.")
 
 
 def create_table_function_protein(cursor):
@@ -223,7 +232,7 @@ def create_table_function_protein(cursor):
     PRIMARY KEY(NCBI_prot_ID, prot_function_ID)
     )"""
     cursor.execute(sql)
-    print("Function_protein table created!")
+    print("Function_protein table created.")
 
 
 def create_table_function(cursor):
@@ -243,7 +252,7 @@ def create_table_function(cursor):
     PRIMARY KEY(prot_function_ID)
     )"""
     cursor.execute(sql)
-    print("Function table created!")
+    print("Function table created.")
 
 
 def create_table_feature(cursor):
@@ -267,7 +276,7 @@ def create_table_feature(cursor):
     REFERENCES PROTEIN(NCBI_prot_ID)
     )"""
     cursor.execute(sql)
-    print("Feature table created!")
+    print("Feature table created.")
 
 
 def create_all_tables(cursor):
@@ -290,4 +299,4 @@ def create_all_tables(cursor):
     create_table_function_protein(cursor)
     create_table_gene_protein(cursor)
     create_table_feature(cursor)
-    print("All tables created!")
+    print("All tables created.")

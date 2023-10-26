@@ -1,3 +1,12 @@
+"""
+File: main.py
+Author: Kalle Fruitema
+Date: 25/10/2023
+Description: De hele database wordt via dit script gemaakt.
+Version: Python v3.10.6
+"""
+
+
 import psycopg2
 
 from table_creater import create_all_tables
@@ -10,8 +19,10 @@ def main():
     er wordt naar de bpapge2 database server connectie gemaakt, 
     dan worden met andere functies alle tables gemaakt en gevuld,
     en hierna worden de veranderingen gecommit en wordt de connectie
-    gesloten. Als er een error ergens optreedt na het connecten, 
-    wordt de connectie ook gesloten.
+    gesloten. Er wordt eerst geprobeerd om alle tabellen te droppen, 
+    maar als dit mislukt was de database dus al leeg en gaat het 
+    programma verder. Als er een error ergens optreedt na het 
+    connecten, wordt de connectie ook gesloten.
     
     :return None:
     """
@@ -24,6 +35,11 @@ def main():
     print("Connected succesfully.")
     cursor = conn.cursor()
     try:
+        try:
+            cursor.execute("DROP TABLE alignment, brokstuk, function, function_protein, gene, gene_protein, pathway, pathway_protein, protein, feature, transcript_gene")
+            print("Database cleared.")
+        except Exception:
+            print("Database already empty.")
         print("Creating tables...")
         create_all_tables(cursor)
         print("Filling tables...")
