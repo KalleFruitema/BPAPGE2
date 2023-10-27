@@ -1,6 +1,12 @@
 # BPAPGE2
 BPAPGE project group 2
 
+## Belangrijk!!!
+Zorg ervoor dat alle scripts dus main.sh, en alle scripts in het mapje code, 
+execute permissie hebben. Dit kan namelijk niet vooraf gedaan worden, 
+aangezien deze permissies ergens gereset worden wanneer het project in een zip
+file wordt gezet en op de bioserver wordt gezet.
+
 ## Instructies
 Instructies voor wanneer er alleen nog maar scripts zijn (en seq2.fa), en de blast
 dus nog gerunned moet worden:
