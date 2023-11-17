@@ -34,6 +34,7 @@ def main():
     conn = psycopg2.connect(conn_string)
     print("Connected succesfully.")
     cursor = conn.cursor()
+    cursor.execute("ROLLBACK;")
     try:
         try:
             cursor.execute("DROP TABLE alignment, brokstuk, function, "
