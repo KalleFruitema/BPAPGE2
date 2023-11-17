@@ -36,7 +36,10 @@ def main():
     cursor = conn.cursor()
     try:
         try:
-            cursor.execute("DROP TABLE alignment, brokstuk, function, function_protein, gene, gene_protein, pathway, pathway_protein, protein, feature, transcript_gene")
+            cursor.execute("DROP TABLE alignment, brokstuk, function, "
+                           "function_protein, gene, gene_protein, pathway, "
+                           "pathway_protein, protein, feature, "
+                           "transcript_gene")
             print("Database cleared.")
         except Exception:
             print("Database already empty.")

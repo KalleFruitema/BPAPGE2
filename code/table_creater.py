@@ -19,7 +19,6 @@ def create_table_brokstuk(cursor):
     sql = """CREATE TABLE BROKSTUK(
     brokstuk_header VARCHAR(255) NOT NULL UNIQUE,
     brokstuk_sequence TEXT NOT NULL UNIQUE,
-
     CONSTRAINT pk_brokstuk_header
     PRIMARY KEY(brokstuk_header)
     )"""

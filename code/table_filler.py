@@ -238,7 +238,7 @@ def fill_table_function_protein(cursor, data, data_ids):
     VALUES(%s, %s)"""
     data_check = set()
     for item in data:
-        _id = [fn_id["prot_function_ID"] for fn_id in data_ids if \
+        _id = [fn_id["prot_function_ID"] for fn_id in data_ids if
                fn_id["prot_function"] == item["prot_function"]]
         data_check.add(tuple([item["NCBI_prot_ID"], _id[0]]))
     for line in data_check:
@@ -362,10 +362,10 @@ def parse_blast(file_list):
             alignment_value_list.append(hsp['align_len'])
             alignment_value_list.append(hsp['evalue'])
             alignment_value_list.append(hsp['bit_score'])
-            alignment_value_list.append(\
+            alignment_value_list.append(
                 round(hsp['identity'] / query_len * 100, 3))
             alignment_value_list.append(hsp['gaps'])
-            alignment_value_list.append(\
+            alignment_value_list.append(
                 hsp['align_len'] - hsp['identity'] - hsp['gaps'])
             alignment_value_list.append(hsp['hit_from'])
             alignment_value_list.append(hsp['hit_to'])
@@ -423,7 +423,6 @@ def togows(gene_data):
         if dict_insert not in protein_data:
             protein_data.append(dict_insert)
 
-
     # tweede base_url, voor pathway data en function data
     kegg_pathway_url = "http://togows.org/entry/kegg-pathway/{}.json"
     pathway_data = []
@@ -468,7 +467,7 @@ def togows(gene_data):
 
     for item in protein_data:
         # data wordt opgehaald met requests.get().json()
-        feat_req = requests.get(\
+        feat_req = requests.get(
             ncbi_protein_url.format(item["NCBI_prot_ID"])).json()
         for feat in feat_req[0]["features"]:
             note = None
@@ -481,7 +480,7 @@ def togows(gene_data):
                 "NCBI_prot_ID": item["NCBI_prot_ID"],
                 "feature_db_xref": db_xref,
                 "feature_type": feat["feature"],
-                "feature_position": \
+                "feature_position":
                     feat["position"].strip("order").strip("(").strip(")"),
                 "feature_note": note
             })
@@ -509,7 +508,7 @@ def get_table_data():
         f = os.path.join(directory, filename)
         if "blast_results_" in filename:
             file_list.append(f)
-    file_list.sort(key= lambda x: int(x.split("_")[-1].split(".")[0]))
+    file_list.sort(key=lambda x: int(x.split("_")[-1].split(".")[0]))
 
     align_data, transcript_data, gene_data = parse_blast(file_list)
     protein_data, pathway_data, function_data, function_data_ids,\
