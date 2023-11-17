@@ -1,0 +1,83 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_37",
+          "query_title": "seq_037",
+          "query_len": 2431,
+          "query_masking": [
+            {
+              "from": 727,
+              "to": 755
+            },
+            {
+              "from": 1635,
+              "to": 1648
+            },
+            {
+              "from": 2212,
+              "to": 2218
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|23160",
+                  "accession": "23160",
+                  "title": "ENSPPRT00000004457.1 cds scaffold:PanPar1.0:KV860287.1:3325694:3343291:-1 gene:ENSPPRG00000002075.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:CPOX description:coproporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:2321]"
+                }
+              ],
+              "len": 1338,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 669.607,
+                  "score": 362,
+                  "evalue": 0,
+                  "identity": 364,
+                  "query_from": 1,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 974,
+                  "hit_to": 1338,
+                  "hit_strand": "Plus",
+                  "align_len": 365,
+                  "gaps": 0,
+                  "qseq": "TCGGGGGCATCTTTTTTGATGACCTTGACTCTCCATCCAAGGAAGAAGTGTTTCGCTTCGTGCAGAGCTGCGCCCAGGCTGTGGTTCCTTCATACATTCCTCTTGTGAAAAAGCACTGTGATGACTCATTCACCCCCCAGGAGAAGCTGTGGCAGCAGCTGCGGAGAGGACGGTATGTAGAATTTAACCTTGTGTATGATCGAGGTACAAAATTTGGCCTCTTCACTCCAGGATCCAGGATTGAAAGCATCTTGATGTCTTTACCTCTAACTGCTCGATGGGAGTACATGCATTCACCCCCAGAGAACTCCAAAGAAGCGGAAATTCTGGAAGTTCTGCGCCATCCGAGAGACTGGGTGCATTAA",
+                  "hseq": "TCGGGGGCATCTTTTTTGATGACCTTGACTCTCCATCCAAGGAAGAAGTGTTTCGCTTCGTGCAGAGCTGCGCCCAGGCTGTGGTTCCTTCATACATTCCTCTTGTGAAAAAGCACTGTGATGACTCATTCACCCCCCAGGAGAAGCTGTGGCAGCAGCTGCGGAGAGGACGGTATGTAGAATTTAACCTTGTGTATGATCGAGGTACAAAGTTTGGCCTCTTCACTCCAGGATCCAGGATTGAAAGCATCTTGATGTCTTTACCTCTAACTGCTCGATGGGAGTACATGCATTCACCCCCAGAGAACTCCAAAGAAGCGGAAATTCTGGAAGTTCTGCGCCATCCGAGAGACTGGGTGCATTAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 26,
+            "eff_space": 109627458915,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

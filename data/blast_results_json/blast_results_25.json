@@ -1,0 +1,172 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_25",
+          "query_title": "seq_025",
+          "query_len": 2604,
+          "query_masking": [
+            {
+              "from": 1992,
+              "to": 1998
+            },
+            {
+              "from": 2391,
+              "to": 2398
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|8402",
+                  "accession": "8402",
+                  "title": "ENSPPRT00000020047.1 cds scaffold:PanPar1.0:KV860274.1:25562347:25589650:-1 gene:ENSPPRG00000012339.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 1590,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 2909.59,
+                  "score": 1575,
+                  "evalue": 0,
+                  "identity": 1585,
+                  "query_from": 1,
+                  "query_to": 1590,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 1590,
+                  "hit_strand": "Plus",
+                  "align_len": 1590,
+                  "gaps": 0,
+                  "qseq": "ATGAGGACTGTAAAAGGTTTCTGGGTTCTTTTCATGCTGCATCTGTATTTCTTCGACTCTGGAAGGACTGGGAAAATACTTGTGTGGCCCTTGGATTTTAGTCACTGGATTAATTTAAAAGTTATCCTGGATCAACTCCAGCTTCGTGGGCATGAGGTAACTGTCCTGGTACCTTCACCAAGTTATCTGTTTGATCATACCAAGATTCCCTTTAATGTGGAGATCCTTCAACTTCCAGTAACTAAAGAAACTCTCATGGAAGAGTTCAATGGTATTCTCTATGATATTTCCTTTGAAGTGCCAAAACTTTCATGGTGGAGCATGCAAGGAAAACTGACAGAACTTGTCTACAGGTTTTCTAGGACAGCCAAAAGAATGTGTGAGTGTGCTATCACAAATAAGGAGTTACTCAGCAGGCTACAAGCAGCTAAGTTTGATATCTGTTTAGCTGATCCCTTAAGCTTTTGTGGGGAATTGTTGGCTGAGCTCCTCAATATTCCATTTATATACTCTTTTCGATTTTCTTATGGGAATGTCATTGAGAGACTGTGTGCTCAGCTTCCTATCCCTTCTTCATATGTTCCTGGCATCACATCGGGACTGACAGACCGCATGACTTTTGTACAGAGACTAGAGAATTGGTTACTGTACATAGTGACTGATATTATGTTTTTATATTTTGTATTTCCGGAATGGGATGACTATTACAGCAAGGCTTTAGGAAAACCTGCCACATTATGTGAGATTATGGGGAAAGCTGAAATGTGGTTGATTCGAACTTACTGGGATATTGAATTTCCTTACCCTTATTTACCTAACATTGAATTTGTTGGAGGACTGCACTGCAAGCCTGCAAAGCCCCTACCGAAGGAGTTAGAAGAGTTTGTCCAAAGCTCTGGAAAGGATGGAGTTGTGGTATTTACTCTGGGTTCAATGATCAAAAACCTCACAGAAGAAAAGTCTAATCTAATTGCATCAGCCCTTGCCCAGATTCCACAGAAGGTTCTGTGGAGATACACAGGAAAGAAACCAGACACATTAGGACCCAATACCCGGCTATATGAATGGATTCCCCAGAATGATCTTCTTGGTCATCCCAAGACCAGAGCTTTTATCACTCACTGTGGAACCAATGGGATCTATGAAGCTATTTACCATGGGGTCCCTATGGTGGGAATTCCCATGTTTGGTGATCAGTATGATAATATTGCTCGTATGAAAGCCAAAGGGGCAGCTCTTAAAGTAGACTTACATACAATGACAAGTTCGGATCTACTTAACGCTTTGAAGGCAGTTATTAACAACCCTTCCTATAAAGAGAATGCTATGAGGTTATCAAGAATTCACCATGATCAGCCTACAAAGCCCTTGGATCGAGCAGTCTTCTGGATTGAATTTGTCATGCGCCACAAAGGAGCCAAACACCTTCGGCCAACCTCCCATGACCTCACCTGGATCCAGTACCACTCGTTGGATGTGATTGGGTTCCTGCTGGCCTGTGTGGCTACTACTATATTCCTGGTCACAAAATGTTGCCTGTTTTGTTGCTGGAAATTTGGTAAGACAGGGAAGAAGAACAAGAGAGAATAG",
+                  "hseq": "ATGAGGACTGTAAAAGGTTTCTGGGTTCTTTTCATGCTGCATCTGTATTTCTTCGACTCTGGAAGGACTGGGAAAATACTTGTGTGGCCCTTGGATTTTAGTCACTGGATTAATTTAAAAGTTATCCTGGATCAACTCCAGCTTCGTGGGCATGAAGTAACTGTCCTGGTACCTTCACCAAGTTATCTGTTTGATCATACCAAGATTCCCTTTAATGTGGAGATCCTTCAACTTCCAGTAACTAAAGAAACTCTCATGGAAGAGTTCAATGGTATTCTCTATGATATTTCCTTTGAGGTGCCAAAACTTTCATGGTGGAGCATGCAAGGAAAACTGACAGAACTTGTCTACAGGTTTTCTAGGACAGCCAAAAGAATGTGTGAGAGTGCTATCACAAATAAGGAGTTACTCAGCAGGCTACAAGCAGCTAAGTTTGATATCTGTTTAGCTGATCCCTTAAGCTTTTGTGGGGAATTGTTGGCTGAGCTCCTCAATATTCCATTTATGTACTCTTTTCGATTTTCTTATGGGAATGTCATTGAGAGACTGTGTGCTCAGCTTCCTATCCCTTCTTCATATGTTCCTGGCATCACATCGGGACTGACAGACCGCATGACTTTTGTACAGAGACTAGAGAATTGGTTACTGTACATAGTGACTGATATTATGTTTTTATATTTTGTATTTCCGGAATGGGATGACTATTACAGCAAGGCTTTAGGAAAACCTGCCACATTATGTGAGATTATGGGGAAAGCTGAAATGTGGTTGATTCGAACTTACTGGGATATTGAATTTCCTTACCCTTATTTACCTAACATTGAATTTGTTGGAGGACTGCACTGCAAGCCTGCAAAGCCCCTACCGAAGGAGTTAGAAGAGTTTGTCCAAAGCTCTGGAAAGGATGGAGTTGTGGTATTTACTCTGGGTTCAATGATCAAAAACCTCACAGAAGAAAAGTCTAATCTAATTGCATCAGCCCTTGCCCAGATTCCACAGAAGGTTCTGTGGAGATACACAGGAAAGAAACCAGACACATTAGGACCCAATACCCGGCTATATGAATGGATTCCCCAGAATGATCTTCTTGGTCATCCCAAGACCAGAGCTTTTATCACTCACTGTGGAACCAATGGGATCTATGAAGCTATTTACCATGGGGTCCCTATGGTGGGAATTCCCATGTTTGGTGATCAGTATGATAATATTGCTCGTATGAAAGCCAAAGGGGCAGCTCTTAAAGTAGACTTACATACAATGACAAGTTCGGATCTACTTAACGCTTTGAAGGCAGTTATTAACAACCCTTCCTATAAAGAGAATGCTATGAGGTTATCAAGAATTCACCATGATCAGCCTACAAAGCCCTTGGATCGAGCAGTCTTCTGGATTGAATTTGTCATGCGCCACAAAGGAGCCAAACACCTTCGGCCAACCTCCCATGACCTCACCTGGGTCCAGTACCACTCGTTGGATGTGATTGGGTTCCTGCTGGCCTGTGTGGCTACTACTATATTCCTGGTCACAAAATGTTGCCTGTTTTGTTGCTGGAAATTTGGTAAGACAGGGAAGAAGAACAAGAGAGAATAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6398",
+                  "accession": "6398",
+                  "title": "ENSPPRT00000022102.1 cds scaffold:PanPar1.0:KV860274.1:25405436:25469306:1 gene:ENSPPRG00000013797.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UGT2A1 description:UDP glucuronosyltransferase family 2 member A1 complex locus [Source:HGNC Symbol;Acc:HGNC:12542]"
+                }
+              ],
+              "len": 1587,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 806.26,
+                  "score": 436,
+                  "evalue": 0,
+                  "identity": 744,
+                  "query_from": 693,
+                  "query_to": 1590,
+                  "query_strand": "Plus",
+                  "hit_from": 690,
+                  "hit_to": 1587,
+                  "hit_strand": "Plus",
+                  "align_len": 898,
+                  "gaps": 0,
+                  "qseq": "ATGGGATGACTATTACAGCAAGGCTTTAGGAAAACCTGCCACATTATGTGAGATTATGGGGAAAGCTGAAATGTGGTTGATTCGAACTTACTGGGATATTGAATTTCCTTACCCTTATTTACCTAACATTGAATTTGTTGGAGGACTGCACTGCAAGCCTGCAAAGCCCCTACCGAAGGAGTTAGAAGAGTTTGTCCAAAGCTCTGGAAAGGATGGAGTTGTGGTATTTACTCTGGGTTCAATGATCAAAAACCTCACAGAAGAAAAGTCTAATCTAATTGCATCAGCCCTTGCCCAGATTCCACAGAAGGTTCTGTGGAGATACACAGGAAAGAAACCAGACACATTAGGACCCAATACCCGGCTATATGAATGGATTCCCCAGAATGATCTTCTTGGTCATCCCAAGACCAGAGCTTTTATCACTCACTGTGGAACCAATGGGATCTATGAAGCTATTTACCATGGGGTCCCTATGGTGGGAATTCCCATGTTTGGTGATCAGTATGATAATATTGCTCGTATGAAAGCCAAAGGGGCAGCTCTTAAAGTAGACTTACATACAATGACAAGTTCGGATCTACTTAACGCTTTGAAGGCAGTTATTAACAACCCTTCCTATAAAGAGAATGCTATGAGGTTATCAAGAATTCACCATGATCAGCCTACAAAGCCCTTGGATCGAGCAGTCTTCTGGATTGAATTTGTCATGCGCCACAAAGGAGCCAAACACCTTCGGCCAACCTCCCATGACCTCACCTGGATCCAGTACCACTCGTTGGATGTGATTGGGTTCCTGCTGGCCTGTGTGGCTACTACTATATTCCTGGTCACAAAATGTTGCCTGTTTTGTTGCTGGAAATTTGGTAAGACAGGGAAGAAGAACAAGAGAGAATAG",
+                  "hseq": "ATGGGATTCCTACTATAGTAAAGCTTTGGGAAGACCCACTACATTATGTGAGGTTATGGGGAAAGCAGAAATTTGGCTAATCCGGACATATTGGGATTTTGAATTTCCTCGTCCATACTTACCTAATTTTGAGTTTGTAGGAGGGTTGCACTGTAAACCAGCCAAACCATTACCTAAGGAAATGGAAGAATTTGTCCAAAGTTCAGGTGAAGATGGTATTGTGGTGTTTTCTCTGGGGTCAATGATCAGAAACCTCTCAGATGAAAAAGCCAATCTCATTGCCTCAGCCTTGGCCCAGATTCCACAAAAGGTTTTATGGAGATACAAAGGAAAGAAACCAGCCACATTAGGAGCCAATACTCGGCTCTATGATTGGATACCCCAGAATGATCTTCTTGGTCATCCCAAAACAAAAGCTTTTATCACTCATGGTGGAACCAATGGGATCTATGAAGCTATTTATCATGGGGTTCCTATGGTGGGAGTTCCCATGTTTGCTGATCAGCCTGATAATATCGCTCACATGAAGGCCAAAGGAGCAGCTGTGGAGGTGAACATAAACACAATGACAAGTGAAGATCTGCTCAATGCCTTGAGAACAGTCATTAATGAACCTTCTTATAAAGAGAATGCTACAAGGTTATCAAGGATTCAACATGATCAACCTGTAAAGCCCCTAGATCGAGCAGTCTTCTGGATAGAGTTTGTCATGCGTCACAAAGGAGCCAAGCACCTGCGTCCAGCTGCCCATGACCTCACCTGGTTCCAGTACCATTCTTTCGATGTGATTGGTTTCCTGCTGGTCTGTGTAGCAACTGCTATCTTCTTGGTCACAAAATGTTGTTTGTTTTCTTGCCAAAAACTTGGTAAAACAGGAAAGAAGAAAAAGAGGGAATAG",
+                  "midline": "|||||||  ||| || || || ||||| |||| |||  | |||||||||||| ||||||||||||| ||||| ||| | || || || || |||||| |||||||||||   || || ||||||||  |||| ||||| |||||  ||||||| || || || || ||  |||| |||||  | ||||| ||||||||||| || ||  | |||||  ||||||| ||| ||||||| |||||||||| ||||||| |||| |||||  | ||||| ||||| |||||| | |||||||||||||| |||||| | |||||||||| |||||||||||||| |||||||||| ||||||| ||||| ||||| ||||| ||||||||||||||||||||||||||||| || | |||||||||||||||  ||||||||||||||||||||||||||||||| |||||||| |||||||||||| |||||||||||| |||||||  ||||||||| ||||  ||||| |||||||| |||||| |  | ||  || || | ||||||||||||   ||||| || || || ||||   |||| |||||  | ||||| ||||||||||||||||  ||||||||||| ||||| |||||||| |||  ||||||| | |||||||||||||||||||| || ||||||||||| |||||||||||||| ||||| || ||| |  ||||||||||||||||| |||||||||| || || ||||||||||| |||||||||| |||||| || ||| |||| ||| ||||||||||||||||  |||||| ||||   ||| ||||||| ||||| |||||||| ||||| ||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6399",
+                  "accession": "6399",
+                  "title": "ENSPPRT00000022108.1 cds scaffold:PanPar1.0:KV860274.1:25417894:25469306:1 gene:ENSPPRG00000013797.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UGT2A1 description:UDP glucuronosyltransferase family 2 member A1 complex locus [Source:HGNC Symbol;Acc:HGNC:12542]"
+                }
+              ],
+              "len": 1611,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 804.413,
+                  "score": 435,
+                  "evalue": 0,
+                  "identity": 745,
+                  "query_from": 691,
+                  "query_to": 1590,
+                  "query_strand": "Plus",
+                  "hit_from": 712,
+                  "hit_to": 1611,
+                  "hit_strand": "Plus",
+                  "align_len": 900,
+                  "gaps": 0,
+                  "qseq": "GAATGGGATGACTATTACAGCAAGGCTTTAGGAAAACCTGCCACATTATGTGAGATTATGGGGAAAGCTGAAATGTGGTTGATTCGAACTTACTGGGATATTGAATTTCCTTACCCTTATTTACCTAACATTGAATTTGTTGGAGGACTGCACTGCAAGCCTGCAAAGCCCCTACCGAAGGAGTTAGAAGAGTTTGTCCAAAGCTCTGGAAAGGATGGAGTTGTGGTATTTACTCTGGGTTCAATGATCAAAAACCTCACAGAAGAAAAGTCTAATCTAATTGCATCAGCCCTTGCCCAGATTCCACAGAAGGTTCTGTGGAGATACACAGGAAAGAAACCAGACACATTAGGACCCAATACCCGGCTATATGAATGGATTCCCCAGAATGATCTTCTTGGTCATCCCAAGACCAGAGCTTTTATCACTCACTGTGGAACCAATGGGATCTATGAAGCTATTTACCATGGGGTCCCTATGGTGGGAATTCCCATGTTTGGTGATCAGTATGATAATATTGCTCGTATGAAAGCCAAAGGGGCAGCTCTTAAAGTAGACTTACATACAATGACAAGTTCGGATCTACTTAACGCTTTGAAGGCAGTTATTAACAACCCTTCCTATAAAGAGAATGCTATGAGGTTATCAAGAATTCACCATGATCAGCCTACAAAGCCCTTGGATCGAGCAGTCTTCTGGATTGAATTTGTCATGCGCCACAAAGGAGCCAAACACCTTCGGCCAACCTCCCATGACCTCACCTGGATCCAGTACCACTCGTTGGATGTGATTGGGTTCCTGCTGGCCTGTGTGGCTACTACTATATTCCTGGTCACAAAATGTTGCCTGTTTTGTTGCTGGAAATTTGGTAAGACAGGGAAGAAGAACAAGAGAGAATAG",
+                  "hseq": "GAATGGAATTCATACTACAGCAAAGTTCTAGGAAGACCCACTACATTATGTGAGGTTATGGGGAAAGCAGAAATTTGGCTAATCCGGACATATTGGGATTTTGAATTTCCTCGTCCATACTTACCTAATTTTGAGTTTGTAGGAGGGTTGCACTGTAAACCAGCCAAACCATTACCTAAGGAAATGGAAGAATTTGTCCAAAGTTCAGGTGAAGATGGTATTGTGGTGTTTTCTCTGGGGTCAATGATCAGAAACCTCTCAGATGAAAAAGCCAATCTCATTGCCTCAGCCTTGGCCCAGATTCCACAAAAGGTTTTATGGAGATACAAAGGAAAGAAACCAGCCACATTAGGAGCCAATACTCGGCTCTATGATTGGATACCCCAGAATGATCTTCTTGGTCATCCCAAAACAAAAGCTTTTATCACTCATGGTGGAACCAATGGGATCTATGAAGCTATTTATCATGGGGTTCCTATGGTGGGAGTTCCCATGTTTGCTGATCAGCCTGATAATATCGCTCACATGAAGGCCAAAGGAGCAGCTGTGGAGGTGAACATAAACACAATGACAAGTGAAGATCTGCTCAATGCCTTGAGAACAGTCATTAATGAACCTTCTTATAAAGAGAATGCTACAAGGTTATCAAGGATTCAACATGATCAACCTGTAAAGCCCCTAGATCGAGCAGTCTTCTGGATAGAGTTTGTCATGCGTCACAAAGGAGCCAAGCACCTGCGTCCAGCTGCCCATGACCTCACCTGGTTCCAGTACCATTCTTTCGATGTGATTGGTTTCCTGCTGGTCTGTGTAGCAACTGCTATCTTCTTGGTCACAAAATGTTGTTTGTTTTCTTGCCAAAAACTTGGTAAAACAGGAAAGAAGAAAAAGAGGGAATAG",
+                  "midline": "|||||| ||   || |||||||| | | |||||| |||  | |||||||||||| ||||||||||||| ||||| ||| | || || || || |||||| |||||||||||   || || ||||||||  |||| ||||| |||||  ||||||| || || || || ||  |||| |||||  | ||||| ||||||||||| || ||  | |||||  ||||||| ||| ||||||| |||||||||| ||||||| |||| |||||  | ||||| ||||| |||||| | |||||||||||||| |||||| | |||||||||| |||||||||||||| |||||||||| ||||||| ||||| ||||| ||||| ||||||||||||||||||||||||||||| || | |||||||||||||||  ||||||||||||||||||||||||||||||| |||||||| |||||||||||| |||||||||||| |||||||  ||||||||| ||||  ||||| |||||||| |||||| |  | ||  || || | ||||||||||||   ||||| || || || ||||   |||| |||||  | ||||| ||||||||||||||||  ||||||||||| ||||| |||||||| |||  ||||||| | |||||||||||||||||||| || ||||||||||| |||||||||||||| ||||| || ||| |  ||||||||||||||||| |||||||||| || || ||||||||||| |||||||||| |||||| || ||| |||| ||| ||||||||||||||||  |||||| ||||   ||| ||||||| ||||| |||||||| ||||| ||||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|6397",
+                  "accession": "6397",
+                  "title": "ENSPPRT00000022116.1 cds scaffold:PanPar1.0:KV860274.1:25405436:25469306:1 gene:ENSPPRG00000013797.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UGT2A1 description:UDP glucuronosyltransferase family 2 member A1 complex locus [Source:HGNC Symbol;Acc:HGNC:12542]"
+                }
+              ],
+              "len": 2085,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 599.435,
+                  "score": 324,
+                  "evalue": 4.19023e-170,
+                  "identity": 502,
+                  "query_from": 1000,
+                  "query_to": 1590,
+                  "query_strand": "Plus",
+                  "hit_from": 1495,
+                  "hit_to": 2085,
+                  "hit_strand": "Plus",
+                  "align_len": 591,
+                  "gaps": 0,
+                  "qseq": "AAGGTTCTGTGGAGATACACAGGAAAGAAACCAGACACATTAGGACCCAATACCCGGCTATATGAATGGATTCCCCAGAATGATCTTCTTGGTCATCCCAAGACCAGAGCTTTTATCACTCACTGTGGAACCAATGGGATCTATGAAGCTATTTACCATGGGGTCCCTATGGTGGGAATTCCCATGTTTGGTGATCAGTATGATAATATTGCTCGTATGAAAGCCAAAGGGGCAGCTCTTAAAGTAGACTTACATACAATGACAAGTTCGGATCTACTTAACGCTTTGAAGGCAGTTATTAACAACCCTTCCTATAAAGAGAATGCTATGAGGTTATCAAGAATTCACCATGATCAGCCTACAAAGCCCTTGGATCGAGCAGTCTTCTGGATTGAATTTGTCATGCGCCACAAAGGAGCCAAACACCTTCGGCCAACCTCCCATGACCTCACCTGGATCCAGTACCACTCGTTGGATGTGATTGGGTTCCTGCTGGCCTGTGTGGCTACTACTATATTCCTGGTCACAAAATGTTGCCTGTTTTGTTGCTGGAAATTTGGTAAGACAGGGAAGAAGAACAAGAGAGAATAG",
+                  "hseq": "AAGGTTTTATGGAGATACAAAGGAAAGAAACCAGCCACATTAGGAGCCAATACTCGGCTCTATGATTGGATACCCCAGAATGATCTTCTTGGTCATCCCAAAACAAAAGCTTTTATCACTCATGGTGGAACCAATGGGATCTATGAAGCTATTTATCATGGGGTTCCTATGGTGGGAGTTCCCATGTTTGCTGATCAGCCTGATAATATCGCTCACATGAAGGCCAAAGGAGCAGCTGTGGAGGTGAACATAAACACAATGACAAGTGAAGATCTGCTCAATGCCTTGAGAACAGTCATTAATGAACCTTCTTATAAAGAGAATGCTACAAGGTTATCAAGGATTCAACATGATCAACCTGTAAAGCCCCTAGATCGAGCAGTCTTCTGGATAGAGTTTGTCATGCGTCACAAAGGAGCCAAGCACCTGCGTCCAGCTGCCCATGACCTCACCTGGTTCCAGTACCATTCTTTCGATGTGATTGGTTTCCTGCTGGTCTGTGTAGCAACTGCTATCTTCTTGGTCACAAAATGTTGTTTGTTTTCTTGCCAAAAACTTGGTAAAACAGGAAAGAAGAAAAAGAGGGAATAG",
+                  "midline": "|||||| | |||||||||| |||||||||||||| |||||||||| ||||||| ||||| ||||| ||||| ||||||||||||||||||||||||||||| || | |||||||||||||||  ||||||||||||||||||||||||||||||| |||||||| |||||||||||| |||||||||||| |||||||  ||||||||| ||||  ||||| |||||||| |||||| |  | ||  || || | ||||||||||||   ||||| || || || ||||   |||| |||||  | ||||| ||||||||||||||||  ||||||||||| ||||| |||||||| |||  ||||||| | |||||||||||||||||||| || ||||||||||| |||||||||||||| ||||| || ||| |  ||||||||||||||||| |||||||||| || || ||||||||||| |||||||||| |||||| || ||| |||| ||| ||||||||||||||||  |||||| ||||   ||| ||||||| ||||| |||||||| ||||| ||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 26,
+            "eff_space": 117513342654,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

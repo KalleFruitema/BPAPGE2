@@ -1,0 +1,180 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_41",
+          "query_title": "seq_041",
+          "query_len": 496,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22610",
+                  "accession": "22610",
+                  "title": "ENSPPRT00000004913.1 cds scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 1086,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 911.519,
+                  "score": 493,
+                  "evalue": 0,
+                  "identity": 495,
+                  "query_from": 1,
+                  "query_to": 496,
+                  "query_strand": "Plus",
+                  "hit_from": 249,
+                  "hit_to": 744,
+                  "hit_strand": "Plus",
+                  "align_len": 496,
+                  "gaps": 0,
+                  "qseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGTGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGCATGATCCTGAGACCCTGCTTCGCTGCATT",
+                  "hseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGCGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGCATGATCCTGAGACCCTGCTTCGCTGCATT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22609",
+                  "accession": "22609",
+                  "title": "ENSPPRT00000004927.1 cds scaffold:PanPar1.0:KV860326.1:3826185:3834021:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 1035,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 911.519,
+                  "score": 493,
+                  "evalue": 0,
+                  "identity": 495,
+                  "query_from": 1,
+                  "query_to": 496,
+                  "query_strand": "Plus",
+                  "hit_from": 198,
+                  "hit_to": 693,
+                  "hit_strand": "Plus",
+                  "align_len": 496,
+                  "gaps": 0,
+                  "qseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGTGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGCATGATCCTGAGACCCTGCTTCGCTGCATT",
+                  "hseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGGGGGCCCTGGGCGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGCATGATCCTGAGACCCTGCTTCGCTGCATT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22612",
+                  "accession": "22612",
+                  "title": "ENSPPRT00000004887.1 cds scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 966,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 747.167,
+                  "score": 404,
+                  "evalue": 0,
+                  "identity": 404,
+                  "query_from": 1,
+                  "query_to": 404,
+                  "query_strand": "Plus",
+                  "hit_from": 249,
+                  "hit_to": 652,
+                  "hit_strand": "Plus",
+                  "align_len": 404,
+                  "gaps": 0,
+                  "qseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGG",
+                  "hseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAGATACTCCACCCGGAGGAGTGCATGTATGCTGTGGGTCAGG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|22611",
+                  "accession": "22611",
+                  "title": "ENSPPRT00000004894.1 cds scaffold:PanPar1.0:KV860326.1:3826452:3833866:-1 gene:ENSPPRG00000002473.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HMBS description:hydroxymethylbilane synthase [Source:HGNC Symbol;Acc:HGNC:4982]"
+                }
+              ],
+              "len": 993,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 673.301,
+                  "score": 364,
+                  "evalue": 0,
+                  "identity": 364,
+                  "query_from": 1,
+                  "query_to": 364,
+                  "query_strand": "Plus",
+                  "hit_from": 195,
+                  "hit_to": 558,
+                  "hit_strand": "Plus",
+                  "align_len": 364,
+                  "gaps": 0,
+                  "qseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAG",
+                  "hseq": "CGCGCTGGAAAAGAATGAAGTGGACTTAGTCGTTCACTCCCTGAAGGACCTGCCCACTGTGCTTCCTCCTGGCTTCACCATTGGAGCCATCTGCAAGCGGGAGAACCCCTATGATGCCGTTGTCTTTCACCCAAAATTTGTTGGGAAGACCCTAGAAACCTTGCCAGAGAAGAGTGTGGTGGGAACCAGCTCCCTGCGGAGGGCGGCCCAGCTGCAGAGAAAGTTCCCACACCTGGAGTTCAAGAGCATTCGGGGAAATCTCAACACACGCCTTCGGAAGCTGGATGAATTTCAGGAGTTCAGTGCCATCATCCTGGCTGCAGCTGGCCTGCAGCGCATGGGCTGGCAGCACCGGGTGGGACAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 178.399,
+                  "score": 96,
+                  "evalue": 4.26546e-44,
+                  "identity": 100,
+                  "query_from": 395,
+                  "query_to": 496,
+                  "query_strand": "Plus",
+                  "hit_from": 550,
+                  "hit_to": 651,
+                  "hit_strand": "Plus",
+                  "align_len": 102,
+                  "gaps": 0,
+                  "qseq": "GTGGGTCAGGGGGCCCTGGGTGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGCATGATCCTGAGACCCTGCTTCGCTGCATT",
+                  "hseq": "GTGGGACAGGGGGCCCTGGGCGTGGAAGTCCGAGCCAAGGACCAGGACATCCTGGATCTGGTGGGTGTATTGCATGATCCTGAGACCCTGCTTCGCTGCATT",
+                  "midline": "||||| |||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 21543396408,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

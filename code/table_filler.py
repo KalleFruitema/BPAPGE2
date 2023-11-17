@@ -14,7 +14,7 @@ from Bio import SeqIO
 import requests
 
 
-def fill_table_brokstuk(cursor):
+def fill_table_brokstuk(cursor, conn):
     """
     Deze functie leest 'seq2.fa' in om de sequenties te krijgen
     zodat de brokstuk tabel gevuld kan worden. De inhoud van 
@@ -36,11 +36,15 @@ def fill_table_brokstuk(cursor):
     for key_val in fasta_dict.items():
         sql = """INSERT INTO BROKSTUK
         VALUES(%s, %s)"""
-        cursor.execute(sql, key_val)
+        try:
+            cursor.execute(sql, key_val)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Brokstuk table filled.")
 
 
-def fill_table_alignment(cursor, data):
+def fill_table_alignment(cursor, data, conn):
     """
     Deze functie krijgt data, en vult de alignment tabel
     met deze data.
@@ -54,11 +58,15 @@ def fill_table_alignment(cursor, data):
     sql = """INSERT INTO ALIGNMENT
     VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
     for line in data:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Alignment table filled.")
 
 
-def fill_table_transcript_gene(cursor, data):
+def fill_table_transcript_gene(cursor, data, conn):
     """
     Deze functie krijgt data, en vult de transcript_gene tabel
     met deze data.
@@ -72,11 +80,15 @@ def fill_table_transcript_gene(cursor, data):
     sql = """INSERT INTO TRANSCRIPT_GENE
     VALUES(%s, %s)"""
     for line in data:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Transcript_gene table filled.")
 
 
-def fill_table_gene(cursor, data):
+def fill_table_gene(cursor, data, conn):
     """
     Deze functie krijgt data, en vult de gene tabel
     met deze data.
@@ -90,11 +102,15 @@ def fill_table_gene(cursor, data):
     sql = """INSERT INTO GENE
     VALUES(%s, %s, %s, %s)"""
     for line in data:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Gene table filled.")
 
 
-def fill_table_protein(cursor, data):
+def fill_table_protein(cursor, data, conn):
     """
     Deze functie krijgt een lijst met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -115,11 +131,15 @@ def fill_table_protein(cursor, data):
         data_check.add(tuple([item["NCBI_prot_ID"], item["prot_name"], 
                               item["prot_sequence"]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Protein table filled.")
 
 
-def fill_table_gene_protein(cursor, data):
+def fill_table_gene_protein(cursor, data, conn):
     """
     Deze functie krijgt een lijst met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -140,11 +160,15 @@ def fill_table_gene_protein(cursor, data):
         data_check.add(tuple([item["ENSEMBL_gene_ID"], 
                               item["NCBI_prot_ID"]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Gene_protein table filled.")
 
 
-def fill_table_pathway(cursor, data):
+def fill_table_pathway(cursor, data, conn):
     """
     Deze functie krijgt een lijst met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -165,11 +189,15 @@ def fill_table_pathway(cursor, data):
         data_check.add(tuple([item["pathway_ID"], item["pathway_name"], 
                               item["pathway_description"]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Pathway table filled.")
 
 
-def fill_table_pathway_protein(cursor, data):
+def fill_table_pathway_protein(cursor, data, conn):
     """
     Deze functie krijgt een lijst met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -189,11 +217,15 @@ def fill_table_pathway_protein(cursor, data):
     for item in data:
         data_check.add(tuple([item["NCBI_prot_ID"], item["pathway_ID"]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Pathway_protein table filled.")
 
 
-def fill_table_function(cursor, data):
+def fill_table_function(cursor, data, conn):
     """
     Deze functie krijgt een lijst met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -214,11 +246,15 @@ def fill_table_function(cursor, data):
         data_check.add(tuple([item["prot_function_ID"], 
                               item["prot_function"]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Function table filled.")
 
 
-def fill_table_function_protein(cursor, data, data_ids):
+def fill_table_function_protein(cursor, data, data_ids, conn):
     """
     Deze functie krijgt twee lijsten met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -242,11 +278,15 @@ def fill_table_function_protein(cursor, data, data_ids):
                fn_id["prot_function"] == item["prot_function"]]
         data_check.add(tuple([item["NCBI_prot_ID"], _id[0]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Function_protein table filled.")
 
 
-def fill_table_feature(cursor, data):
+def fill_table_feature(cursor, data, conn):
     """
     Deze functie krijgt een lijst met dictionaries van data, checkt 
     door middel van een set met tuples er in of er dubbele waarden 
@@ -268,7 +308,11 @@ def fill_table_feature(cursor, data):
                              item["feature_type"], item["feature_position"], 
                              item["feature_note"]]))
     for line in data_check:
-        cursor.execute(sql, line)
+        try:
+            cursor.execute(sql, line)
+        except Exception as e:
+            print(e)
+            conn.rollback()
     print("Feature table filled.")
 
 
@@ -517,7 +561,7 @@ def get_table_data():
         pathway_data, function_data, function_data_ids, feature_data
 
 
-def fill_all_tables(cursor):
+def fill_all_tables(cursor, conn):
     """
     Alle data wordt met get_table_data() opgehaald, en alle tabellen 
     worden gevuld.
@@ -528,15 +572,15 @@ def fill_all_tables(cursor):
     """
     align_data, transcript_data, gene_data, protein_data, pathway_data, \
         function_data, function_data_ids, feature_data = get_table_data()
-    fill_table_brokstuk(cursor)
-    fill_table_gene(cursor, gene_data)
-    fill_table_transcript_gene(cursor, transcript_data)
-    fill_table_alignment(cursor, align_data)
-    fill_table_protein(cursor, protein_data)
-    fill_table_gene_protein(cursor, protein_data)
-    fill_table_pathway(cursor, pathway_data)
-    fill_table_pathway_protein(cursor, pathway_data)
-    fill_table_function(cursor, function_data_ids)
-    fill_table_function_protein(cursor, function_data, function_data_ids)
-    fill_table_feature(cursor, feature_data)
+    fill_table_brokstuk(cursor, conn)
+    fill_table_gene(cursor, gene_data, conn)
+    fill_table_transcript_gene(cursor, transcript_data, conn)
+    fill_table_alignment(cursor, align_data, conn)
+    fill_table_protein(cursor, protein_data, conn)
+    fill_table_gene_protein(cursor, protein_data, conn)
+    fill_table_pathway(cursor, pathway_data, conn)
+    fill_table_pathway_protein(cursor, pathway_data, conn)
+    fill_table_function(cursor, function_data_ids, conn)
+    fill_table_function_protein(cursor, function_data, function_data_ids, conn)
+    fill_table_feature(cursor, feature_data, conn)
     print("All tables filled!")

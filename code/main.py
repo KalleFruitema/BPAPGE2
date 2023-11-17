@@ -34,6 +34,7 @@ def main():
     conn = psycopg2.connect(conn_string)
     print("Connected succesfully.")
     cursor = conn.cursor()
+    cursor.execute("ROLLBACK;")
     try:
         try:
             cursor.execute("DROP TABLE alignment, brokstuk, function, "
@@ -44,9 +45,16 @@ def main():
         except Exception:
             print("Database already empty.")
         print("Creating tables...")
-        create_all_tables(cursor)
+        queries = create_all_tables(cursor)
+        for q in queries:
+            try:
+                print(f"SQL QUERY:\n\n{q}")
+                cursor.execute(q)
+            except Exception as e:
+                print(e)
+                conn.rollback()
         print("Filling tables...")
-        fill_all_tables(cursor)
+        fill_all_tables(cursor, conn)
         
         conn.commit()
         conn.close()

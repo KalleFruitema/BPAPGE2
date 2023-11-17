@@ -1,0 +1,118 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_8",
+          "query_title": "seq_008",
+          "query_len": 1976,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13458",
+                  "accession": "13458",
+                  "title": "ENSPPRT00000014677.1 cds scaffold:PanPar1.0:KV860359.1:8942492:8955909:1 gene:ENSPPRG00000008734.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:GUSB description:glucuronidase beta [Source:HGNC Symbol;Acc:HGNC:4696]"
+                }
+              ],
+              "len": 1953,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 3086.87,
+                  "score": 1671,
+                  "evalue": 0,
+                  "identity": 1721,
+                  "query_from": 34,
+                  "query_to": 1764,
+                  "query_strand": "Plus",
+                  "hit_from": 209,
+                  "hit_to": 1951,
+                  "hit_strand": "Plus",
+                  "align_len": 1743,
+                  "gaps": 12,
+                  "qseq": "AGTCGGGCCCCACCCTGGACATGCCGGTTCCCTCCAGCTTCAATGACGTGGGCCAGGATAGGCAGCTGCGCAGCTTTGTCGGCTGGGTGTGGTACGAGCGGGAGGCGACCCTGCCCCAGCGATGGACTCAGGACCTGGGCACCAGAGTGGTGCTGAGGATTGGCAGCGCCCACTACTATGCCATTGTGTGGGTGAATGGGGTCCACGTGGCAGAGCATGAGGGGGGCCATCTCCCCTTCGAGGCTGACATCAGCAAGCTGGTACAGAGTGGGCCCCTGGCCTCTTGCCGCATTACCGTTGCCATCAACAACACGCTCACCCCCCACACTCTGCCGCCAGGGACCATCCTCCACCAGACGGATACCTCCAAGTACCCCAAGGGTTACTTTGTCCAGAACATAAACTTTGACTTCTTCAACTACGCGGGGCTGCATCGGCCCGTGCTCCTCTACACCACACCTGCCACCTACATCGATGACATCACCGTCAGCACCAGCGTGGACCAAGACACTGGGCTGGTGGATTACCAGATTTTTGTTGAAGGCGGTGAACACTTTCAACTGGAAGTGCGTCTTCTGGACGAGGAAGGCAAAGCCGTGGCCCAGGGGACGGGGGGTCGGGGCCAGCTGCACGTGCCCGATGCCCACCTCTGGTGGCCATACCTGATGCATGAGCACCCTGCCTACCTGTACTCATTGGAGGTGAGGTTGACCGCGCAGACGGCAGCTGGGTCTGTGTCTGACTTCTACACTCTCCCCGTGGGGATTCGCACGGTGGCTGTCACAGAGCACCAGTTCCTCATCAATGGGAAACCTTTCTATTTCCACGGGGTCAACAAGCACGAGGATGCAGATATCCGAGGGAAGGGCTTTGACTGGCCACTGCTGGTGAAGGACTTCAATTTGCTTCGCTGGCTCGGGGCCAACGCCTTCCG------------CCCCTACGCGGAGGAGGTGATGCAGCTCTGTGACCGCTATGGGATCGTGGTCATCGACGAGAGTCCCGGTGTGGGCATCGTGCTGGTCGAGAGCTACGGCAACGTGTCTCTGCAGCACCACCTGGAGGTGATGGAGGAGCTGGTGCGCAGGGACAAGAATCACCCGGCTGTTGTGATGTGGTCTGTGGCCAATGAGCCCGCTTCCTTCCTGAAACCTGCCGGTTACTACTTCAAGACGCTGATTGCTCACACCAAAGCCTTGGATCCCTCCCGGCCCGTGACCTTTGTGACCAACTCCAACTATGAAGCAGATCTGGGGGCGCCGTATGTGGACGTCATCTGTGTGAATAGTTACTACTCTTGGTATCATGACTATGGTCACATGGAGGTGATTCAGCTGCAGCTGACAACCCAGTTTGAGAACTGGTACAGGACCTATCAGAAACCAATAATCCAGAGCGAGTACGGAGCAGACACCATTGCAGGGTTTCACCAGGACCCACCTCTGATGTTCAGCGAGGAATACCAGAAAGGTCTGCTGGAGCAGTATCATTTGGTTCTGGATCAAAAACGCAAAGAATACGTGGTCGGAGAGCTCATCTGGAACTTTGCCGATTTTATGACTAACCAGTCACCGCAGAGAGTAATGGGGAATAAAAAGGGGATCTTCACGCGCCAGAGACAACCAAAAGGGGCAGCGTTCCTTTTGCGAGAGAGATACTGGAAACTTGCCAATGAAACCAGGTATCCCTGGTCGGCTGTGAAGTCACCGTGTTTGGAAAACAGCCCATTTACTC",
+                  "hseq": "AGTCGGGCCCCACCCTGGACATGCCGGTTCCCTCCAGCTTCAATGACGTGGGCCAGGATAGGCAGCTGCGCAGCTTTGTCGGCTGGGTGTGGTACGAGCGGGAGGCGACCCTGCCCCAGCGATGGACTCAGGACCTGGGCACCAGAGTGGTGCTGAGGATTGGCAGCGCCCACTACTATGCCATTGTGTGGGTGAATGGGGTCCACGTGGCAGAGCATGAGGGGGGCCATCTCCCCTTCGAGGCTGACATCAGCAAGCTGGTACAGAGTGGGCCCCTGGCCTCTTGCCGCATTACCGTTGCCATCAACAACACGCTCACCCCCCACACTCTGCCGCCAGGGACCATCCTCCACCAGACGGATACCTCCAAGTACCCCAAGGGTTACTTTGTCCAGAACATAAACTTTGACTTCTTCAACTACGCGGGGCTGCATCGGCCCGTGCTCCTCTACACCACACCTGCCACCTACATCGATGACATCACCGTCAGCACCAGCGTGGACCAAGACACTGGGCTGGTGGATTACCAGATTTTTGTTGAAGGCGGTGAACACTTTCAACTGGAAGTGCGTCTTCTGGACGAGGAAGGCAAAGCCGTGGCCCGGGGGACAGGGGGTCGGGGCCAGCTGCAGGTGCCCAATGCCCACCTCTGGTGGCCATACCTGATGCATGAGCACCCTGCCTACCTGTACTCATTGGAGGTGAGGTTGACCGCGCAGACGGCAGCTGGGTCTGTGTCTGACTTCTACACTCTCCCCGTGGGGATTCGCACGGTGGCTGTCACAGAGCACCAGTTCCTCATCAATGGGAAACCTTTCTATTTCCACGGGGTCAACAAGCACGAGGATGCAGATATCCGAGGGAAGGGCTTTGACTGGCCACTGCTGGTGAAGGACTTCAATTTGCTTCGCTGGCTCGGGGCCAACGCCTTCCGCACCAGCCACTACCCCTACGCGGAGGAGGTGATGCAGCTCTGTGACCGCTATGGGATCGTGGTCATCGACGAGAGTCCCGGTGTGGGCATCGTGCTGGTCGAGAGCTACAGCAACGTGTCTCTGCAGCACCACCTGGAGGTGATGGAGGAGCTGGTGCGCAGGGACAAGAATCACCCGGCTGTTGTGATGTGGTCTGTGGCCAATGAGCCCGCTTCCTTCCTGAAACCTGCCGGTTACTACTTCAAGACGCTGATTGCTCACACCAAAGCCTTGGATCCCTCCCGGCCCGTGACCTTTGTGACCAACTCCAACTATGAAGCAGACCTGGGGGCGCCGTATGTGGACGTCATCTGTGTGAATAGTTACTACTCTTGGTATCATGACTATGGTCATATGGAGGTGATTCAGCTGCAGCTGACAACCCAGTTTGAGAACTGGTACAGGACCTATCAGAAACCAATAATCCAGAGCGAGTACGGAGCAGACACCATTGCAGGGTTTCACCAGGACCCACCTCTGATGTTCAGCGAGGAATACCAGAAAGGTCTGCTGGAGCAGTATCATTTGGTTCTGGATCAAAAACGCAAAGAATACGTGGTCGGAGAGCTCATCTGGAACTTTGCCGATTTTATGACTAACCAGTCACCGCAGAGAGTAATGGGGAATAAAAAGGGGATCTTCACGCGCCAGAGACAACCAAAAGGGGCAGCGTTCCTTCTGCGAGAGAGATACTGGAAACTTGCCAATGAAACCAGGTATCCCTGGTCAGCTGTGAAGTCACAGTGTTTGGAAAACAGCCCATTTACTC",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||| |||||||||||||||||||| |||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| ||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13459",
+                  "accession": "13459",
+                  "title": "ENSPPRT00000014665.1 cds scaffold:PanPar1.0:KV860359.1:8942492:8955908:1 gene:ENSPPRG00000008734.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:GUSB description:glucuronidase beta [Source:HGNC Symbol;Acc:HGNC:4696]"
+                }
+              ],
+              "len": 1524,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1736.97,
+                  "score": 940,
+                  "evalue": 0,
+                  "identity": 1020,
+                  "query_from": 735,
+                  "query_to": 1769,
+                  "query_strand": "Plus",
+                  "hit_from": 476,
+                  "hit_to": 1524,
+                  "hit_strand": "Plus",
+                  "align_len": 1054,
+                  "gaps": 24,
+                  "qseq": "GTGAGGTTGACCGCGCAGACGGCAGCTGGGTCTGTGTCTGACTTCTACACTCTCCCCGTGGGGATTCGCACGGTGGCTGTCACAGAGCACCAGTTCCTCATCAATGGGAAACCTTTCTATTTCCACGGGGTCAACAAGCACGAGGATGCAGATATCCGAGGGAAGGGCTTTGACTGGCCACTGCTGGTGAAGGACTTCAATTTGCTTCGCTGGCTCGGGGCCAACGCCTTCCG------------CCCCTACGCGGAGGAGGTGATGCAGCTCTGTGACCGCTATGGGATCGTGGTCATCGACGAGAGTCCCGGTGTGG-G--CATCG---T-GCTGGTCGAGAGCTACGGCAACGTGTCTCTGCAGCACCACCTGGAGGTGATGGAGGAGCTGGTGCGCAGGGACAAGAATCACCCGGCTGTTGTGATGTGGTCTGTGGCCAATGAGCCCGCTTCCTTCCTGAAACCTGCCGGTTACTACTTCAAGACGCTGATTGCTCACACCAAAGCCTTGGATCCCTCCCGGCCCGTGACCTTTGTGACCAACTCCAACTATGAAGCAGATCTGGGGGCGCCGTATGTGGACGTCATCTGTGTGAATAGTTACTACTCTTGGTATCATGACTATGGTCACATGGAGGTGATTCAGCTGCAGCTGACAACCCAGTTTGAGAACTGGTACAGGACCTATCAGAAACCAATAATCCAGAGCGAGTACGGAGCAGACACCATTGCAGGGTTTCACCAGGACCCACCTCTGATGTTCAGCGAGGAATACCAGAAAGGTCTGCTGGAGCAGTATCATTTGGTTCTGGATCAAAAACGCAAAGAATACGTGGTCGGAGAGCTCATCTGGAACTTTGCCGATTTTATGACTAACCAGTCACCGCAGAGAGTAATGGGGAATAAAAAGGGGATCTTCACGCGCCAGAGACAACCAAAAGGGGCAGCGTTCCTTTTGCGAGAGAGATACTGGAAACTTGCCAATGAAACCAGGTATCCCTGGTCGGCTGTGAAGTCACCGTGTTTGGAAAACAGCCCATTTACTCTTTAA",
+                  "hseq": "GTG-GGTTGACCGCGCAGACGGCAGCTGGGTCTGTGTCTGACTTCTACACTCTCCCCGTGGGGATTCGCACGGTGGCTGTCACAGAGCACCAGTTCCTCATCAATGGGAAACCTTTCTATTTCCACGGGGTCAACAAGCACGAGGATGCAGATATCCGAGGGAAGGGCTTTGACTGGCCACTGCTGGTGAAGGACTTCAATTTGCTTCGCTGGCTCGGGGCCAACGCCTTCCGCACCAGCCACTACCCCTACGCGGAGGAGGTGATGCAGCTCTGTGACCGCTATGGGATCGTGGTCATCGACGAGAGTCCCGGTGTGGTGCCCGCCGCCCTCCCTGCTC---A-CTACAGCAACGTGTCTCTGCAGCACCACCTGGAGGTGATGGAGGAGCTGGTGCGCAGGGACAAGAATCACCCGGCTGTTGTGATGTGGTCTGTGGCCAATGAGCCCGCTTCCTTCCTGAAACCTGCCGGTTACTACTTCAAGACGCTGATTGCTCACACCAAAGCCTTGGATCCCTCCCGGCCCGTGACCTTTGTGACCAACTCCAACTATGAAGCAGACCTGGGGGCGCCGTATGTGGACGTCATCTGTGTGAATAGTTACTACTCTTGGTATCATGACTATGGTCATATGGAGGTGATTCAGCTGCAGCTGACAACCCAGTTTGAGAACTGGTACAGGACCTATCAGAAACCAATAATCCAGAGCGAGTACGGAGCAGACACCATTGCAGGGTTTCACCAGGACCCACCTCTGATGTTCAGCGAGGAATACCAGAAAGGTCTGCTGGAGCAGTATCATTTGGTTCTGGATCAAAAACGCAAAGAATACGTGGTCGGAGAGCTCATCTGGAACTTTGCCGATTTTATGACTAACCAGTCACCGCAGAGAGTAATGGGGAATAAAAAGGGGATCTTCACGCGCCAGAGACAACCAAAAGGGGCAGCGTTCCTTCTGCGAGAGAGATACTGGAAACTTGCCAATGAAACCAGGTATCCCTGGTCAGCTGTGAAGTCACAGTGTTTGGAAAACAGCCCATTTACTCTTTAA",
+                  "midline": "||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |  |  ||   |  ||| ||   | |||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||| |||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 503.409,
+                  "score": 272,
+                  "evalue": 2.55641e-141,
+                  "identity": 272,
+                  "query_from": 34,
+                  "query_to": 305,
+                  "query_strand": "Plus",
+                  "hit_from": 209,
+                  "hit_to": 480,
+                  "hit_strand": "Plus",
+                  "align_len": 272,
+                  "gaps": 0,
+                  "qseq": "AGTCGGGCCCCACCCTGGACATGCCGGTTCCCTCCAGCTTCAATGACGTGGGCCAGGATAGGCAGCTGCGCAGCTTTGTCGGCTGGGTGTGGTACGAGCGGGAGGCGACCCTGCCCCAGCGATGGACTCAGGACCTGGGCACCAGAGTGGTGCTGAGGATTGGCAGCGCCCACTACTATGCCATTGTGTGGGTGAATGGGGTCCACGTGGCAGAGCATGAGGGGGGCCATCTCCCCTTCGAGGCTGACATCAGCAAGCTGGTACAGAGTGGG",
+                  "hseq": "AGTCGGGCCCCACCCTGGACATGCCGGTTCCCTCCAGCTTCAATGACGTGGGCCAGGATAGGCAGCTGCGCAGCTTTGTCGGCTGGGTGTGGTACGAGCGGGAGGCGACCCTGCCCCAGCGATGGACTCAGGACCTGGGCACCAGAGTGGTGCTGAGGATTGGCAGCGCCCACTACTATGCCATTGTGTGGGTGAATGGGGTCCACGTGGCAGAGCATGAGGGGGGCCATCTCCCCTTCGAGGCTGACATCAGCAAGCTGGTACAGAGTGGG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 26,
+            "eff_space": 88887128850,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

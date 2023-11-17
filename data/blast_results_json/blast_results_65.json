@@ -1,0 +1,69 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_65",
+          "query_title": "seq_065",
+          "query_len": 308,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|3155",
+                  "accession": "3155",
+                  "title": "ENSPPRT00000027038.1 cds scaffold:PanPar1.0:KV860328.1:4333787:4334515:-1 gene:ENSPPRG00000017740.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:FTMT description:ferritin mitochondrial [Source:HGNC Symbol;Acc:HGNC:17345]"
+                }
+              ],
+              "len": 729,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 569.888,
+                  "score": 308,
+                  "evalue": 3.62403e-162,
+                  "identity": 308,
+                  "query_from": 1,
+                  "query_to": 308,
+                  "query_strand": "Plus",
+                  "hit_from": 422,
+                  "hit_to": 729,
+                  "hit_strand": "Plus",
+                  "align_len": 308,
+                  "gaps": 0,
+                  "qseq": "GCCTGAAGGACATCAAGAAACCTGACCTGGACGACTGGGAGAGCGGGCTGAATGCCATGGAGTGTGCGCTGCTCTTGGAAAAGAATGTGAACCAGTCGTTGCTCGAATTGCACACTCTGGCCTCAGACAAAGGTGACCCCCATTTGTGCGACTTCCTGGAAACTCACTATTTGAATGAACAGGTGAAATCGATCAAAGAACTAGGTGACCACGTGCAAAACTTGGTTAAGATGGGGGCCCCGGCTTCCGGCCTGGCAGAGTACCTCTTTGACAAGCACACCCTTGGAAATGAAAACGATCACAACTAA",
+                  "hseq": "GCCTGAAGGACATCAAGAAACCTGACCTGGACGACTGGGAGAGCGGGCTGAATGCCATGGAGTGTGCGCTGCTCTTGGAAAAGAATGTGAACCAGTCGTTGCTCGAATTGCACACTCTGGCCTCAGACAAAGGTGACCCCCATTTGTGCGACTTCCTGGAAACTCACTATTTGAATGAACAGGTGAAATCGATCAAAGAACTAGGTGACCACGTGCAAAACTTGGTTAAGATGGGGGCCCCGGCTTCCGGCCTGGCAGAGTACCTCTTTGACAAGCACACCCTTGGAAATGAAAACGATCACAACTAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 12962552076,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

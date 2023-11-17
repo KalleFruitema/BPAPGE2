@@ -1,0 +1,131 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_63",
+          "query_title": "seq_063",
+          "query_len": 723,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13193",
+                  "accession": "13193",
+                  "title": "ENSPPRT00000014971.1 cds scaffold:PanPar1.0:KV860423.1:2526115:2530005:1 gene:ENSPPRG00000008923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 1434,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1319.63,
+                  "score": 714,
+                  "evalue": 0,
+                  "identity": 720,
+                  "query_from": 1,
+                  "query_to": 723,
+                  "query_strand": "Plus",
+                  "hit_from": 712,
+                  "hit_to": 1434,
+                  "hit_strand": "Plus",
+                  "align_len": 723,
+                  "gaps": 0,
+                  "qseq": "CAAGCCCTTAACACCCACCTGACTAGTAGAGGAGTCCGTATTCTCAGAGGCCAGCCCGTCTGTGGGCTCAGCCTCCAGGCAGACAGGCGCTGGAAGGTGTCTCTAGGGGACAGCAGTCTGGATGCTGACCACGTTATCAGTGCTGTTCCGGCTTCAGTGCTTGGCAAGCTGCTCCCTGCGGAGGCTGCGCCTCTGGCCCGGGCCCTGAGCGCCATCACTGCGGTGTCTGTGGCTGTGGTGAACCTGCAGTACCGAGGAGCCCGTCTGCCCGTGCAGGGATTCGGACATTTGGTGCCATCCTCAGAAGACCCGGGCGTCCTGGGAATCGTGTATGACTCAGTTGCTTTCCCTGAGCAGGACGGAAGCCCCCCTGGCCTCCGAGTGACTGTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCCGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "hseq": "CAAGCCCTTAACACCCACCTGACTAGTAGAGGAGTCCGTATTCTCAGAGGCCAGCCCGTCTGTGGGCTCAGCCTCCAGGCAGACAGGCGCTGGAAGGTGTCTCTAGGGGACAGCAGTCTGGATGCTGACCACGTTATCAGTGCTGTTCCGGCTTCAGTGCTCGGCAAGCTGCTCCCTGCGGAGGCTGCGCCTCTGGCCCGGGCCCTGAGCGCCATCACTGCGGTGTCTGTGGCTGTGGTGAACCTGCAGTACCGAGGAGCCCGTCTGCCCGTGCAGGGATTCGGACATTTGGTGCCATCCTCAGAAGACCCGGGCGTCCTGGGAATCGTGTATGACTCAGTTGCTTTCCCTGAGCAGGACGGAAGCCCCCCTGGCCTCCGAGTGACCGTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCTGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13195",
+                  "accession": "13195",
+                  "title": "ENSPPRT00000014941.1 cds scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 423,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 616.055,
+                  "score": 333,
+                  "evalue": 1.12725e-175,
+                  "identity": 335,
+                  "query_from": 388,
+                  "query_to": 723,
+                  "query_strand": "Plus",
+                  "hit_from": 88,
+                  "hit_to": 423,
+                  "hit_strand": "Plus",
+                  "align_len": 336,
+                  "gaps": 0,
+                  "qseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCCGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "hseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCTGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13194",
+                  "accession": "13194",
+                  "title": "ENSPPRT00000014946.1 cds scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 558,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 616.055,
+                  "score": 333,
+                  "evalue": 1.12725e-175,
+                  "identity": 335,
+                  "query_from": 388,
+                  "query_to": 723,
+                  "query_strand": "Plus",
+                  "hit_from": 223,
+                  "hit_to": 558,
+                  "hit_strand": "Plus",
+                  "align_len": 336,
+                  "gaps": 0,
+                  "qseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCCGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "hseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCTGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 25,
+            "eff_space": 31837850268,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

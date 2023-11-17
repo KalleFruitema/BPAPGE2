@@ -22,8 +22,9 @@ def create_table_brokstuk(cursor):
     CONSTRAINT pk_brokstuk_header
     PRIMARY KEY(brokstuk_header)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Brokstuk table created.")
+    return sql
 
 
 def create_table_alignment(cursor):
@@ -58,8 +59,9 @@ def create_table_alignment(cursor):
     FOREIGN KEY(ENSEMBL_transcript_ID)
     REFERENCES TRANSCRIPT_GENE(ENSEMBL_transcript_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Alignment table created.")
+    return sql
 
 
 def create_table_transcript_gene(cursor):
@@ -82,8 +84,9 @@ def create_table_transcript_gene(cursor):
     FOREIGN KEY(ENSEMBL_gene_ID)
     REFERENCES GENE(ENSEMBL_gene_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Transcript_gene table created.")
+    return sql
 
 
 def create_table_gene(cursor):
@@ -104,8 +107,9 @@ def create_table_gene(cursor):
     CONSTRAINT pk_ENSEMBL_gene_ID
     PRIMARY KEY(ENSEMBL_gene_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Gene table created.")
+    return sql
 
 
 def create_table_gene_protein(cursor):
@@ -132,8 +136,9 @@ def create_table_gene_protein(cursor):
     CONSTRAINT ck_GENE_PROTEIN
     PRIMARY KEY(ENSEMBL_gene_ID, NCBI_prot_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Gene_protein table created.")
+    return sql
 
 
 def create_table_pathway(cursor):
@@ -153,8 +158,9 @@ def create_table_pathway(cursor):
     CONSTRAINT pk_pathway_ID
     PRIMARY KEY(pathway_ID) 
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Pathway table created.")
+    return sql
 
 
 def create_table_pathway_protein(cursor):
@@ -181,8 +187,9 @@ def create_table_pathway_protein(cursor):
     CONSTRAINT ck_PATHWAY_PROTEIN
     PRIMARY KEY(NCBI_prot_ID, pathway_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Pathway_protein table created.")
+    return sql
 
 
 def create_table_protein(cursor):
@@ -202,8 +209,9 @@ def create_table_protein(cursor):
     CONSTRAINT pk_NCBI_prot_ID
     PRIMARY KEY(NCBI_prot_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Protein table created.")
+    return sql
 
 
 def create_table_function_protein(cursor):
@@ -230,8 +238,9 @@ def create_table_function_protein(cursor):
     CONSTRAINT ck_FUNCTION_PROTEIN
     PRIMARY KEY(NCBI_prot_ID, prot_function_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Function_protein table created.")
+    return sql
 
 
 def create_table_function(cursor):
@@ -250,8 +259,9 @@ def create_table_function(cursor):
     CONSTRAINT pk_prot_function_ID
     PRIMARY KEY(prot_function_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Function table created.")
+    return sql
 
 
 def create_table_feature(cursor):
@@ -274,8 +284,9 @@ def create_table_feature(cursor):
     FOREIGN KEY(NCBI_prot_ID)
     REFERENCES PROTEIN(NCBI_prot_ID)
     )"""
-    cursor.execute(sql)
+    # cursor.execute(sql)
     print("Feature table created.")
+    return sql
 
 
 def create_all_tables(cursor):
@@ -287,15 +298,17 @@ def create_all_tables(cursor):
     runnen op de database server.
     :return None: 
     """
-    create_table_brokstuk(cursor)
-    create_table_gene(cursor)
-    create_table_transcript_gene(cursor)
-    create_table_alignment(cursor)
-    create_table_function(cursor)
-    create_table_pathway(cursor)
-    create_table_protein(cursor)
-    create_table_pathway_protein(cursor)
-    create_table_function_protein(cursor)
-    create_table_gene_protein(cursor)
-    create_table_feature(cursor)
+    create_queries = []
+    create_queries.append(create_table_brokstuk(cursor))
+    create_queries.append(create_table_gene(cursor))
+    create_queries.append(create_table_transcript_gene(cursor))
+    create_queries.append(create_table_alignment(cursor))
+    create_queries.append(create_table_function(cursor))
+    create_queries.append(create_table_pathway(cursor))
+    create_queries.append(create_table_protein(cursor))
+    create_queries.append(create_table_pathway_protein(cursor))
+    create_queries.append(create_table_function_protein(cursor))
+    create_queries.append(create_table_gene_protein(cursor))
+    create_queries.append(create_table_feature(cursor))
     print("All tables created.")
+    return create_queries

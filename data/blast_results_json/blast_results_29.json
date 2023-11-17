@@ -1,0 +1,149 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_29",
+          "query_title": "seq_029",
+          "query_len": 1104,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|17532",
+                  "accession": "17532",
+                  "title": "ENSPPRT00000010367.1 cds scaffold:PanPar1.0:KV860394.1:5074769:5078153:1 gene:ENSPPRG00000005917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
+                }
+              ],
+              "len": 1104,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 2028.74,
+                  "score": 1098,
+                  "evalue": 0,
+                  "identity": 1102,
+                  "query_from": 1,
+                  "query_to": 1104,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 1104,
+                  "hit_strand": "Plus",
+                  "align_len": 1104,
+                  "gaps": 0,
+                  "qseq": "ATGGAGGCTAACGGGTTGGGATCCCAGGGTTTTCCAGAGCTGAAGAATGACACGTTCCTGCGAGCAGCATGGGGAGAAGACACAGATTACACTCCCGTTTGGTGCATGCGGCAGGCAGGCCGCTACTTACCAGAGTTTAGGGAAACTAGGGCTGCCCAGGACTTTTTCAGCACCTGTCGCTCCCCAGAGGCCTGCTGTGAATTGACTTTGCAGCCACTGCGTCGCTTCCCTTTGGATGCTGCCATCATCTTCTCTGACATCCTTGTTGTACCCCAGGCACTGGGCATGGAGGTGACTATGGTGCCTGGCAAAGGGCCTAGCTTCCCAGAGCCATTAAGAGAAGAGCGGGACTTAGAACGCCTCAGGGATCCAGCAACAGTGGCCTCTGAGCTGGGCTATGTGTTCCAGGCCATCACCCTCACTCGACAACGGCTAGCTGGGCGTGTGCCGCTGATTGGCTTTGCTGGTGCCCCGTGGACTTTGATGACATACATGGTTGAGGGTGGCAGCTCAAGCACCATGGCTCAGGCCAAGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGCATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAGAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "hseq": "ATGGAGGCTAACGGGTTGGGATCCCAGGGTTTTCCAGAGCTGAAGAATGACACGTTCCTGCGAGCAGCATGGGGAGAAGACACAGATTACACTCCCGTTTGGTGCATGCGGCAGGCAGGCCGCTACTTACCAGAGTTTAGGGAAACTAGGGCTGCCCAGGACTTTTTCAGCACCTGTCGCTCCCCAGAGGCCTGCTGTGAATTGACTTTGCAGCCACTGCGTCGCTTCCCTTTGGATGCTGCCATCATCTTCTCTGACATCCTTGTTGTACCCCAGGCACTGGGCATGGAGGTGACTATGGTGCCTGGCAAAGGGCCTAGCTTCCCAGAGCCATTAAGAGAAGAGCGGGACTTAGAACGCCTCAGGGATCCAGCAACAGTGGCCTCTGAGCTGGGCTATGTGTTCCAGGCCATCACCCTCACTCGACAACGGCTAGCTGGGCGTGTGCCGCTGATTGGCTTTGCTGGTGCCCCGTGGACTTTGATGACATACATGGTTGAGGGTGGCAGCTCAAGCACCATGGCTCAGGCCAAGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGAATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAAAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|17534",
+                  "accession": "17534",
+                  "title": "ENSPPRT00000010346.1 cds scaffold:PanPar1.0:KV860394.1:5074882:5077938:1 gene:ENSPPRG00000005917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
+                }
+              ],
+              "len": 897,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1607.71,
+                  "score": 870,
+                  "evalue": 0,
+                  "identity": 874,
+                  "query_from": 1,
+                  "query_to": 876,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 876,
+                  "hit_strand": "Plus",
+                  "align_len": 876,
+                  "gaps": 0,
+                  "qseq": "ATGGAGGCTAACGGGTTGGGATCCCAGGGTTTTCCAGAGCTGAAGAATGACACGTTCCTGCGAGCAGCATGGGGAGAAGACACAGATTACACTCCCGTTTGGTGCATGCGGCAGGCAGGCCGCTACTTACCAGAGTTTAGGGAAACTAGGGCTGCCCAGGACTTTTTCAGCACCTGTCGCTCCCCAGAGGCCTGCTGTGAATTGACTTTGCAGCCACTGCGTCGCTTCCCTTTGGATGCTGCCATCATCTTCTCTGACATCCTTGTTGTACCCCAGGCACTGGGCATGGAGGTGACTATGGTGCCTGGCAAAGGGCCTAGCTTCCCAGAGCCATTAAGAGAAGAGCGGGACTTAGAACGCCTCAGGGATCCAGCAACAGTGGCCTCTGAGCTGGGCTATGTGTTCCAGGCCATCACCCTCACTCGACAACGGCTAGCTGGGCGTGTGCCGCTGATTGGCTTTGCTGGTGCCCCGTGGACTTTGATGACATACATGGTTGAGGGTGGCAGCTCAAGCACCATGGCTCAGGCCAAGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGCATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAGAAAGCCCGG",
+                  "hseq": "ATGGAGGCTAACGGGTTGGGATCCCAGGGTTTTCCAGAGCTGAAGAATGACACGTTCCTGCGAGCAGCATGGGGAGAAGACACAGATTACACTCCCGTTTGGTGCATGCGGCAGGCAGGCCGCTACTTACCAGAGTTTAGGGAAACTAGGGCTGCCCAGGACTTTTTCAGCACCTGTCGCTCCCCAGAGGCCTGCTGTGAATTGACTTTGCAGCCACTGCGTCGCTTCCCTTTGGATGCTGCCATCATCTTCTCTGACATCCTTGTTGTACCCCAGGCACTGGGCATGGAGGTGACTATGGTGCCTGGCAAAGGGCCTAGCTTCCCAGAGCCATTAAGAGAAGAGCGGGACTTAGAACGCCTCAGGGATCCAGCAACAGTGGCCTCTGAGCTGGGCTATGTGTTCCAGGCCATCACCCTCACTCGACAACGGCTAGCTGGGCGTGTGCCGCTGATTGGCTTTGCTGGTGCCCCGTGGACTTTGATGACATACATGGTTGAGGGTGGCAGCTCAAGCACCATGGCTCAGGCCAAGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGAATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAGGCATTGCAGCTCTTTGAGTCCCATGCAGGGCATCTTGGCCCACAACTCTTCAATAAATTTGCACTGCCCTATATCCGTGATGTGGCTAAGCGTGTGAAGGCCAGGCTGCAGGAGTCAGGCCTGGCACCAGTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAAAAAGCCCGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|17533",
+                  "accession": "17533",
+                  "title": "ENSPPRT00000010355.1 cds scaffold:PanPar1.0:KV860394.1:5074882:5078078:1 gene:ENSPPRG00000005917.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:UROD description:uroporphyrinogen decarboxylase [Source:HGNC Symbol;Acc:HGNC:12591]"
+                }
+              ],
+              "len": 966,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1170.05,
+                  "score": 633,
+                  "evalue": 0,
+                  "identity": 635,
+                  "query_from": 1,
+                  "query_to": 636,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 636,
+                  "hit_strand": "Plus",
+                  "align_len": 636,
+                  "gaps": 0,
+                  "qseq": "ATGGAGGCTAACGGGTTGGGATCCCAGGGTTTTCCAGAGCTGAAGAATGACACGTTCCTGCGAGCAGCATGGGGAGAAGACACAGATTACACTCCCGTTTGGTGCATGCGGCAGGCAGGCCGCTACTTACCAGAGTTTAGGGAAACTAGGGCTGCCCAGGACTTTTTCAGCACCTGTCGCTCCCCAGAGGCCTGCTGTGAATTGACTTTGCAGCCACTGCGTCGCTTCCCTTTGGATGCTGCCATCATCTTCTCTGACATCCTTGTTGTACCCCAGGCACTGGGCATGGAGGTGACTATGGTGCCTGGCAAAGGGCCTAGCTTCCCAGAGCCATTAAGAGAAGAGCGGGACTTAGAACGCCTCAGGGATCCAGCAACAGTGGCCTCTGAGCTGGGCTATGTGTTCCAGGCCATCACCCTCACTCGACAACGGCTAGCTGGGCGTGTGCCGCTGATTGGCTTTGCTGGTGCCCCGTGGACTTTGATGACATACATGGTTGAGGGTGGCAGCTCAAGCACCATGGCTCAGGCCAAGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGCATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAG",
+                  "hseq": "ATGGAGGCTAACGGGTTGGGATCCCAGGGTTTTCCAGAGCTGAAGAATGACACGTTCCTGCGAGCAGCATGGGGAGAAGACACAGATTACACTCCCGTTTGGTGCATGCGGCAGGCAGGCCGCTACTTACCAGAGTTTAGGGAAACTAGGGCTGCCCAGGACTTTTTCAGCACCTGTCGCTCCCCAGAGGCCTGCTGTGAATTGACTTTGCAGCCACTGCGTCGCTTCCCTTTGGATGCTGCCATCATCTTCTCTGACATCCTTGTTGTACCCCAGGCACTGGGCATGGAGGTGACTATGGTGCCTGGCAAAGGGCCTAGCTTCCCAGAGCCATTAAGAGAAGAGCGGGACTTAGAACGCCTCAGGGATCCAGCAACAGTGGCCTCTGAGCTGGGCTATGTGTTCCAGGCCATCACCCTCACTCGACAACGGCTAGCTGGGCGTGTGCCGCTGATTGGCTTTGCTGGTGCCCCGTGGACTTTGATGACATACATGGTTGAGGGTGGCAGCTCAAGCACCATGGCTCAGGCCAAGCGCTGGCTTTATCAGAGACCACAGGCTAGTCACCAGTTGCTTCGAATCCTCACTGATGCTCTGGTCCCATATCTGGTAGGACAAGTGGCTGCTGGTGCCCAG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 614.208,
+                  "score": 332,
+                  "evalue": 6.26736e-175,
+                  "identity": 337,
+                  "query_from": 766,
+                  "query_to": 1104,
+                  "query_strand": "Plus",
+                  "hit_from": 629,
+                  "hit_to": 966,
+                  "hit_strand": "Plus",
+                  "align_len": 339,
+                  "gaps": 1,
+                  "qseq": "GTGCCCATGATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAGAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "hseq": "GTGCCCA-GATCATCTTTGCTAAAGATGGACATTTTGCCCTGGAAGAGCTGGCCCAAGCTGGCTACGAGGTGGTTGGGCTTGACTGGACAGTGGCCCCAGAAAAAGCCCGGGAACGTGTGGGGAAGACGGTGACCTTGCAGGGCAACCTGGACCCCTGTGCCCTGTATGCATCTGAGGAGGAGATTGGACGGCTGGTGCAGCAGATGCTGAATGACTTCGGGCCACAGCGCTACATTGCCAACCTGGGCCATGGACTTTACCCTGACATGGACCCAGAACATGTGGGGGCCTTTGTGGATGCCGTGCACAGATACTCACGTCTGCTTCGACAGAACTGA",
+                  "midline": "||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 25,
+            "eff_space": 49216390314,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

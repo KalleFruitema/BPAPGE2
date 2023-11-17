@@ -1,0 +1,131 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_69",
+          "query_title": "seq_069",
+          "query_len": 372,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|9185",
+                  "accession": "9185",
+                  "title": "ENSPPRT00000018977.1 cds scaffold:PanPar1.0:KV860390.1:61848:150921:1 gene:ENSPPRG00000011739.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEPH description:hephaestin [Source:HGNC Symbol;Acc:HGNC:4866]"
+                }
+              ],
+              "len": 3597,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 566.195,
+                  "score": 306,
+                  "evalue": 5.74443e-161,
+                  "identity": 316,
+                  "query_from": 52,
+                  "query_to": 372,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 321,
+                  "hit_strand": "Plus",
+                  "align_len": 321,
+                  "gaps": 0,
+                  "qseq": "ACGCTGCTCAGACACTTTGAATCCAGGAGAGAAAGATGTGTCAAGCCTGACTGGAGAACAGCATCTGCTTCTAGCCAAGATCTGTCATCACAAAGTAAGGATACTAAAGTTATGTGGGCCATGAAACCAGGCCATCTCTTCTGGGCTCTGTTGTTTCTGCAACCTTTGTGGCCCCGACTGACTGATGGGGCCACTCACGTCTACTACTTGGGCATCCTGGATGTGCAGTGGAACTATGCTCCCAAGGGAAGGAATGTCGTCATGAACCAGCCTCTGGACAATGATACAGTAGCTTCCAGCTTCTTAAAATCTGACAAGAAC",
+                  "hseq": "ACCCTGCTCAGACACTTTGAATCCAGGAGAGAAAGATGTGTCAAGCCTGCCTGGAGAACAGCATCTGCTTCTAGCCAAGATCTGTCATCACAAAGTAAGGATACTAAAGTTATGTGGGCCATGAAACCAGGCCATCTCTTCTGGGCTCTGTTGTTTCTGCAACCTTTGTGGCCCCGACTGAGTGATGGGGCCACTCGAGTCTACTACTTGGGCATCCTGGATGTGCAGTGGAACTATGCTCCCAAGGGAAGGAATGTCGTCATGAACCAGCCTCTGGACAATGATACAGTAGCTTCCAGCTTCTTAAAATCTGACAAGAAC",
+                  "midline": "|| |||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|9186",
+                  "accession": "9186",
+                  "title": "ENSPPRT00000018965.1 cds scaffold:PanPar1.0:KV860390.1:70756:150921:1 gene:ENSPPRG00000011739.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEPH description:hephaestin [Source:HGNC Symbol;Acc:HGNC:4866]"
+                }
+              ],
+              "len": 2910,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 372.297,
+                  "score": 201,
+                  "evalue": 1.34408e-102,
+                  "identity": 207,
+                  "query_from": 163,
+                  "query_to": 372,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 210,
+                  "hit_strand": "Plus",
+                  "align_len": 210,
+                  "gaps": 0,
+                  "qseq": "ATGTGGGCCATGAAACCAGGCCATCTCTTCTGGGCTCTGTTGTTTCTGCAACCTTTGTGGCCCCGACTGACTGATGGGGCCACTCACGTCTACTACTTGGGCATCCTGGATGTGCAGTGGAACTATGCTCCCAAGGGAAGGAATGTCGTCATGAACCAGCCTCTGGACAATGATACAGTAGCTTCCAGCTTCTTAAAATCTGACAAGAAC",
+                  "hseq": "ATGTGGGCCATGAAACCAGGCCATCTCTTCTGGGCTCTGTTGTTTCTGCAACCTTTGTGGCCCCGACTGAGTGATGGGGCCACTCGAGTCTACTACTTGGGCATCCTGGATGTGCAGTGGAACTATGCTCCCAAGGGAAGGAATGTCGTCATGAACCAGCCTCTGGACAATGATACAGTAGCTTCCAGCTTCTTAAAATCTGACAAGAAC",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|9184",
+                  "accession": "9184",
+                  "title": "ENSPPRT00000018998.1 cds scaffold:PanPar1.0:KV860390.1:61720:151412:1 gene:ENSPPRG00000011739.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:HEPH description:hephaestin [Source:HGNC Symbol;Acc:HGNC:4866]"
+                }
+              ],
+              "len": 3477,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 355.677,
+                  "score": 192,
+                  "evalue": 1.35362e-97,
+                  "identity": 198,
+                  "query_from": 172,
+                  "query_to": 372,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 201,
+                  "hit_strand": "Plus",
+                  "align_len": 201,
+                  "gaps": 0,
+                  "qseq": "ATGAAACCAGGCCATCTCTTCTGGGCTCTGTTGTTTCTGCAACCTTTGTGGCCCCGACTGACTGATGGGGCCACTCACGTCTACTACTTGGGCATCCTGGATGTGCAGTGGAACTATGCTCCCAAGGGAAGGAATGTCGTCATGAACCAGCCTCTGGACAATGATACAGTAGCTTCCAGCTTCTTAAAATCTGACAAGAAC",
+                  "hseq": "ATGAAACCAGGCCATCTCTTCTGGGCTCTGTTGTTTCTGCAACCTTTGTGGCCCCGACTGAGTGATGGGGCCACTCGAGTCTACTACTTGGGCATCCTGGATGTGCAGTGGAACTATGCTCCCAAGGGAAGGAATGTCGTCATGAACCAGCCTCTGGACAATGATACAGTAGCTTCCAGCTTCTTAAAATCTGACAAGAAC",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 15883690572,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_46",
+          "query_title": "seq_046",
+          "query_len": 186,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|16286",
+                  "accession": "16286",
+                  "title": "ENSPPRT00000011734.1 cds scaffold:PanPar1.0:KV860336.1:4165606:4168886:-1 gene:ENSPPRG00000006764.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 552,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 307.664,
+                  "score": 166,
+                  "evalue": 1.80181e-83,
+                  "identity": 170,
+                  "query_from": 15,
+                  "query_to": 186,
+                  "query_strand": "Plus",
+                  "hit_from": 114,
+                  "hit_to": 285,
+                  "hit_strand": "Plus",
+                  "align_len": 172,
+                  "gaps": 0,
+                  "qseq": "GTCTTACTATTTTGACCGTGATGATGTGGCTTTGAAGAACTTTGCCAAATACTTTCTTCACCAATCTCATGAGGAGAGGGAACATGCCGAGAAGCTGATGAAGCTGCAGAACCAGCGAGGTGGCCGAATCTTCCTTCAGGATATCAAGAAACCAGACCGTGACGATTGGGAG",
+                  "hseq": "GTCTTACTATTTTGACCGTGATGATGTGGCTTTGAAGAACTTTGCCAAATATTTTCTTCACCAATCTCATGAGGAGAGGGAACATGCTGAGAAGCTGATGAAGCTGCAGAACCAGCGAGGTGGCCGAATCTTCCTTCAGGATATCAAGAAACCAGACCGTGACGATTGGGAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|8779",
+                  "accession": "8779",
+                  "title": "ENSPPRT00000019630.1 cds scaffold:PanPar1.0:KV861153.1:4:469:1 gene:ENSPPRG00000012045.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 342,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 117.459,
+                  "score": 63,
+                  "evalue": 3.25907e-26,
+                  "identity": 71,
+                  "query_from": 112,
+                  "query_to": 186,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 75,
+                  "hit_strand": "Plus",
+                  "align_len": 75,
+                  "gaps": 0,
+                  "qseq": "ATGAAGCTGCAGAACCAGCGAGGTGGCCGAATCTTCCTTCAGGATATCAAGAAACCAGACCGTGACGATTGGGAG",
+                  "hseq": "ATGAAGCTGCAGAACCAACGAGGTGGCCGAATCTTCCTTCAGGATATCAAGAAACCAGACTGTGATGACTGGGAG",
+                  "midline": "||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| |||| || ||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 23,
+            "eff_space": 7444635756,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

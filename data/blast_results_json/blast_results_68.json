@@ -1,0 +1,118 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_68",
+          "query_title": "seq_068",
+          "query_len": 248,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|3155",
+                  "accession": "3155",
+                  "title": "ENSPPRT00000027038.1 cds scaffold:PanPar1.0:KV860328.1:4333787:4334515:-1 gene:ENSPPRG00000017740.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:FTMT description:ferritin mitochondrial [Source:HGNC Symbol;Acc:HGNC:17345]"
+                }
+              ],
+              "len": 729,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 316.897,
+                  "score": 171,
+                  "evalue": 4.11151e-86,
+                  "identity": 171,
+                  "query_from": 78,
+                  "query_to": 248,
+                  "query_strand": "Plus",
+                  "hit_from": 189,
+                  "hit_to": 359,
+                  "hit_strand": "Plus",
+                  "align_len": 171,
+                  "gaps": 0,
+                  "qseq": "CGCCCCCTCCCGAGTGCGGCAGAACTTCCACCCGGACTCCGAGGCCGCCATCAACCGCCAGATCAACCTGGAGCTCTATGCGTCCTATGTGTACTTGTCTATGGCCTATTACTTCTCCCGAGATGACGTGGCCCTGAACAACTTCGCCAGATATTTCCTTCGTCAGTCTCG",
+                  "hseq": "CGCCCCCTCCCGAGTGCGGCAGAACTTCCACCCGGACTCCGAGGCCGCCATCAACCGCCAGATCAACCTGGAGCTCTATGCGTCCTATGTGTACTTGTCTATGGCCTATTACTTCTCCCGAGATGACGTGGCCCTGAACAACTTCGCCAGATATTTCCTTCGTCAGTCTCG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 141.466,
+                  "score": 76,
+                  "evalue": 2.65589e-33,
+                  "identity": 81,
+                  "query_from": 1,
+                  "query_to": 83,
+                  "query_strand": "Plus",
+                  "hit_from": 30,
+                  "hit_to": 111,
+                  "hit_strand": "Plus",
+                  "align_len": 83,
+                  "gaps": 1,
+                  "qseq": "GCAGATCAGCAGTTCGCTGGTGTCCCTGCGCAGCGCGCGCCGAGGCTTCGCCCTCCGACCGCTCTGGGTTTCCTGGTCGCCCC",
+                  "hseq": "GCAGATCAGCAGTTCGCTGGTGTCCCTGCGCAGCGCGCGCCGAGGCTTCGCGCTCCGACCGCTCTGGGTTTCCTGGT-GCCCC",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||| |||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|16286",
+                  "accession": "16286",
+                  "title": "ENSPPRT00000011734.1 cds scaffold:PanPar1.0:KV860336.1:4165606:4168886:-1 gene:ENSPPRG00000006764.1 gene_biotype:protein_coding transcript_biotype:protein_coding"
+                }
+              ],
+              "len": 552,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 145.159,
+                  "score": 78,
+                  "evalue": 2.05313e-34,
+                  "identity": 132,
+                  "query_from": 80,
+                  "query_to": 238,
+                  "query_strand": "Plus",
+                  "hit_from": 14,
+                  "hit_to": 172,
+                  "hit_strand": "Plus",
+                  "align_len": 159,
+                  "gaps": 0,
+                  "qseq": "CCCCCTCCCGAGTGCGGCAGAACTTCCACCCGGACTCCGAGGCCGCCATCAACCGCCAGATCAACCTGGAGCTCTATGCGTCCTATGTGTACTTGTCTATGGCCTATTACTTCTCCCGAGATGACGTGGCCCTGAACAACTTCGCCAGATATTTCCTTC",
+                  "hseq": "CCCCCTCGCAGGTGCGCCAGAACTACCACCAGGACTCGGAGGCCGCCATCAACCGCCAGATCAACCTGGAGCTCTACGCCTCCTATGTCTACCTGTCCATGTCTTACTATTTTGACCGTGATGATGTGGCTTTGAAGAACTTTGCCAAATATTTTCTTC",
+                  "midline": "||||||| |  ||||| ||||||| ||||| |||||| |||||||||||||||||||||||||||||||||||||| || |||||||| ||| |||| ||| | || || ||   ||| ||||| |||||  |||| ||||| |||| |||||| ||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 10223984736,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

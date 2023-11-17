@@ -1,0 +1,191 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_14",
+          "query_title": "seq_014",
+          "query_len": 1678,
+          "query_masking": [
+            {
+              "from": 17,
+              "to": 24
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13193",
+                  "accession": "13193",
+                  "title": "ENSPPRT00000014971.1 cds scaffold:PanPar1.0:KV860423.1:2526115:2530005:1 gene:ENSPPRG00000008923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 1434,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 2213.41,
+                  "score": 1198,
+                  "evalue": 0,
+                  "identity": 1208,
+                  "query_from": 385,
+                  "query_to": 1597,
+                  "query_strand": "Plus",
+                  "hit_from": 222,
+                  "hit_to": 1434,
+                  "hit_strand": "Plus",
+                  "align_len": 1213,
+                  "gaps": 0,
+                  "qseq": "GGTTTCTGAGCTTGGCTTGGACTCAGAAGTGTTGCCTGTCCGGGGAGACCACCCAGCTGCCAAGAACAGGTTCCTGTACGTAGGTGGCGCCCTGCATGCGCTGCCCTCCGGCCTCAGGGGGCTCTTCCGCCCTTCACCGCCCTTCTCCAAACCTCTGTTTTGGGCTGGGCTGAGGGAGTTGACCGCGCCCAGGGGCAAAGACCCTGATGAGACTGTGCACAGTTTTGCCCAGCGCCGCCTTGGACCCGAGGTGGCGTCTCTAGCCATGGACAGCCTCTGCCGAGGAGTGTTTGCAGGCAACAGCCGAGAGCTCAGCGTCAGGTCCTGCTTTCCCAGTCTCTTCCAAGCCGAGCAAACCCATCGTTCCGTTTTACTGGGGCTGCTGCGGGGAGCAGGGCAGAGCCCGCAGCCAGACTCCGCACTCATTAGCCAGGCCCGAGCCGAGCGCTGGAGCCAGTGGTCCCTCCGAGGAGGGCTGGAAACGTTGCCCCAAGCCCTTAACACCCACCTGACTAGTAGAGGAGTCCGTATTCTCAGAGGCCAGCCCGTCTGTGGGCTCAGCCTCCAGGCAGACAGGCGCTGGAAGGTGTCTCTAGGGGACAGCAGTCTGGATGCTGACCACGTTATCAGTGCTGTTCCGGCTTCAGTGCTTGGCAAGCTGCTCCCTGCGGAGGCTGCGCCTCTGGCCCGGGCCCTGAGCGCCATCACTGCGGTGTCTGTGGCTGTGGTGAACCTGCAGTACCGAGGAGCCCGTCTGCCCGTGCAGGGATTCGGACATTTGGTGCCATCCTCAGAAGACCCGGGCGTCCTGGGAATCGTGTATGACTCAGTTGCTTTCCCTGAGCAGGACGGAAGCCCCCCTGGCCTCCGAGTGACTGTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCCGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "hseq": "GGTTTCTGAGCTTGGCTTGGACTCAGAAGTGTTGCCTGTCCGGGGAGACCACCCAGCTGCCAAGAACAGGTTCCTGTACGTAGGTGGCGCCCTGCATGCGCTGCCCTCGGGCCTCAGGGGGCTCTTCCGCCCTTCACCGCCCTTCTCCAAACCTCTGTTTTGGGCTGGGCTGAGGGAGTTGACCGCGCCCAGGGGCAAAGACCCTGATGAGACTGTGCACAGTTTTGCCCAGCGCCGCCTTGGACCCGAGGTGGCGTCTCTAGCCATGGACAGCCTCTGCCGAGGAGTGTTTGCAGGCAACAGCCGAGAGCTCAGCGTCAGGTCCTGCTTTCCCAGTCTCTTCCAAGCCGAGCAAACCCATCGTTCCGTTTTACTGGGGCTGCTGCTGGGAGCAGGGCAGAGCCCGCAGCCAGACTCCGCACTCATTAGCCAGGCCCGAGCCGAGCGCTGGAGCCAGTGGTCCCTCCGAGGAGGGCTGGAAACGTTGCCCCAAGCCCTTAACACCCACCTGACTAGTAGAGGAGTCCGTATTCTCAGAGGCCAGCCCGTCTGTGGGCTCAGCCTCCAGGCAGACAGGCGCTGGAAGGTGTCTCTAGGGGACAGCAGTCTGGATGCTGACCACGTTATCAGTGCTGTTCCGGCTTCAGTGCTCGGCAAGCTGCTCCCTGCGGAGGCTGCGCCTCTGGCCCGGGCCCTGAGCGCCATCACTGCGGTGTCTGTGGCTGTGGTGAACCTGCAGTACCGAGGAGCCCGTCTGCCCGTGCAGGGATTCGGACATTTGGTGCCATCCTCAGAAGACCCGGGCGTCCTGGGAATCGTGTATGACTCAGTTGCTTTCCCTGAGCAGGACGGAAGCCCCCCTGGCCTCCGAGTGACCGTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCTGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 414.77,
+                  "score": 224,
+                  "evalue": 1.0439e-114,
+                  "identity": 227,
+                  "query_from": 131,
+                  "query_to": 357,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 228,
+                  "hit_strand": "Plus",
+                  "align_len": 228,
+                  "gaps": 1,
+                  "qseq": "ATGGGCCGGACCGTGGTCGTGCTGGGAGGAGGCATCAGCGGCTTGGCCGCCAGTTACCACCTGAGCCGGGCCCCCTGTCCCCCCAAGGTGGTCCTGGTGGAGGCCAGCGAGCGTCTGGGAGGCTGGATCCGCTCAGTCCGAGGGCCAGGTGGTGCTATCTTTGAACTTGGACCTCGAGGAATTCGGCCGGCGGGAGCCCTGGGGGCCCGGACCCTGCTCCTG-TTTCT",
+                  "hseq": "ATGGGCCGGACCGTGGTCGTGCTGGGAGGAGGCATCAGCGGCTTGGCCGCCAGTTACCACCTGAGCCGGGCCCCCTGTCCCCCCAAGGTGGTCCTGGTGGAGGCCAGCGAGCGTCTGGGAGGCTGGATCCGCTCAGTCCGAGGGCCAGGTGGTGCTATCTTTGAACTTGGACCTCGAGGAATTCGGCCGGCGGGAGCCCTGGGGGCCCGGACCCTGCTCCTGGTTTCT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13195",
+                  "accession": "13195",
+                  "title": "ENSPPRT00000014941.1 cds scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 423,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 616.055,
+                  "score": 333,
+                  "evalue": 2.6662e-175,
+                  "identity": 335,
+                  "query_from": 1262,
+                  "query_to": 1597,
+                  "query_strand": "Plus",
+                  "hit_from": 88,
+                  "hit_to": 423,
+                  "hit_strand": "Plus",
+                  "align_len": 336,
+                  "gaps": 0,
+                  "qseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCCGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "hseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCTGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 169.165,
+                  "score": 91,
+                  "evalue": 8.97327e-41,
+                  "identity": 95,
+                  "query_from": 131,
+                  "query_to": 227,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 97,
+                  "hit_strand": "Plus",
+                  "align_len": 97,
+                  "gaps": 0,
+                  "qseq": "ATGGGCCGGACCGTGGTCGTGCTGGGAGGAGGCATCAGCGGCTTGGCCGCCAGTTACCACCTGAGCCGGGCCCCCTGTCCCCCCAAGGTGGTCCTGG",
+                  "hseq": "ATGGGCCGGACCGTGGTCGTGCTGGGAGGAGGCATCAGCGGCTTGGCCGCCAGTTACCACCTGAGCCGGGCCCCCTGTCCCCCCAAGGTGATGCTGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| | ||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|13194",
+                  "accession": "13194",
+                  "title": "ENSPPRT00000014946.1 cds scaffold:PanPar1.0:KV860423.1:2526503:2529930:1 gene:ENSPPRG00000008923.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:PPOX description:protoporphyrinogen oxidase [Source:HGNC Symbol;Acc:HGNC:9280]"
+                }
+              ],
+              "len": 558,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 616.055,
+                  "score": 333,
+                  "evalue": 2.6662e-175,
+                  "identity": 335,
+                  "query_from": 1262,
+                  "query_to": 1597,
+                  "query_strand": "Plus",
+                  "hit_from": 223,
+                  "hit_to": 558,
+                  "hit_strand": "Plus",
+                  "align_len": 336,
+                  "gaps": 0,
+                  "qseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCCGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "hseq": "GTGATGCTGGGAGGGTCCTGGTTACAGACGCTGGAAGCCAGGGGCGCCGTCTTATCTCAGGAGCTGCTCCAACAACAGGCCCAGGAAGCAGCTGCCACCCAGTTAGGACTGAAAGAGCCACCCAGCCACTGCTTGGTCCATCTGCACAAGAACTGCATCCCCCAGTATACACTAGGCCACTGGCAAAAACTGGAGGCAGCTACGCAATTCTTGGCTTCTCAGAGGCTGCCCTTGACTCTGGCCGGAGCCTCCTATGAGGGGGTTGCCGTCAACGACTGTATAGAGAGCGGACGCCAGGCAGCAGCCTGGGTCCTGGGCTCGGAACCGAACAGCTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 411.077,
+                  "score": 222,
+                  "evalue": 1.35037e-113,
+                  "identity": 222,
+                  "query_from": 131,
+                  "query_to": 352,
+                  "query_strand": "Plus",
+                  "hit_from": 1,
+                  "hit_to": 222,
+                  "hit_strand": "Plus",
+                  "align_len": 222,
+                  "gaps": 0,
+                  "qseq": "ATGGGCCGGACCGTGGTCGTGCTGGGAGGAGGCATCAGCGGCTTGGCCGCCAGTTACCACCTGAGCCGGGCCCCCTGTCCCCCCAAGGTGGTCCTGGTGGAGGCCAGCGAGCGTCTGGGAGGCTGGATCCGCTCAGTCCGAGGGCCAGGTGGTGCTATCTTTGAACTTGGACCTCGAGGAATTCGGCCGGCGGGAGCCCTGGGGGCCCGGACCCTGCTCCTG",
+                  "hseq": "ATGGGCCGGACCGTGGTCGTGCTGGGAGGAGGCATCAGCGGCTTGGCCGCCAGTTACCACCTGAGCCGGGCCCCCTGTCCCCCCAAGGTGGTCCTGGTGGAGGCCAGCGAGCGTCTGGGAGGCTGGATCCGCTCAGTCCGAGGGCCAGGTGGTGCTATCTTTGAACTTGGACCTCGAGGAATTCGGCCGGCGGGAGCCCTGGGGGCCCGGACCCTGCTCCTG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 26,
+            "eff_space": 75303352236,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}

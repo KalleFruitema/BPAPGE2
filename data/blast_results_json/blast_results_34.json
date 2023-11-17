@@ -1,0 +1,118 @@
+{
+  "BlastOutput2": {
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.12.0+",
+      "reference": "Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb Miller (2000), \"A greedy algorithm for aligning DNA sequences\", J Comput Biol 2000; 7(1-2):203-14.",
+      "search_target": {
+        "db": "blast_db/pan_par_proteome.fa"
+      },
+      "params": {
+        "expect": 10,
+        "sc_match": 1,
+        "sc_mismatch": -2,
+        "gap_open": 0,
+        "gap_extend": 0,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_34",
+          "query_title": "seq_034",
+          "query_len": 372,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|19628",
+                  "accession": "19628",
+                  "title": "ENSPPRT00000008217.1 cds scaffold:PanPar1.0:KV860322.1:2070220:2093636:1 gene:ENSPPRG00000004502.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MMAB description:metabolism of cobalamin associated B [Source:HGNC Symbol;Acc:HGNC:19331]"
+                }
+              ],
+              "len": 726,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 636.368,
+                  "score": 344,
+                  "evalue": 0,
+                  "identity": 344,
+                  "query_from": 29,
+                  "query_to": 372,
+                  "query_strand": "Plus",
+                  "hit_from": 53,
+                  "hit_to": 396,
+                  "hit_strand": "Plus",
+                  "align_len": 344,
+                  "gaps": 0,
+                  "qseq": "CCGGCAGGCTGCTGTGTCCCCGTTTCCAGAGCCGCGGCCCCCAGGGCGTGGAAGACGGGGACGGGCCACAGCCTTCCTTGAAGACACCCAAGATCCCCAAGATATACACCAAAACAGGAGACAAAGGGTTTTCTAGCACCTTCACTGGAGAAAGGAGACCTAAAGATGACCAAGTGTTTGAAGCCTTGGGAACTACAGATGAATTAAGCTCAGCCATTGGGTTTGCTTTGGAATTAGTCGCAGAAAAAGGCCACCCGTTTGCTGAAGAGCTGCAGAAAATCCAGTGCTCGCTGCAGGACGTCGGCTCTGCCCTGGCGACCCCGCGCTCCTCGGCCAGGGAGGCT",
+                  "hseq": "CCGGCAGGCTGCTGTGTCCCCGTTTCCAGAGCCGCGGCCCCCAGGGCGTGGAAGACGGGGACGGGCCACAGCCTTCCTTGAAGACACCCAAGATCCCCAAGATATACACCAAAACAGGAGACAAAGGGTTTTCTAGCACCTTCACTGGAGAAAGGAGACCTAAAGATGACCAAGTGTTTGAAGCCTTGGGAACTACAGATGAATTAAGCTCAGCCATTGGGTTTGCTTTGGAATTAGTCGCAGAAAAAGGCCACCCGTTTGCTGAAGAGCTGCAGAAAATCCAGTGCTCGCTGCAGGACGTCGGCTCTGCCCTGGCGACCCCGCGCTCCTCGGCCAGGGAGGCT",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gnl|BL_ORD_ID|19629",
+                  "accession": "19629",
+                  "title": "ENSPPRT00000008208.1 cds scaffold:PanPar1.0:KV860322.1:2070304:2093389:1 gene:ENSPPRG00000004502.1 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:MMAB description:metabolism of cobalamin associated B [Source:HGNC Symbol;Acc:HGNC:19331]"
+                }
+              ],
+              "len": 570,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 233.798,
+                  "score": 126,
+                  "evalue": 6.61752e-61,
+                  "identity": 126,
+                  "query_from": 247,
+                  "query_to": 372,
+                  "query_strand": "Plus",
+                  "hit_from": 115,
+                  "hit_to": 240,
+                  "hit_strand": "Plus",
+                  "align_len": 126,
+                  "gaps": 0,
+                  "qseq": "GGGTTTGCTTTGGAATTAGTCGCAGAAAAAGGCCACCCGTTTGCTGAAGAGCTGCAGAAAATCCAGTGCTCGCTGCAGGACGTCGGCTCTGCCCTGGCGACCCCGCGCTCCTCGGCCAGGGAGGCT",
+                  "hseq": "GGGTTTGCTTTGGAATTAGTCGCAGAAAAAGGCCACCCGTTTGCTGAAGAGCTGCAGAAAATCCAGTGCTCGCTGCAGGACGTCGGCTCTGCCCTGGCGACCCCGCGCTCCTCGGCCAGGGAGGCT",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 121.153,
+                  "score": 65,
+                  "evalue": 5.37537e-27,
+                  "identity": 65,
+                  "query_from": 29,
+                  "query_to": 93,
+                  "query_strand": "Plus",
+                  "hit_from": 53,
+                  "hit_to": 117,
+                  "hit_strand": "Plus",
+                  "align_len": 65,
+                  "gaps": 0,
+                  "qseq": "CCGGCAGGCTGCTGTGTCCCCGTTTCCAGAGCCGCGGCCCCCAGGGCGTGGAAGACGGGGACGGG",
+                  "hseq": "CCGGCAGGCTGCTGTGTCCCCGTTTCCAGAGCCGCGGCCCCCAGGGCGTGGAAGACGGGGACGGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 29823,
+            "db_len": 46358541,
+            "hsp_len": 24,
+            "eff_space": 15883690572,
+            "kappa": 0.46,
+            "lambda": 1.28,
+            "entropy": 0.85
+          }
+        }
+      }
+    }
+  }
+}
