@@ -1,9 +1,9 @@
 """
 File: table_filler.py
 Author: Kalle Fruitema
-Date: 25/10/2023
+Date: 08/12/2023
 Description: Haalt alle data op en vult alle tabellen hiermee.
-Version: Python v3.10.6
+Version: Python v3.12.0
 """
 
 
@@ -88,7 +88,7 @@ def fill_table_gene(cursor, data):
     :return None:
     """
     sql = """INSERT INTO GENE
-    VALUES(%s, %s, %s, %s)"""
+    VALUES(%s, %s, %s, %s, %s)"""
     for line in data:
         cursor.execute(sql, line)
     print("Gene table filled.")
@@ -261,15 +261,183 @@ def fill_table_feature(cursor, data):
     :return None:
     """
     sql = """INSERT INTO FEATURE
-    VALUES(%s, %s, %s, %s, %s)"""
+    VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"""
     data_check = set()
     for item in data:
-        data_check.add(tuple([item["NCBI_prot_ID"], item["feature_db_xref"], 
-                             item["feature_type"], item["feature_position"], 
-                             item["feature_note"]]))
+        data_check.add(tuple([item["feature_id"], item["NCBI_prot_ID"], 
+                              item["feature_db_xref"], item["feature_type"], 
+                              item["feature_note"], item["feature_length"], 
+                             item["feature_skipped_positions"],
+                             '{' + ", ".join(str(i) for i in 
+                                             item["feature_positions"]) + '}'
+                              ]))
     for line in data_check:
         cursor.execute(sql, line)
     print("Feature table filled.")
+
+
+def read_blast_result(jsonpath):
+    """
+    Leest een blast output in een json bestand, en geeft deze output
+    terug, als er hits waren, anders None.
+    
+    :param jsonpath: (str) locatie van de json file die wordt geopend
+    :return search | None: Returned (dict) search, waar de resultaten
+    in staan, als er geen resultaten zijn, wordt None gereturned.
+    """
+    with open(jsonpath) as jsonfile:
+        j = json.load(jsonfile)
+        search = j['BlastOutput2']['report']['results']['search']
+        try:
+            if search["message"] == "No hits found":
+                return None
+        except Exception:
+            pass
+        return search
+
+
+def parse_blast_transcript(hit, transcript_data):
+    """
+    Parsed de juiste informatie voor het vullen van de transcript 
+    tabel, en returned de geupdate volledige set van tuples.
+    
+    :param hit: (dict) bevat informatie nodig om transcript tabel
+    te vullen en moet geparsed worden.
+    :param transcript_data: Set van tuples met informatie over
+    transcripts om de database te vullen.
+    :return (value_dict["gene"], transcript_id, 
+             transcript_data, value_dict):
+        - value_dict["gene"]:
+            (str) ENSEMBL gen id van het huidige resultaat
+        - transcript_id:
+            (str) ENSEMBL transcript id van het huidige resultaat
+        - transcript_data:
+            Geupdate set van tuples met informatie over transcripts 
+            om de database te vullen
+        - value_dict:
+            dictionary van de geparste 'title' van het huidige 
+            resultaat. key= naam element, val= waarde element
+    """
+    transcript_id, _, description = \
+        hit['description'][0]['title'].split(' ', 2)
+    value_dict = {}
+    if "[" in description:
+        description, value_dict["gene_description"] = description\
+            .split("[")[0].strip().split(" description:")
+    for element in description.split(" "):
+        key, val = element.split(":", 1)
+        value_dict[key] = val
+    transcript_data.add(tuple([transcript_id, value_dict["gene"]]))
+    
+    return value_dict["gene"], transcript_id, transcript_data, value_dict
+
+
+def parse_blast_gene(gene_id, transcript_id, gene_data, 
+                     blast_db, value_dict):
+    """
+    Parsed de juiste informatie voor het vullen van de gene 
+    tabel, en returned de geupdate volledige set van tuples.
+    
+    :param gene_id: (str) ENSEMBL id van het transcript
+    :param transcript_id: (str) ENSEMBL id van transcript die wordt
+    bekeken
+    :param gene_data: Set van tuples met informatie over
+    genen om de database te vullen.
+    :param blast_db: (list) alle sequenties uit he proteoom van
+    panthera pardus, opgeslagen in Bio.SeqRecord objecten
+    :param value_dict: dictionary van de geparste 'title' van het
+    huidige resultaat. key= naam element, val= waarde element
+    :return gene_data: Geupdate set van tuples met informatie over
+    genen om de database te vullen.
+    """
+    gene_value_list = []
+
+    for line in gene_data:
+        if line[0] == gene_id:
+            break
+    else:
+        gene_value_list.append(gene_id)
+        for key in ["gene_symbol", "gene_description", "scaffold"]:
+            if key in value_dict:
+                gene_value_list.append(value_dict[key])
+            else:
+                gene_value_list.append("unknown")
+        
+        for seq_rec in blast_db:
+            if seq_rec.id == transcript_id:
+                gene_value_list.append(seq_rec.seq.__str__())
+        gene_data.add(tuple(gene_value_list))
+    return gene_data
+
+
+def parse_blast_alignment(brokstuk_header, transcript_id, query_len, 
+                          hsp, alignment_data):
+    """
+    Parsed de juiste informatie voor het vullen van de alignment 
+    tabel, en returned de geupdate volledige set van tuples.
+
+    :param brokstuk_header: (str) Header van het huidige brokstuk 
+    waarvan de resultaten bekeken worden.
+    :param transcript_id: (str) ENSEMBL id van transcript die wordt
+    bekeken
+    :param query_len: (int) Lengte van de query van het huidige
+    resultaat
+    :param hsp: (dict) Bevat informatie over de huidige alignment
+    die nodig is voor de alignment tabel
+    :param alignment_data: Set van tuples met informatie over
+    alignments om de database te vullen.
+    :return alignment_data: Geupdate set van tuples met informatie 
+    over alignments om de database te vullen.
+    """
+    alignment_value_list = [brokstuk_header, transcript_id, hsp['align_len'], 
+                            hsp["evalue"], hsp['bit_score'], 
+                            round(hsp['identity'] / query_len * 100, 3),
+                            hsp['gaps'], (hsp['align_len'] - 
+                                          hsp['identity'] - hsp['gaps']),
+                            hsp['hit_from'], hsp['hit_to']]
+    alignment_data.add(tuple(alignment_value_list))
+    return alignment_data
+
+
+def parse_blast_hits(transcript_data, gene_data, alignment_data, 
+                     brokstuk_header, query_len, search, blast_db):
+    """
+    Haalt de data op van de hits van een blast result. Alleen de beste 
+    hit per json bestand (result) wordt gebruikt.
+    
+    :param transcript_data: Set van tuples met informatie over
+    transcripts om de database te vullen.
+    :param gene_data: Set van tuples met informatie over
+    genen om de database te vullen.
+    :param alignment_data: Set van tuples met informatie over
+    alignments om de database te vullen.
+    :param brokstuk_header: (str) Header van het huidige brokstuk 
+    waarvan de resultaten bekeken worden.
+    :param query_len: (int) Lengte van de query van het huidige
+    resultaat
+    :param search: (dict) waar de resultaten in staan
+    :param blast_db: (list) alle sequenties uit he proteoom van
+    panthera pardus, opgeslagen in Bio.SeqRecord objecten
+    :return (alignment_data, gene_data, transcript_data): Tuple van 
+    3 sets met data erin, om de alignment, gene en transcript_gene 
+    tabel te vullen.
+    """
+    for hit in search['hits']:
+        # alleen eerste (beste) hit wordt gebruikt per bestand
+        if hit['num'] > 1:
+            break
+        # transcript tabel data wordt verzameld
+        gene_id, transcript_id, transcript_data, value_dict = \
+            parse_blast_transcript(hit, transcript_data)
+        hsp = hit['hsps'][0]
+        # gene tabel data wordt verzameld
+        gene_data = parse_blast_gene(gene_id, transcript_id, gene_data, 
+                                     blast_db, value_dict)
+        # alignment tabel data wordt verzameld
+        alignment_data = \
+            parse_blast_alignment(brokstuk_header, transcript_id, 
+                                  query_len, hsp, alignment_data)
+    return alignment_data, gene_data, transcript_data
 
 
 def parse_blast(file_list):
@@ -291,86 +459,172 @@ def parse_blast(file_list):
     3 sets met data erin, om de alignment, transcript_gene en gene 
     tabel te vullen.
     """
-
-    alignment_data = set()
-    gene_data = set()
-    transcript_data = set()
+    alignment_data, gene_data, transcript_data = set(), set(), set()
     blast_db = []
-
     # data van blast DATABASE wordt ingelezen door middel van biopython
     path = "blast_db/pan_par_proteome.fa"
     for seq_record in SeqIO.parse(path, "fasta"):
         blast_db.append(seq_record)
-
     # resultaten worden per json bestand ingelezen
     for jsonpath in file_list:
-        with open(jsonpath) as jsonfile:
-            j = json.load(jsonfile)
-        search = j['BlastOutput2']['report']['results']['search']
-        try:
-            if search["message"] == "No hits found":
-                continue
-        except Exception:
-            pass
-
+        search = read_blast_result(jsonpath)
+        if search is None:
+            continue
         # hier begint het parsen van de resultaten
         brokstuk_header = f">{search['query_title']}"
         query_len = search['query_len']
-
-        for hit in search['hits']:
-            # alleen eerste (beste) hit wordt gebruikt per bestand
-            if hit['num'] > 1:
-                break
-                
-            # transcript tabel data wordt verzameld
-            transcript_id, description = \
-                hit['description'][0]['title'].split(' ', 1)
-            gene_id, desc_end = \
-                description.split("gene:", 1)[-1].split(" ", 1)
-            description = \
-                "".join([description.split("gene:", 1)[0], desc_end])
-            
-            transcript_data.add(tuple([transcript_id, gene_id]))
-
-            hsp = hit['hsps'][0]
-
-            # gene tabel data wordt verzameld
-            gene_value_list = []
-
-            for line in gene_data:
-                if line[0] == gene_id:
-                    break
-            else:
-                gene_value_list.append(gene_id)
-                try:
-                    gene_name = \
-                        description.split("gene_symbol:")[1].split(" ")[0]
-                    gene_value_list.append(gene_name)
-                except IndexError:
-                    gene_value_list.append("unknown")
-                gene_value_list.append(description)
-                for seq_rec in blast_db:
-                    if seq_rec.id == transcript_id:
-                        gene_value_list.append(seq_rec.seq.__str__())
-                gene_data.add(tuple(gene_value_list))
-
-            # alignment tabel data wordt verzameld
-            alignment_value_list = []
-
-            alignment_value_list.append(brokstuk_header)
-            alignment_value_list.append(transcript_id)
-            alignment_value_list.append(hsp['align_len'])
-            alignment_value_list.append(hsp['evalue'])
-            alignment_value_list.append(hsp['bit_score'])
-            alignment_value_list.append(
-                round(hsp['identity'] / query_len * 100, 3))
-            alignment_value_list.append(hsp['gaps'])
-            alignment_value_list.append(
-                hsp['align_len'] - hsp['identity'] - hsp['gaps'])
-            alignment_value_list.append(hsp['hit_from'])
-            alignment_value_list.append(hsp['hit_to'])
-            alignment_data.add(tuple(alignment_value_list))
+        alignment_data, gene_data, transcript_data = \
+            parse_blast_hits(transcript_data, gene_data, alignment_data, 
+                             brokstuk_header, query_len, search, blast_db)
+        
     return alignment_data, transcript_data, gene_data
+
+
+def parse_feature_position(position):
+    """
+    Parsed de feature position zoals uit de NCBI database
+    gehaald is, zet de waarden die in de tabel moeten komen
+    in een dictionary, en returned deze.
+
+    :param position: De nog niet geparste string van posities
+    :return value_dict: Dictionary met benodigde waarden voor
+    het vullen van de feature tabel.
+    """
+    value_dict, n_positions = {}, []
+    for num in position.split(","):
+        if ".." in num:
+            num1, num2 = [int(num) for num in num.split("..")]
+            n_positions.extend([*range(num1, num2 + 1)])
+        else:
+            n_positions.append(int(num))
+    skipped = True
+    if list(range(n_positions[0], n_positions[-1] + 1)) == n_positions:
+        skipped = False
+    value_dict.update({
+        "feature_positions": n_positions,
+        "feature_length": len(n_positions),
+        "feature_skipped_positions": skipped
+    })
+    return value_dict
+
+
+def togows_kegg_genes(gene_data):
+    """
+    Deze functie zorgt voor het ophalen van de protein data door 
+    middel van togows, zie togows() functie voor meer uitleg.
+
+    :param gene_data: Set van tuples met data over genen.
+    :return protein_data: Lijst van dictionaries met informatie over
+    de eiwitten, wordt gebruikt voor tabellen vullen en meer
+    informatie zoeken.
+    """
+    # base url voor protein data
+    kegg_gene_url = "http://togows.org/entry/kegg-genes/ppad:{}.json"
+    json_dict, protein_data = {}, []
+    for i in gene_data:
+        if i[1] == "unknown":
+            continue
+        # data wordt opgehaald met requests.get().json()
+        gene_req = requests.get(kegg_gene_url.format(i[1])).json()
+        if gene_req:
+            json_dict.update({
+                i[0]: gene_req
+            })
+
+    for i, y in json_dict.items():
+        dict_insert = {
+            "ENSEMBL_gene_ID": i,
+            "NCBI_prot_ID": y[0]["dblinks"]["NCBI-ProteinID"][0],
+            "prot_name": y[0]["name"].replace(f"(RefSeq)", "").strip(),
+            "prot_sequence": y[0]["aaseq"],
+            "pathways": y[0]["pathways"]
+        }
+        if dict_insert not in protein_data:
+            protein_data.append(dict_insert)
+    return protein_data
+
+
+def togows_kegg_pathway(protein_data):
+    """
+    Deze functie zorgt voor het ophalen van de pathway en function
+    data door middel van togows, zie togows() functie voor meer 
+    uitleg.
+
+    :param protein_data: Lijst van dictionaries met informatie over
+    de eiwitten die opgezocht moeten worden.
+    :return (pathway_data, function_data, func_list): Tuple van 3
+    waardes, pathway_data is een lijst van dictionaries met 
+    informatie over de pathways van eiwitten, function_data is een
+    lijst van dictionaries met informatie over de functie van 
+    eiwitten, en func_list is een set met elke mogelijke functie.
+    """
+    # base_url voor pathway data en function data
+    kegg_pathway_url = "http://togows.org/entry/kegg-pathway/{}.json"
+    pathway_data, function_data, func_list = [], [], set()
+
+    for prot in protein_data:
+        for pw_id, pw_name in prot["pathways"].items():
+            # data wordt opgehaald met requests.get().json()
+            pw_req = requests.get(kegg_pathway_url.format(pw_id)).json()
+            pathway_desc = pw_req[0]["description"] 
+            if pathway_desc == "":
+                pathway_desc = None
+
+            pathway_data.append({
+                "NCBI_prot_ID": prot["NCBI_prot_ID"],
+                "pathway_ID": pw_id,
+                "pathway_name": pw_name,
+                "pathway_description": pathway_desc
+            })
+            
+            for func in pw_req[0]["classes"]:
+                dict_insert = {
+                    "NCBI_prot_ID": prot["NCBI_prot_ID"],
+                    "prot_function": func
+                }
+                func_list.add(func)
+                if dict_insert not in function_data:
+                    function_data.append(dict_insert)
+    return pathway_data, function_data, func_list
+
+
+def togows_ncbi_protein(protein_data):
+    """
+    Deze functie zorgt voor het ophalen van de feature data door
+    middel van togows, zie togows() functie voor meer uitleg.
+
+    :param protein_data: Lijst van dictionaries met informatie over
+    de eiwitten die opgezocht moeten worden.
+    :return feature_data: Lijst van dictionaries met informatie over
+    de features van de gegeven eiwitten.
+    """
+    # base_url voor feature data
+    ncbi_protein_url = "http://togows.org/entry/ncbi-protein/{}.json"
+    feature_data = []
+    counter = 1
+    for item in protein_data:
+        # data wordt opgehaald met requests.get().json()
+        feat_req = requests.get(
+            ncbi_protein_url.format(item["NCBI_prot_ID"])).json()
+        
+        for feat in feat_req[0]["features"]:
+            note, db_xref = None, None
+            if "note" in feat:
+                note = feat["note"][0]
+            if "db_xref" in feat:
+                db_xref = feat["db_xref"][0]
+            positions = feat["position"].strip("order").strip("(").strip(")")
+            dict_insert = {
+                "feature_id": counter,
+                "NCBI_prot_ID": item["NCBI_prot_ID"],
+                "feature_db_xref": db_xref,
+                "feature_type": feat["feature"],
+                "feature_note": note,
+            }
+            dict_insert.update(parse_feature_position(positions))
+            feature_data.append(dict_insert)
+            counter += 1         
+    return feature_data
 
 
 def togows(gene_data):
@@ -398,58 +652,10 @@ def togows(gene_data):
         feature_data): Een tuple met meerdere lijsten waar dictionaries in 
     staan met data, om de resterende tabellen te kunnen vullen.
     """
+    protein_data = togows_kegg_genes(gene_data)
 
-    # eerste base url, voor protein data
-    kegg_gene_url = "http://togows.org/entry/kegg-genes/ppad:{}.json"
-    json_dict = {}
-    for i in gene_data:
-        if i[1] == "unknown":
-            continue
-        # data wordt opgehaald met requests.get().json()
-        gene_req = requests.get(kegg_gene_url.format(i[1])).json()
-        if gene_req:
-            json_dict.update({
-                i[0]: gene_req
-            })
-    protein_data = []
-    for i, y in json_dict.items():
-        dict_insert = {
-            "ENSEMBL_gene_ID": i,
-            "NCBI_prot_ID": y[0]["dblinks"]["NCBI-ProteinID"][0],
-            "prot_name": y[0]["name"],
-            "prot_sequence": y[0]["aaseq"],
-            "pathways": y[0]["pathways"]
-        }
-        if dict_insert not in protein_data:
-            protein_data.append(dict_insert)
-
-    # tweede base_url, voor pathway data en function data
-    kegg_pathway_url = "http://togows.org/entry/kegg-pathway/{}.json"
-    pathway_data = []
-    function_data = []
-    func_list = set()
-
-    for prot in protein_data:
-        for pw_id, pw_name in prot["pathways"].items():
-            # data wordt opgehaald met requests.get().json()
-            pw_req = requests.get(kegg_pathway_url.format(pw_id)).json()
-            pathway_desc = pw_req[0]["description"]
-            if pathway_desc == "":
-                pathway_desc = None
-            pathway_data.append({
-                "NCBI_prot_ID": prot["NCBI_prot_ID"],
-                "pathway_ID": pw_id,
-                "pathway_name": pw_name,
-                "pathway_description": pathway_desc
-            })
-            for func in pw_req[0]["classes"]:
-                dict_insert = {
-                    "NCBI_prot_ID": prot["NCBI_prot_ID"],
-                    "prot_function": func
-                }
-                func_list.add(func)
-                if dict_insert not in function_data:
-                    function_data.append(dict_insert)
+    pathway_data, function_data, func_list = \
+        togows_kegg_pathway(protein_data)
 
     # function_data_ids verbindt de functies aan hun ID's
     function_data_ids = []
@@ -461,29 +667,8 @@ def togows(gene_data):
         })
         count += 1
 
-    # derde base_url, voor feature data
-    ncbi_protein_url = "http://togows.org/entry/ncbi-protein/{}.json"
-    feature_data = []
-
-    for item in protein_data:
-        # data wordt opgehaald met requests.get().json()
-        feat_req = requests.get(
-            ncbi_protein_url.format(item["NCBI_prot_ID"])).json()
-        for feat in feat_req[0]["features"]:
-            note = None
-            if "note" in feat:
-                note = feat["note"][0]
-            db_xref = None
-            if "db_xref" in feat:
-                db_xref = feat["db_xref"][0]
-            feature_data.append({
-                "NCBI_prot_ID": item["NCBI_prot_ID"],
-                "feature_db_xref": db_xref,
-                "feature_type": feat["feature"],
-                "feature_position":
-                    feat["position"].strip("order").strip("(").strip(")"),
-                "feature_note": note
-            })
+    feature_data = togows_ncbi_protein(protein_data)
+    
     return protein_data, pathway_data, function_data, function_data_ids, \
         feature_data
 

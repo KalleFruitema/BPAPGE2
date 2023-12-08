@@ -1,9 +1,9 @@
 """
 File: main.py
 Author: Kalle Fruitema
-Date: 25/10/2023
+Date: 08/12/2023
 Description: De hele database wordt via dit script gemaakt.
-Version: Python v3.10.6
+Version: Python v3.12.0
 """
 
 

@@ -1,9 +1,9 @@
 """
 File: table_creater.py
 Author: Kalle Fruitema
-Date: 25/10/2023
+Date: 08/12/2023
 Description: Maakt alle tabellen aan.
-Version: Python v3.10.6
+Version: Python v3.12.0
 """
 
 
@@ -18,7 +18,8 @@ def create_table_brokstuk(cursor):
     """
     sql = """CREATE TABLE BROKSTUK(
     brokstuk_header VARCHAR(255) NOT NULL UNIQUE,
-    brokstuk_sequence TEXT NOT NULL UNIQUE,
+    brokstuk_sequence TEXT NOT NULL,
+    
     CONSTRAINT pk_brokstuk_header
     PRIMARY KEY(brokstuk_header)
     )"""
@@ -37,7 +38,7 @@ def create_table_alignment(cursor):
     """
     sql = """CREATE TABLE ALIGNMENT(
     brokstuk_header VARCHAR(255) NOT NULL,
-    ENSEMBL_transcript_ID VARCHAR(255) NOT NULL,
+    ensembl_transcript_id VARCHAR(255) NOT NULL,
     alignment_length INTEGER NOT NULL,
     e_value DOUBLE PRECISION NOT NULL,
     bit_score INTEGER NOT NULL,
@@ -54,9 +55,9 @@ def create_table_alignment(cursor):
     FOREIGN KEY(brokstuk_header)
     REFERENCES BROKSTUK(brokstuk_header),
 
-    CONSTRAINT fk_ENSEMBL_transcript_ID
-    FOREIGN KEY(ENSEMBL_transcript_ID)
-    REFERENCES TRANSCRIPT_GENE(ENSEMBL_transcript_ID)
+    CONSTRAINT fk_ensembl_transcript_id
+    FOREIGN KEY(ensembl_transcript_id)
+    REFERENCES TRANSCRIPT_GENE(ensembl_transcript_id)
     )"""
     cursor.execute(sql)
     print("Alignment table created.")
@@ -72,15 +73,15 @@ def create_table_transcript_gene(cursor):
     :return None: 
     """
     sql = """CREATE TABLE TRANSCRIPT_GENE(
-    ENSEMBL_transcript_ID VARCHAR(255) NOT NULL UNIQUE,
-    ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
+    ensembl_transcript_id VARCHAR(255) NOT NULL UNIQUE,
+    ensembl_gene_id VARCHAR(255) NOT NULL,
 
-    CONSTRAINT pk_ENSEMBL_transcript_ID
-    PRIMARY KEY(ENSEMBL_transcript_ID),
+    CONSTRAINT pk_ensembl_transcript_id
+    PRIMARY KEY(ensembl_transcript_id),
 
-    CONSTRAINT fk_ENSEMBL_gene_ID
-    FOREIGN KEY(ENSEMBL_gene_ID)
-    REFERENCES GENE(ENSEMBL_gene_ID)
+    CONSTRAINT fk_ensembl_gene_id
+    FOREIGN KEY(ensembl_gene_id)
+    REFERENCES GENE(ensembl_gene_id)
     )"""
     cursor.execute(sql)
     print("Transcript_gene table created.")
@@ -96,13 +97,14 @@ def create_table_gene(cursor):
     :return None: 
     """
     sql = """CREATE TABLE GENE(
-    ENSEMBL_gene_ID VARCHAR(255) NOT NULL UNIQUE,
+    ensembl_gene_id VARCHAR(255) NOT NULL UNIQUE,
     gene_name VARCHAR(255) NOT NULL,
-    gene_description TEXT,
-    gene_sequence TEXT NOT NULL UNIQUE,
+    gene_description VARCHAR(255) NULL,
+    gene_scaffold VARCHAR(255) NULL,
+    gene_sequence TEXT NOT NULL,
 
-    CONSTRAINT pk_ENSEMBL_gene_ID
-    PRIMARY KEY(ENSEMBL_gene_ID)
+    CONSTRAINT pk_ensembl_gene_id
+    PRIMARY KEY(ensembl_gene_id)
     )"""
     cursor.execute(sql)
     print("Gene table created.")
@@ -118,19 +120,19 @@ def create_table_gene_protein(cursor):
     :return None: 
     """
     sql = """CREATE TABLE GENE_PROTEIN(
-    ENSEMBL_gene_ID VARCHAR(255) NOT NULL,
-    NCBI_prot_ID VARCHAR(255) NOT NULL,
+    ensembl_gene_id VARCHAR(255) NOT NULL,
+    ncbi_prot_id VARCHAR(255) NOT NULL,
 
-    CONSTRAINT fk_ENSEMBL_gene_ID
-    FOREIGN KEY(ENSEMBL_gene_ID)
-    REFERENCES GENE(ENSEMBL_gene_ID),
+    CONSTRAINT fk_ensembl_gene_id
+    FOREIGN KEY(ensembl_gene_id)
+    REFERENCES GENE(ensembl_gene_id),
 
-    CONSTRAINT fk_NCBI_prot_ID
-    FOREIGN KEY(NCBI_prot_ID)
-    REFERENCES PROTEIN(NCBI_prot_ID),
+    CONSTRAINT fk_ncbi_prot_id
+    FOREIGN KEY(ncbi_prot_id)
+    REFERENCES PROTEIN(ncbi_prot_id),
 
     CONSTRAINT ck_GENE_PROTEIN
-    PRIMARY KEY(ENSEMBL_gene_ID, NCBI_prot_ID)
+    PRIMARY KEY(ensembl_gene_id, ncbi_prot_id)
     )"""
     cursor.execute(sql)
     print("Gene_protein table created.")
@@ -146,12 +148,12 @@ def create_table_pathway(cursor):
     :return None: 
     """
     sql = """CREATE TABLE PATHWAY(
-    pathway_ID VARCHAR(255) NOT NULL UNIQUE,
+    pathway_id VARCHAR(255) NOT NULL UNIQUE,
     pathway_name VARCHAR(255) NOT NULL,
     pathway_description TEXT NULL,
 
-    CONSTRAINT pk_pathway_ID
-    PRIMARY KEY(pathway_ID) 
+    CONSTRAINT pk_pathway_id
+    PRIMARY KEY(pathway_id) 
     )"""
     cursor.execute(sql)
     print("Pathway table created.")
@@ -167,19 +169,19 @@ def create_table_pathway_protein(cursor):
     :return None: 
     """
     sql = """CREATE TABLE PATHWAY_PROTEIN(
-    NCBI_prot_ID VARCHAR(255) NOT NULL,
-    pathway_ID VARCHAR(255) NOT NULL,
+    ncbi_prot_id VARCHAR(255) NOT NULL,
+    pathway_id VARCHAR(255) NOT NULL,
 
-    CONSTRAINT fk_NCBI_prot_ID
-    FOREIGN KEY(NCBI_prot_ID)
-    REFERENCES PROTEIN(NCBI_prot_ID),
+    CONSTRAINT fk_ncbi_prot_id
+    FOREIGN KEY(ncbi_prot_id)
+    REFERENCES PROTEIN(ncbi_prot_id),
 
     CONSTRAINT fk_pathway_id
-    FOREIGN KEY(pathway_ID)
-    REFERENCES PATHWAY(pathway_ID),
+    FOREIGN KEY(pathway_id)
+    REFERENCES PATHWAY(pathway_id),
 
     CONSTRAINT ck_PATHWAY_PROTEIN
-    PRIMARY KEY(NCBI_prot_ID, pathway_ID)
+    PRIMARY KEY(ncbi_prot_id, pathway_id)
     )"""
     cursor.execute(sql)
     print("Pathway_protein table created.")
@@ -195,12 +197,12 @@ def create_table_protein(cursor):
     :return None: 
     """
     sql = """CREATE TABLE PROTEIN(
-    NCBI_prot_ID VARCHAR(255) NOT NULL UNIQUE,
+    ncbi_prot_id VARCHAR(255) NOT NULL UNIQUE,
     prot_name VARCHAR(255) NOT NULL,
-    prot_sequence TEXT NOT NULL UNIQUE,
+    prot_sequence TEXT NOT NULL,
 
-    CONSTRAINT pk_NCBI_prot_ID
-    PRIMARY KEY(NCBI_prot_ID)
+    CONSTRAINT pk_ncbi_prot_id
+    PRIMARY KEY(ncbi_prot_id)
     )"""
     cursor.execute(sql)
     print("Protein table created.")
@@ -216,19 +218,19 @@ def create_table_function_protein(cursor):
     :return None: 
     """
     sql = """CREATE TABLE FUNCTION_PROTEIN(
-    NCBI_prot_ID VARCHAR(255) NOT NULL,
-    prot_function_ID VARCHAR(255) NOT NULL,
+    ncbi_prot_id VARCHAR(255) NOT NULL,
+    prot_function_id VARCHAR(255) NOT NULL,
 
-    CONSTRAINT fk_NCBI_prot_ID
-    FOREIGN KEY(NCBI_prot_ID)
-    REFERENCES PROTEIN(NCBI_prot_ID),
+    CONSTRAINT fk_ncbi_prot_id
+    FOREIGN KEY(ncbi_prot_id)
+    REFERENCES PROTEIN(ncbi_prot_id),
 
-    CONSTRAINT fk_prot_function_ID
-    FOREIGN KEY(prot_function_ID)
-    REFERENCES FUNCTION(prot_function_ID),
+    CONSTRAINT fk_prot_function_id
+    FOREIGN KEY(prot_function_id)
+    REFERENCES FUNCTION(prot_function_id),
 
     CONSTRAINT ck_FUNCTION_PROTEIN
-    PRIMARY KEY(NCBI_prot_ID, prot_function_ID)
+    PRIMARY KEY(ncbi_prot_id, prot_function_id)
     )"""
     cursor.execute(sql)
     print("Function_protein table created.")
@@ -244,11 +246,11 @@ def create_table_function(cursor):
     :return None: 
     """
     sql = """CREATE TABLE FUNCTION(
-    prot_function_ID VARCHAR(255) NOT NULL UNIQUE,
+    prot_function_id VARCHAR(255) NOT NULL UNIQUE,
     prot_function TEXT NOT NULL UNIQUE,
 
-    CONSTRAINT pk_prot_function_ID
-    PRIMARY KEY(prot_function_ID)
+    CONSTRAINT pk_prot_function_id
+    PRIMARY KEY(prot_function_id)
     )"""
     cursor.execute(sql)
     print("Function table created.")
@@ -264,15 +266,21 @@ def create_table_feature(cursor):
     :return None: 
     """
     sql = """CREATE TABLE FEATURE(
-    NCBI_prot_ID VARCHAR(255) NOT NULL,
+    feature_id INTEGER NOT NULL UNIQUE,
+    ncbi_prot_id VARCHAR(255) NOT NULL,
     feature_db_xref VARCHAR(255) NULL,
     feature_type VARCHAR(255) NOT NULL,
-    feature_position VARCHAR(255) NOT NULL,
     feature_note TEXT NULL,
+    feature_length INTEGER NOT NULL,
+    skipped_positions BOOLEAN NOT NULL,
+    feature_positions INTEGER ARRAY NOT NULL,
+    
+    CONSTRAINT pk_feature_id
+    PRIMARY KEY(feature_id),
 
-    CONSTRAINT fk_NCBI_prot_ID
-    FOREIGN KEY(NCBI_prot_ID)
-    REFERENCES PROTEIN(NCBI_prot_ID)
+    CONSTRAINT fk_ncbi_prot_id
+    FOREIGN KEY(ncbi_prot_id)
+    REFERENCES PROTEIN(ncbi_prot_id)
     )"""
     cursor.execute(sql)
     print("Feature table created.")
