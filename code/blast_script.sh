@@ -8,7 +8,7 @@
 
 # Usage: $ ./blast_script.sh
 
-# download proteoom van panthera pardus vanaf ftp.ensembl,org
+# download proteoom van panthera pardus vanaf ftp.ensembl.org
 wget "http://ftp.ensembl.org/pub/release-110/fasta/panthera_pardus/cds/Panthera_pardus.PanPar1.0.cds.all.fa.gz" -O blast_db/pan_par_proteome.fa.gz
 
 # unpackt het gedownloadde proteoom
